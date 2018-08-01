@@ -4,16 +4,21 @@ package com.fine_fettle;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Locale;
 
 /**
  * Created by Priyadharshini on 05-Jun-18.
@@ -24,6 +29,7 @@ public class PersonInfo extends AppCompatActivity {
     RadioGroup genderRadioGroup;
     Button info;
     ProgressDialog progressDialog;
+    private Calendar newCalendar;
     private static final String TAG = "PersonInfo";
     TextView tvView;
     @Override
@@ -47,6 +53,13 @@ public class PersonInfo extends AppCompatActivity {
         city = findViewById(R.id.city);
         pincode = findViewById(R.id.pincode);
         info = findViewById(R.id.send);
+        newCalendar = Calendar.getInstance();
+        dob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mFromdatePicker();
+            }
+        });
         info.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -55,6 +68,20 @@ public class PersonInfo extends AppCompatActivity {
                 });
 
     }
+    private void mFromdatePicker() {
+        android.app.DatePickerDialog fromDatePickerDialog = new android.app.DatePickerDialog(PersonInfo.this, new android.app.DatePickerDialog.OnDateSetListener() {
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                Calendar newDate = Calendar.getInstance();
+                newDate.set(year, monthOfYear, dayOfMonth);
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                dob.setText(df.format(newDate.getTime()));
+            }
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+        fromDatePickerDialog.getDatePicker().setBackgroundColor(ContextCompat.getColor(this, R.color.White));
+        fromDatePickerDialog.show();
+
+    }
+
 
     private void submitForm(View view) {
         final String first = firstname.getText().toString().trim();
@@ -66,6 +93,7 @@ public class PersonInfo extends AppCompatActivity {
         final String p_city = city.getText().toString().trim();
         final String pin = pincode.getText().toString().trim();
         int selectedId = genderRadioGroup.getCheckedRadioButtonId();
+
         String gender;
         if(selectedId == R.id.radioButton2) {
             gender = "Female";

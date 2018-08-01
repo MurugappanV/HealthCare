@@ -68,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 //URL url = new URL("http://192.168.43.194/user_login.php"); // here is your URL path
-                URL url = new URL("http://192.168.43.59/user_login.php");
-                //URL url = new URL("http://192.168.0.111/user_login.php");
+                //URL url = new URL("http://192.168.43.59/user_login.php");
+                URL url = new URL("http://10.13.1.17/user_login.php");
                 JSONObject postDataParams = new JSONObject();
                 postDataParams.put("user", user);
                 postDataParams.put("pass",pass);

@@ -2,16 +2,21 @@ package com.fine_fettle;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Locale;
 
 /**
  * Created by Priyadharshini on 16-Jul-18.
@@ -21,7 +26,7 @@ public class MakeAppointment extends AppCompatActivity {
     EditText pername, perage, peraddr, heaissue, docspecialization, docname, hosname, dates, slots;
     Button book;
     private ProgressBar progressBar;
-
+    private Calendar newCalendar;
     TextView tv;
 
 
@@ -45,7 +50,13 @@ public class MakeAppointment extends AppCompatActivity {
         slots = findViewById(R.id.slot);
         book = findViewById(R.id.book);
         progressBar = findViewById(R.id.progressBar);
-
+       newCalendar = Calendar.getInstance();
+        dates.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mFromdatePicker();
+            }
+        });
 
         book.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +67,19 @@ public class MakeAppointment extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Hi !", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    private void mFromdatePicker() {
+        android.app.DatePickerDialog fromDatePickerDialog = new android.app.DatePickerDialog(MakeAppointment.this, new android.app.DatePickerDialog.OnDateSetListener() {
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                Calendar newDate = Calendar.getInstance();
+                newDate.set(year, monthOfYear, dayOfMonth);
+                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                dates.setText(df.format(newDate.getTime()));
+            }
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+        fromDatePickerDialog.getDatePicker().setBackgroundColor(ContextCompat.getColor(this, R.color.White));
+        fromDatePickerDialog.show();
+
     }
 
 

@@ -89,6 +89,7 @@ public class Personreg extends AppCompatActivity {
             return;
         }
 
+
         //if it passes all the validations
         HashMap<String, String> params = new HashMap<>();
         params.put("name", user);
