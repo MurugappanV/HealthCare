@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/logo3">
+    <TextView
+        android:id="@+id/tvView1"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/p_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:ems="10"
+                android:hint="Patient Name"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="108dp" />
+            <EditText
+                android:id="@+id/p_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:ems="10"
+                android:hint="patient age"
+                android:inputType="number"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="108dp" />
+
+            <EditText
+                android:id="@+id/p_addr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:ems="10"
+                android:hint="patient address"
+                android:inputType="textMultiLine"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="108dp" />
+
+            <EditText
+                android:id="@+id/h_issue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:ems="10"
+                android:hint="health issue"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="108dp" />
+
+            <EditText
+                android:id="@+id/doc_specializtion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:ems="10"
+                android:hint="doctor specialization"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="108dp" />
+
+            <EditText
+                android:id="@+id/doc_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:ems="10"
+                android:hint="doctor name"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="161dp" />
+
+            <EditText
+                android:id="@+id/hos_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:ems="10"
+                android:hint="hospital name"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="19dp"
+                tools:layout_editor_absoluteY="307dp" />
+
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:ems="10"
+                android:hint="yyyy-mm-dd"
+                android:inputType="date"
+                tools:layout_editor_absoluteX="19dp"
+                tools:layout_editor_absoluteY="307dp" />
+
+
+            <EditText
+                android:id="@+id/slot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:ems="10"
+                android:hint="1:00pm"
+                android:inputType="time"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="353dp" />
+
+            <Button
+                android:id="@+id/book"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_tranparent"
+                android:text="freeze appointment" />
+
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

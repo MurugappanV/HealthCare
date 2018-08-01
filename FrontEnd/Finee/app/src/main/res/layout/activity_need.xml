@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/logo3"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+
+        <EditText
+            android:id="@+id/pid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:fontFamily="sans-serif-light"
+            android:hint="Patient ID"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+
+        <EditText
+            android:id="@+id/pname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:fontFamily="sans-serif-light"
+            android:hint="Patient Name"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+
+        <EditText
+            android:id="@+id/phospital"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:fontFamily="sans-serif-light"
+            android:hint="Hospital Name"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+
+        <EditText
+            android:id="@+id/pdoctor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:fontFamily="sans-serif-light"
+            android:hint="Doctor Name"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+
+        <EditText
+            android:id="@+id/poperation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:fontFamily="sans-serif-light"
+            android:hint="Operation Name"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+
+        <EditText
+            android:id="@+id/opamount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:fontFamily="sans-serif-light"
+            android:hint="Operation Fees"
+            android:textColor="#000000"
+            android:textSize="17dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/picDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pic Date for operation"
+            android:onClick="datePicker"
+            android:background="@drawable/button_tranparent"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+    <Button
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="30dp"
+        android:text="SEND"
+        android:background="@drawable/button_tranparent"
+        android:id="@+id/send" />
+
+
+        <Button
+            android:id="@+id/dcan"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/button_tranparent"
+            android:text="Cancel"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+</LinearLayout>

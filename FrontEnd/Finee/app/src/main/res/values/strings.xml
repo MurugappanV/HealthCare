@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Fine_Fettle</string>
+    <string name="welcome">WELCOME</string>
+    <string name="password">PASSWORD</string>
+    <string name="username">USERNAME</string>
+    <string name="login">LOGIN</string>
+    <string name="set_reminder">set reminder</string>
+    <string name="fine_fettle">FINE FETTLE</string>
+    <string name="first_name">First Name :</string>
+    <string name="VERY_SEVERELY_UNDERWEIGHT">VERY SEVERELY UNDER WEIGHT</string>
+    <string name="SEVERELY_UNDERWEIGHT">SEVERELY UNDERWEIGHT </string>
+    <string name="UNDERWEIGHT">UNDER WEIGHT</string>
+    <string name="NORMAL">NORMAL</string>
+    <string name="OVERWEIGHT">OVERWEIGHT</string>
+    <string name="OBESE_CLASS_I">OBESE CLASS I</string>
+    <string name="OBESE_CLASS_II">OBESE CLASS II</string>
+    <string name="OBESE_CLASS_III">OBESE CLASS III</string>
+    <string name="title_activity_maps">FINE-FETTLE</string>
+    <string name="sign_up">SIGN UP</string>
+
+
+
+    <string-array name="dropdown">
+        <item>CHOOSE THE BLOOD GROUP</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+
+
+
+    </string-array>
+</resources>

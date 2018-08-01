@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.fine_fettle.Blood"
+    android:background="@drawable/logo3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="80sp"
+            android:text="BLOOD REQUEST"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvView"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tvView1"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <Spinner
+            android:id="@+id/blood"
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+            android:entries="@array/dropdown"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70sp"
+            android:id="@+id/rating"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/request"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="REQUEST"
+            android:background="@drawable/button_tranparent"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
