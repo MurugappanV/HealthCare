@@ -9,11 +9,12 @@ import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 import android.widget.Toast;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -22,7 +23,7 @@ public class PersonInfoList extends AppCompatActivity {
 
     private ProgressDialog pDialog;
     private ListView lv;
-    TextView tvView;
+    String username;
 
     ArrayList<HashMap<String, String>> contactList;
 
@@ -30,10 +31,8 @@ public class PersonInfoList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personinfolist);
-        tvView = findViewById(R.id.tvView);
         Intent intent = getIntent();
-        final String username = intent.getStringExtra("user");
-        tvView.setText(username);
+        username = intent.getStringExtra("user");
         contactList = new ArrayList<>();
         new Handler().execute();
         lv = findViewById(R.id.list);
@@ -62,7 +61,7 @@ public class PersonInfoList extends AppCompatActivity {
         protected Void doInBackground(Void... arg0) {
             JsonParser sh = new JsonParser();
             //String url= "http://192.168.43.194/u_profile_select.php?user="+tvView.getText().toString();
-            String url= "http://10.13.1.17/u_profile_select.php?user="+tvView.getText().toString();
+            String url= "http://10.13.1.17/u_profile_select.php?user="+username;
             //String url= "http://192.168.0.111/u_profile_select.php?user="+tvView.getText().toString();
            String jsonStr = sh.convertJson(url);
            System.out.println(url);
