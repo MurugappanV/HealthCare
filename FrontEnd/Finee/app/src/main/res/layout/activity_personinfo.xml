@@ -19,9 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:fontFamily="cursive"
+        android:fontFamily="@font/corpos_dem_regular"
         android:gravity="center_horizontal"
-        android:text="PERSONAL INFORMATION"
+        android:text="Personal Information"
         android:textColor="@color/black"
         android:textSize="30sp" />
     <ScrollView
@@ -137,7 +137,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="70"
                     android:gravity="left"
-                    android:text="gender"
+                    android:text="Gender"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
@@ -154,7 +154,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
-                        android:text="male" />
+                        android:text="Male" />
 
 
                     <RadioButton
