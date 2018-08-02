@@ -1,0 +1,202 @@
+#overlay_reg_heart, #overlay_reg_brain,#overlay_reg_kidney,#overlay_reg_nervous,#overlay_reg_lungs
+{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+#overlayback_reg
+{
+    background-color: white;
+    border-radius: 15px;
+    height: 300px;
+    width: 400px;
+    padding-left:10px;
+}
+#overlayback
+{
+    background-color: white;
+    border-radius: 15px;
+    height: 500px;
+    width: 650px;
+    padding-left:10px;
+}
+#close
+{
+    height: 16px;
+    width: 16px;
+}
+#sign
+{
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+}
+hr
+{
+    border-width: 3px;
+}
+#side
+{
+    float: left;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+    -webkit-box-shadow: 0px 0px 20px #000;
+    -moz-box-shadow: 0px 0px 20px #000;
+    -ms-box-shadow: 0px 0px 20px #000;
+    -o-box-shadow: 0px 0px 20px #000;
+    box-shadow: 0px 0px 20px #000;
+}
+#overinput
+{
+    margin-left:  32px;
+}
+#overinput1
+{
+    margin-left:  18px;
+}
+.overinput
+{
+    height: 20px;
+    width: 230px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 0px 10px #ff7f00;
+    -moz-box-shadow: inset 0px 0px 10px #ff7f00;
+    -ms-box-shadow: inset 0px 0px 10px #ff7f00;
+    -o-box-shadow: inset 0px 0px 10px #ff7f00;
+    box-shadow: inset 0px 0px 10px #ff7f00;
+    border-color: rgba(0,0,0,0);
+}
+#oversign
+{
+    margin-left:80px;
+    height: 35px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #ff0059;
+    border-color: #ff0059;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    -ms-box-shadow: 0px 0px 10px #000;
+    -o-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+}
+#form
+{
+    height: 160px;
+    border-radius: 5px;
+    margin-left: 230px;
+    margin-bottom: 20px;
+    align-content: center;
+    margin-right: 10px;
+    -webkit-box-shadow: inset 0px 0px 200px #ff00ee,0px 0px 20px #000;
+    -moz-box-shadow: inset 0px 0px 200px #ff00ee,0px 0px 20px #000;
+    -ms-box-shadow: inset 0px 0px 200px #ff00ee,0px 0px 20px #000;
+    -o-box-shadow: inset 0px 0px 200px #ff00ee,0px 0px 20px #000;
+    box-shadow: inset 0px 0px 200px #ff00ee,0px 0px 20px #000;
+}
+#forminside
+{
+    padding-top: 10px;
+    padding-left: 50px;
+}
+#p
+{
+    color: black;
+    font-weight: bold;
+}
+.div{
+    float: left;
+}
+td
+{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #4286f4;
+    -webkit-box-shadow: inset 0 0 30px#fff;
+    -moz-box-shadow: inset 0 0 30px#fff;
+    box-shadow: inset 0 0 30px#fff;
+    height:40px;
+    width: 190px;
+    font-family:Calibri;
+    font-weight:bold;
+    font-size: 20px;
+    padding-left: 10px;
+}
+#special
+{
+    float: left;
+    margin: 50px;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    box-shadow: 0 0 50px #fff,inset 0 0 100px#fff;
+
+}
+#special:hover
+{
+    box-shadow: inset 0 0 100px#000;
+    height: 200px;
+    width: 200px;
+    transition: .5s ease ;
+}
+#button
+{
+    height:60px;
+    width: 150px;
+    -webkit-box-shadow: 0 0 30px #fff ;
+    -moz-box-shadow: 0 0 30px #fff ;
+    box-shadow: 0 0 30px #fff ;
+    font-size:20px;
+    display: inline-block;
+    float: left;
+    margin: 20px;
+
+}
+#button,#submit
+{
+
+    background: #000882;
+    color: white;
+    border-color: #000882;
+    border-radius: 5px;
+}
+#button:hover, #submit:hover
+{
+    background: #fff;
+    color: #000882;
+    font-size:20px;
+    border-color: #fff;
+    -webkit-box-shadow: 0 0 30px #000 ;
+    -moz-box-shadow: 0 0 30px #000 ;
+    box-shadow: 0 0 30px #000 ;
+    transition: .5s ease;
+    border-radius: 5px;
+}
