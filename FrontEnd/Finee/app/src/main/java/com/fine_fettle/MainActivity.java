@@ -137,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("pass", pass);
                     intent.putExtra("user", username.getText().toString());
                     startActivity(intent);
+                    finish();
                 }
 
             } catch (JSONException e) {

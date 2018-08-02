@@ -46,11 +46,9 @@ public class Personhome extends AppCompatActivity{
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                     Intent intent = new Intent(Personhome.this, PersonInfo.class);
                     intent.putExtra("user", tvView.getText().toString());
                     startActivity(intent);
-                    finish();
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
