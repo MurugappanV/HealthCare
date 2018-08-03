@@ -1,122 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:padding="10dp"
-    tools:context="com.fine_fettle.PersonInfo">
+    android:background="@drawable/app_bg1"
+    android:paddingTop="30dp"
+    tools:context="com.fine_fettle.MainActivity"
+    android:orientation="vertical">
 
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="@font/corpos_dem_regular"
-        android:gravity="center_horizontal"
-        android:text="Personal Information"
-        android:textColor="@color/black"
-        android:textSize="30sp" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:src="@drawable/sign_up"/>
+
+        <TextView
+            android:id="@+id/cance"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FF00ADE7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="Personal Information"
+            android:textSize="20sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_weight="1"
+        android:layout_height="0dp">
 
         <LinearLayout
             android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:orientation="vertical">
 
-            <LinearLayout
+            <EditText
+                android:id="@+id/fname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="100">
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="First Name"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="textPersonName"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="First Name : "
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:fontFamily="cursive"/>
-
-                <EditText
-                    android:id="@+id/fname"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="#000000"
-                    android:textSize="17sp" />
-            </LinearLayout>
-            <LinearLayout
+            <EditText
+                android:id="@+id/lname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="Last Name"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="textPersonName"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="Last Name : "
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:fontFamily="cursive"/>
-
-                <EditText
-                    android:id="@+id/lname"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="#000000"
-                    android:textSize="17sp" />
-            </LinearLayout>
-
-
-            <LinearLayout
+            <EditText
+                android:id="@+id/age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="Age : "
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:fontFamily="cursive"/>
-
-                <EditText
-                    android:id="@+id/age"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="#000000"
-                    android:textSize="17dp" />
-            </LinearLayout>
-
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="Age"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="number"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -128,13 +99,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="70"
-                    android:gravity="left"
+                    android:layout_weight="80"
+                    android:gravity="center_vertical"
                     android:text="Gender"
                     android:textColor="#000000"
-                    android:textSize="17dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
-                    android:fontFamily="cursive"/>
+                    android:fontFamily="@font/roboto_medium"/>
                 <RadioGroup
                     android:id="@+id/gender_radio_group"
                     android:layout_width="wrap_content"
@@ -147,7 +118,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
-                        android:text="Male" />
+                        android:text="Male"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/roboto_medium" />
 
 
                     <RadioButton
@@ -156,187 +129,96 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="13dp"
                         android:layout_marginStart="13dp"
-                        android:text="Female" />
+                        android:text="Female"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/roboto_medium" />
 
                     <RadioButton
                         android:id="@+id/radioButton3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/dmob"
-                        android:text="Others" />
+                        android:text="Others"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/roboto_medium" />
                 </RadioGroup>
 
             </LinearLayout>
 
-
-            <LinearLayout
+            <EditText
+                android:id="@+id/dob"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="Date of Birth"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="date"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="DOB : "
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:fontFamily="cursive"/>
 
-                <EditText
-                    android:id="@+id/dob"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="#000000"
-                    android:textSize="17dp" />
-            </LinearLayout>
-
-            <LinearLayout
+            <EditText
+                android:id="@+id/bgroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="B Group : "
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:fontFamily="cursive"/>
-
-                <EditText
-                    android:id="@+id/bgroup"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="#000000"
-                    android:textSize="17dp" />
-            </LinearLayout>
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="Blood group"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="textPersonName"/>
 
 
-            <LinearLayout
+
+            <EditText
+                android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="Address"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="textPostalAddress"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="Address"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:fontFamily="cursive"/>
 
-                <EditText
-                    android:id="@+id/address"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="#000000"
-                    android:textSize="17dp" />
-            </LinearLayout>
-            <LinearLayout
+            <EditText
+                android:id="@+id/city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="City"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="textPostalAddress"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="City"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:fontFamily="cursive"/>
 
-                <EditText
-                    android:id="@+id/city"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="#000000"
-                    android:textSize="17dp" />
-            </LinearLayout>
-
-            <LinearLayout
+            <EditText
+                android:id="@+id/pincode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="16sp"
+                android:hint="Pin code"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="number"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="Pincode : "
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:fontFamily="cursive"/>
-
-                <EditText
-                    android:id="@+id/pincode"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="#000000"
-                    android:textSize="17dp" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_marginTop="30dp"
-                    android:text="UPDATE"
-                    android:background="@drawable/button_tranparent"
-                    android:id="@+id/send" />
-
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"
+        android:text="UPDATE"
+        android:background="@drawable/button_tranparent"
+        android:id="@+id/send" />
 </LinearLayout>
