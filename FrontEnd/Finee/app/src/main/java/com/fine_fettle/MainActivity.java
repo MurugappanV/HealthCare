@@ -2,6 +2,7 @@ package com.fine_fettle;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -53,15 +54,15 @@ public class MainActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"WELCOME",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, Personhome.class);
-                intent.putExtra("id","1003");
-
-                intent.putExtra("user", "Valliyappan");
-                intent.putExtra("pass", "");
-                startActivity(intent);
-                finish();
-                //new mymethod().execute();
+                Toast.makeText(MainActivity.this,"Authorizing user",Toast.LENGTH_SHORT).show();
+                new mymethod().execute();
+//                Intent intent = new Intent(MainActivity.this, Personhome.class);
+//                intent.putExtra("id","1003");
+//
+//                intent.putExtra("user", "Valliyappan");
+//                intent.putExtra("pass", "");
+//                startActivity(intent);
+//                finish();
             }
         });
 
@@ -138,6 +139,12 @@ public class MainActivity extends AppCompatActivity {
                    name = jsonObj.getString("uname");
                     pass1 =jsonObj.getString("password");
                 if (name.equals(user) && pass1.equals(pass)) {
+                    Toast.makeText(getApplicationContext(), "Successfully logged in", Toast.LENGTH_LONG).show();
+                    SharedPreferences.Editor editor = getSharedPreferences("LoginInfo", MODE_PRIVATE).edit();
+                    editor.putString("name", name);
+                    editor.putString("pass", pass);
+                    editor.putInt("id", id);
+                    editor.apply();
                     Intent intent = new Intent(MainActivity.this, Personhome.class);
                     intent.putExtra("id",jsonObj.getString("u_id"));
 
@@ -146,15 +153,18 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("user", username.getText().toString());
                     startActivity(intent);
                     finish();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Please enter valid username and password", Toast.LENGTH_LONG).show();
                 }
 
             } catch (JSONException e) {
+                Toast.makeText(getApplicationContext(), "Please enter valid username and password", Toast.LENGTH_LONG).show();
                 e.printStackTrace();
             }
            // Toast.makeText(getApplicationContext(), "Invalid Username and Password" + result,
                    // Toast.LENGTH_LONG).show();
-            Toast.makeText(getApplicationContext(), "Id" + id,
-                    Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(), "Id" + id,
+//                    Toast.LENGTH_LONG).show();
         }
 
 
