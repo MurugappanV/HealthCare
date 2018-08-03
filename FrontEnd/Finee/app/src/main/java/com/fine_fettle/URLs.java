@@ -6,8 +6,8 @@ package com.fine_fettle;
 
 class URLs {
 
-    //private static final String ROOT_URL = "http://192.168.43.194/";
-    private static final String ROOT_URL = "http://192.168.43.59/";
+    private static final String ROOT_URL = "http://192.168.43.194/";
+   // private static final String ROOT_URL = "http://192.168.43.59/";
     //private static final String ROOT_URL = "http://192.168.0.111/";
     static final String URL_REGISTER = ROOT_URL+"docapp.php";
     static final String REGISTER=ROOT_URL+"userreg.php";

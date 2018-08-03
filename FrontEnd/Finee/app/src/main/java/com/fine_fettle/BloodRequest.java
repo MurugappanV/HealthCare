@@ -13,12 +13,14 @@ import android.widget.Toast;
 
 import java.util.HashMap;
 
-public class BloodRequest extends AppCompatActivity { TextView tvView,tv;
+public class BloodRequest extends AppCompatActivity {
+    TextView tvView, tv;
 
     Button req;
     Spinner spinner;
     RatingBar ratingBar;
-    String spin,rate;
+    String spin, rate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +47,7 @@ public class BloodRequest extends AppCompatActivity { TextView tvView,tv;
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(BloodRequest.this, BloodView.class);
-                rate=String.valueOf(ratingBar.getRating());
+                rate = String.valueOf(ratingBar.getRating());
                 intent.putExtra("user", tvView.getText().toString());
                 intent.putExtra("id", tv.getText().toString());
                 submitReq(view);
@@ -54,41 +56,43 @@ public class BloodRequest extends AppCompatActivity { TextView tvView,tv;
         });
     }
 
-        private void submitReq (View view){
-            HashMap<String, String> params = new HashMap<>();
-            params.put("u_name", tvView.getText().toString());
-            params.put("id", tv.getText().toString());
-            params.put("req_blood_grp", spin);
-            params.put("rate", rate);
-            System.out.println("NAME:" + tvView.getText().toString() + "ID:" + tv.getText().toString() + "BLOOD:" + spin + "RATE:" + rate);
-            Toast.makeText(getApplicationContext(), "Hi: " + params.get("u_name") + "Your Blood Request is sent", Toast.LENGTH_LONG).show();
-            PostRequestHandler postRequestHandler = new PostRequestHandler(URLs.BLOODREQ, params);
-            postRequestHandler.execute();
-            employeeList(view);
+    private void submitReq(View view) {
+        HashMap<String, String> params = new HashMap<>();
+        params.put("u_name", tvView.getText().toString());
+        params.put("id", tv.getText().toString());
+        params.put("req_blood_grp", spin);
+        params.put("rate", rate);
+        System.out.println("NAME:" + tvView.getText().toString() + "ID:" + tv.getText().toString() + "BLOOD:" + spin + "RATE:" + rate);
+        Toast.makeText(getApplicationContext(), "Hi: " + params.get("u_name") + "Your Blood Request is sent", Toast.LENGTH_LONG).show();
+        PostRequestHandler postRequestHandler = new PostRequestHandler(URLs.BLOODREQ, params);
+        postRequestHandler.execute();
+        employeeList(view);
+    }
+
+    public void employeeList(View view) {
+        Intent intent = new Intent(BloodRequest.this, BloodView.class);
+        intent.putExtra("user", tvView.getText().toString());
+        intent.putExtra("id", tv.getText().toString());
+        startActivity(intent);
+    }
+
+    private class CustomOnItemSelectedListener implements android.widget.AdapterView.OnItemSelectedListener {
+
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            spin = String.valueOf(spinner.getSelectedItem());
+            Toast.makeText(BloodRequest.this,
+                    "OnClickListener : " +
+                            "\nSpinner 1 : " + String.valueOf(spinner.getSelectedItem()),
+                    Toast.LENGTH_SHORT).show();
         }
-        public void employeeList (View view){
-            Intent intent = new Intent(BloodRequest.this, BloodView.class);
-            intent.putExtra("user", tvView.getText().toString());
-            intent.putExtra("id", tv.getText().toString());
-            startActivity(intent);
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
         }
+    }
 
-        private class CustomOnItemSelectedListener implements android.widget.AdapterView.OnItemSelectedListener {
-
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                spin=String.valueOf(spinner.getSelectedItem());
-                Toast.makeText(BloodRequest.this,
-                        "OnClickListener : " +
-                                "\nSpinner 1 : " + String.valueOf(spinner.getSelectedItem()),
-                        Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        }
 
 
 }

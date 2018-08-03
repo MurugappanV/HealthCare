@@ -9,4 +9,5 @@ if($con->connect_error)
 	die("Connection failed:".mysqli_connect_errno);
 //else
 	//echo "Connected";
+
 ?>
