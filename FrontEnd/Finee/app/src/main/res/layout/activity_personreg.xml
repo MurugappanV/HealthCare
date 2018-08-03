@@ -1,86 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fine_fettle.Personreg"
-    android:background="@drawable/logo3"
+    android:background="@drawable/app_bg1"
+    tools:context="com.fine_fettle.MainActivity"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        android:fadingEdgeLength="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:src="@drawable/sign_up"/>
+
+            <TextView
+                android:id="@+id/cance"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:textColor="#FF00ADE7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:fontFamily="@font/corpos_dem_regular"
+                android:text="User Information"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+
+
+
         <EditText
-        android:id="@+id/puser"
+            android:id="@+id/puser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:hint="Username"
+            android:fontFamily="@font/roboto_medium"
+            android:textColorHint="#73696868"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/pemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:hint="Email"
+            android:fontFamily="@font/roboto_medium"
+            android:textColorHint="#73696868"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/pmobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:hint="Mobile Number"
+            android:fontFamily="@font/roboto_medium"
+            android:textColorHint="#73696868"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:hint="Password"
+            android:fontFamily="@font/roboto_medium"
+            android:textColorHint="#73696868"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/p1pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:hint="Retype password"
+            android:fontFamily="@font/roboto_medium"
+            android:textColorHint="#73696868"
+            android:inputType="textPersonName"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:ems="10"
-        android:hint="@string/username"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="108dp" />
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center">
 
-    <EditText
-        android:id="@+id/pemail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:ems="10"
-        android:hint="email"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="161dp" />
-    <EditText
-        android:id="@+id/pmobile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:ems="10"
-        android:hint="mobile_number"
-        android:inputType="phone"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="307dp" />
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#FF00ADE7"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_tranparent"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="Sign Up"
+            android:textSize="15sp" />
 
-    <EditText
-        android:id="@+id/pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:ems="10"
-        android:hint="type_password"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="307dp" />
+        <Button
+            android:id="@+id/cancel"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FF00ADE7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:background="@drawable/button_tranparent"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="Cancel"
+            android:textSize="15sp" />
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/p1pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:ems="10"
-        android:hint="re_type_password1"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="353dp" />
-
-
-    <Button
-        android:id="@+id/signup"
-        android:layout_width="136dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/button_tranparent"
-        android:text="Sign Up" />
-
-    <Button
-        android:id="@+id/cancel"
-        android:layout_width="136dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_tranparent"
-        android:text="Cancel" />
-
-
-
-</LinearLayout>
+</RelativeLayout>
 

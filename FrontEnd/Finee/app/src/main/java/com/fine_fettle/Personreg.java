@@ -51,6 +51,13 @@ public class Personreg extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Hi !", Toast.LENGTH_SHORT).show();
             }
         });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
 
@@ -105,5 +112,6 @@ public class Personreg extends AppCompatActivity {
     public void employeeList(View view) {
         Intent intent = new Intent(Personreg.this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 }
