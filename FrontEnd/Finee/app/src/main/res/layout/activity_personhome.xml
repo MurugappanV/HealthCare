@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/White"
+    android:background="@drawable/app_bg1"
+    tools:context="com.fine_fettle.MainActivity"
+    android:orientation="vertical">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+        android:layout_weight="1"
     tools:context="com.fine_fettle.Personhome"
     xmlns:tools="http://schemas.android.com/tools">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:orientation="vertical">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -18,16 +31,18 @@
                 android:layout_marginTop="40sp">
 
                 <LinearLayout
-                    android:layout_width="120sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/b_p_info"
-                        android:layout_width="60sp"
-                        android:layout_height="60sp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/logo" />
+                        android:background="@drawable/personal_info"
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -42,16 +57,17 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="120sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/b_p_hospital"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/hospital" />
+                        android:background="@drawable/hospital_icon" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -65,17 +81,28 @@
                         android:textSize="15sp" />
                 </LinearLayout>
 
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
                 <LinearLayout
-                    android:layout_width="120sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/b_p_lab"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/test" />
+                        android:background="@drawable/doctor_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -89,29 +116,23 @@
                         android:fontFamily="@font/roboto_medium" />
                 </LinearLayout>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-
                 <LinearLayout
-                    android:layout_width="120sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/b_p_appointment"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/appointment" />
+                        android:background="@drawable/appoinment_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
                         android:layout_gravity="center"
                         android:fontFamily="@font/roboto_medium"
                         android:text="Appoinment"
@@ -119,21 +140,31 @@
                         android:textSize="15sp" />
                 </LinearLayout>
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
                 <LinearLayout
-                    android:layout_width="120sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/b_p_ambulance"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/ambulance" />
+                        android:background="@drawable/ambulance_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
                         android:layout_gravity="center"
                         android:fontFamily="@font/roboto_medium"
                         android:text="Ambulance"
@@ -143,20 +174,22 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="120sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/b_p_chat"
-                        android:layout_width="60dp"
+                        android:layout_width="100dp"
                         android:layout_gravity="center"
-                        android:layout_height="60dp"
-                        android:background="@drawable/stethescope" />
+                        android:layout_height="100dp"
+                        android:background="@drawable/chat_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
                         android:text="Chat"
                         android:layout_gravity="center"
                         android:fontFamily="@font/roboto_medium"
@@ -169,24 +202,26 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="120sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/b_p_health"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/health" />
+                        android:background="@drawable/health_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
                         android:text="Health"
                         android:layout_gravity="center"
                         android:fontFamily="@font/roboto_medium"
@@ -196,20 +231,22 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="120sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/b_p_bloodbank"
-                        android:layout_width="60dp"
+                        android:layout_width="100dp"
                         android:layout_gravity="center"
-                        android:layout_height="60dp"
-                        android:background="@drawable/blood" />
+                        android:layout_height="100dp"
+                        android:background="@drawable/blood_bank" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
                         android:text="Bloodbank"
                         android:layout_gravity="center"
                         android:fontFamily="@font/roboto_medium"
@@ -218,21 +255,32 @@
                         android:textSize="15sp" />
                 </LinearLayout>
 
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
                 <LinearLayout
-                    android:layout_width="120sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/b_p_order"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/medicine" />
+                        android:background="@drawable/medicine_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
                         android:text="Order Medicine"
                         android:layout_gravity="center"
                         android:fontFamily="@font/roboto_medium"
@@ -240,29 +288,24 @@
                         android:textColor="@color/black"
                         android:textSize="15sp" />
                 </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="120sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/b_p_need"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/contact" />
+                        android:background="@drawable/help_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
                         android:text="Help Me"
                         android:layout_gravity="center"
                         android:fontFamily="@font/roboto_medium"
@@ -271,21 +314,32 @@
                         android:textSize="15sp" />
                 </LinearLayout>
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:orientation="horizontal">
+
                 <LinearLayout
-                    android:layout_width="120sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/b_p_tips"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/suitcase" />
+                        android:background="@drawable/tips_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
                         android:text="Tips"
                         android:layout_gravity="center"
                         android:fontFamily="@font/roboto_medium"
@@ -295,20 +349,22 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="120sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <Button
                         android:id="@+id/b_p_bmi"
-                        android:layout_width="60dp"
+                        android:layout_width="100dp"
                         android:layout_gravity="center"
-                        android:layout_height="60dp"
-                        android:background="@drawable/firstaid" />
+                        android:layout_height="100dp"
+                        android:background="@drawable/bmi_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
                         android:text="Check BMI"
                         android:layout_gravity="center"
                         android:fontFamily="@font/roboto_medium"
@@ -319,3 +375,31 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/b_p_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#FF00ADE7"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_tranparent"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="LogOut"
+            android:textSize="15sp"
+            android:elevation="10dp"
+            android:stateListAnimator="@null"/>
+
+    </LinearLayout>
+    </LinearLayout>
