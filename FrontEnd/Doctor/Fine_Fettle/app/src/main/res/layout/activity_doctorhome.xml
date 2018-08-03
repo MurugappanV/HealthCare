@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/White"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context="com.example.surya.fine_fettle.Doctorhome">
+
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/secondary"
+        android:layout_gravity="center"
+        android:text="Welcome "
+        android:textSize="@dimen/secondary_txt"
+        tools:layout_editor_absoluteX="110dp"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteY="105dp" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/secondary"
+        android:layout_marginEnd="@dimen/secondary"
+        android:padding="@dimen/normal1"
+
+        android:layout_marginTop="@dimen/medium"
+        android:layout_gravity="center"
+        android:background="@android:color/holo_blue_light"
+        android:text="DOCTOR INFO"
+        android:textColor="@color/White"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteY="387dp" />
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/secondary"
+        android:layout_marginEnd="@dimen/secondary"
+        android:padding="@dimen/normal1"
+
+        android:layout_marginTop="@dimen/secondary"
+        android:layout_gravity="center"
+        android:background="@android:color/holo_blue_light"
+        android:text="Alarm for Emergency"
+        android:textColor="@color/White"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/secondary"
+        android:layout_marginEnd="@dimen/secondary"
+        android:padding="@dimen/normal1"
+
+        android:layout_marginTop="@dimen/secondary"
+        android:layout_gravity="center"
+        android:background="@android:color/holo_blue_light"
+        android:text="Patient Booking History"
+        android:textColor="@color/White"
+        tools:layout_editor_absoluteX="193dp"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteY="386dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/secondary"
+        android:layout_marginEnd="@dimen/secondary"
+        android:padding="@dimen/normal1"
+
+        android:layout_marginTop="@dimen/secondary"
+        android:layout_gravity="center"
+        android:background="@android:color/holo_blue_light"
+        android:text="Patients List"
+        android:textColor="@color/White"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteY="533dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/secondary"
+        android:layout_marginEnd="@dimen/secondary"
+        android:padding="@dimen/normal1"
+
+        android:layout_marginTop="@dimen/secondary"
+        android:layout_gravity="center"
+        android:background="@android:color/holo_blue_light"
+        android:text=" Add Prescrition"
+        android:textColor="@color/White"
+        tools:ignore="HardcodedText" />
+</LinearLayout>

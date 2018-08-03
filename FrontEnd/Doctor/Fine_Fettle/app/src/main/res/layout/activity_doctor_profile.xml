@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    tools:context=".DoctorProfileActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                android:background="@android:color/transparent">
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+                    <ImageView
+                        android:id="@+id/img_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/primary"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="@dimen/lite"
+                        android:src="@drawable/ic_left_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/lite"
+                        android:maxLines="1"
+                        android:text="Profile"
+                        android:textColor="@color/primary_txt"
+                        android:textSize="@dimen/secondary_txt"
+                        tools:ignore="HardcodedText" />
+
+                </android.support.v7.widget.Toolbar>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/man" />
+
+            </android.support.design.widget.AppBarLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4" />
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:background="#ffff">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="@dimen/lite"
+                    app:cardElevation="@dimen/lite">
+
+                    <android.support.v4.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+
+                                android:id="@+id/usr_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/ic_user"
+                                android:text="Suriya"
+                                android:textColor="@color/secondary_txt"
+                                android:textSize="15sp"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/usr_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/ic_id_card"
+                                android:text="DOC 001"
+                                android:textColor="@color/secondary_txt"
+                                android:textSize="15sp"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/usr_special"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/doctor"
+                                android:text="cardio"
+                                android:textColor="@color/secondary_txt"
+                                android:textSize="15sp"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+
+                                android:id="@+id/usr_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/ic_phone"
+                                android:text="98755556666"
+                                android:textColor="@color/secondary_txt"
+                                android:textSize="15sp"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                            android:id="@+id/usr_doc_clinic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:drawablePadding="10dp"
+                            android:drawableStart="@drawable/ic_doctor"
+                            android:text="K S Hospital"
+                            android:textColor="@color/secondary_txt"
+
+                            android:textSize="15sp"
+                            tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/usr_doc_gender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/ic_gender"
+                                android:text="Male"
+                                android:textColor="@color/secondary_txt"
+
+                                android:textSize="15sp"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
+                                android:id="@+id/usr_doc_dob"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/ic_calendar"
+                                android:text="1-01-1986"
+                                android:textColor="@color/secondary_txt"
+
+                                android:textSize="15sp"
+                                tools:ignore="HardcodedText" />
+                            <TextView
+                                android:id="@+id/usr_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+                                android:text=""
+                                android:textColor="@color/secondary_txt"
+
+                                android:textSize="15sp"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+                    </android.support.v4.widget.NestedScrollView>
+                </android.support.v7.widget.CardView>
+            </android.support.design.widget.CoordinatorLayout>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</FrameLayout>
+
+
+
+

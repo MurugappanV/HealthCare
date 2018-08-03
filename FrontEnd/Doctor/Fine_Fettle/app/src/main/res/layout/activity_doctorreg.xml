@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/logo3"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.surya.fine_fettle.Doctorreg">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/secondary"
+            android:fontFamily="serif"
+            android:gravity="center_vertical"
+            android:padding="@dimen/duplex"
+            android:text="@string/register"
+            android:textColor="@color/black"
+            android:textSize="@dimen/secondary_txt1" />
+
+        <EditText
+            android:id="@+id/dname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/secondary"
+            android:hint="Your Name"
+            android:inputType="textCapWords"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/dhos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:hint="@string/hospital_or_clinic_name"
+            android:inputType="textCapWords" />
+
+        <EditText
+            android:id="@+id/doc_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:hint="@string/doctor_id"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+
+        <EditText
+            android:id="@+id/d1user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:hint="@string/create_username"
+            android:inputType="textCapWords" />
+
+        <EditText
+            android:id="@+id/demail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:text="@string/gender"
+            android:textSize="@dimen/secondary_txt" />
+
+        <RadioGroup
+            android:id="@+id/gender_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/duplex"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/secondary"
+                android:text="@string/male" />
+
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium"
+                android:text="@string/female" />
+
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/dmob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:maxLength="10"
+            android:hint="@string/mobile_no"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/d1pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:hint="@string/type_password"
+            android:inputType="textPassword"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="362dp" />
+
+        <EditText
+            android:id="@+id/ddate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:focusable="false"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:hint="@string/date_of_birth"
+            android:inputType="date"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="299dp" />
+        <EditText
+            android:id="@+id/dage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:hint="@string/age"
+            android:inputType="number"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="299dp" />
+        <Spinner
+            android:id="@+id/dspecial"
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+            android:entries="@array/dropdown"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/dexp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:hint="@string/experience"
+            android:inputType="number"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="299dp" />
+        <EditText
+            android:id="@+id/dblood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:hint="@string/blood_group"
+            android:inputType="text"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="299dp" />
+        <EditText
+            android:id="@+id/daddr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:hint="@string/address"
+            android:inputType="textMultiLine"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="299dp" />
+        <EditText
+            android:id="@+id/dcity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:hint="@string/city"
+            android:inputType="text"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="299dp" />
+        <EditText
+            android:id="@+id/dpincode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:hint="@string/pincode"
+            android:inputType="number"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="299dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+        <Button
+            android:id="@+id/dsin"
+            android:layout_width="0dp"
+            android:layout_marginEnd="@dimen/lite"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/lite"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/extra_duplex"
+            android:background="@android:color/holo_blue_light"
+            android:text="@string/sign_up"
+            tools:layout_editor_absoluteX="207dp"
+            tools:layout_editor_absoluteY="454dp" />
+
+            <Button
+                android:id="@+id/dcan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/lite"
+                android:layout_marginStart="@dimen/lite"
+                android:layout_marginTop="@dimen/extra_duplex"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_light"
+                android:text="@string/cancel" />
+
+</LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+</android.support.v4.widget.NestedScrollView>

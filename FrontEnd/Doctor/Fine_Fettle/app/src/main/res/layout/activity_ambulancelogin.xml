@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logo3"
+    tools:context="com.example.surya.fine_fettle.Doctorlogin">
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="136dp"
+        android:text="WELCOME AMBULANCE"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/auser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="USERNAME"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/apass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/auser"
+        android:layout_alignStart="@+id/auser"
+        android:layout_below="@+id/auser"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="PASSWORD"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/ab1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ab2"
+        android:layout_alignStart="@+id/ab2"
+        android:layout_below="@+id/apass"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="LOGIN" />
+
+    <Button
+        android:id="@+id/ab2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/ab1"
+        android:layout_marginTop="72dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="REGISTER" />
+</RelativeLayout>

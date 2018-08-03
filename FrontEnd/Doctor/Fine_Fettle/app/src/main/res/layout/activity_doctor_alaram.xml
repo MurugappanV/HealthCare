@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardviewBg"
+    android:orientation="vertical"
+    tools:context=".DoctorAlaramActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/White">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/lite"
+            android:src="@drawable/ic_left_arrow"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:text="Emergency Message"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/secondary_txt"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_emergency"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/duplex"
+        android:paddingLeft="@dimen/duplex"
+        android:paddingRight="@dimen/duplex"
+        android:paddingTop="@dimen/duplex"
+        tools:context=".BusSearchDetailActivity" />
+
+</LinearLayout>

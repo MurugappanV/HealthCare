@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical"
+    tools:context=".DoctorMedicineActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/White">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/lite"
+            android:src="@drawable/ic_left_arrow"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:text="Prescription"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/secondary_txt"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/large"
+                android:layout_marginStart="@dimen/large"
+                android:layout_marginTop="@dimen/duplex"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:lineSpacingExtra="@dimen/primary"
+                    android:padding="@dimen/mini1"
+                    android:text="Patient Name"
+                    android:textColor="@color/cardviewhintfont"
+                    android:textSize="@dimen/small_txt"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,MissingPrefix" />
+
+
+                <EditText
+                    android:id="@+id/edit_patientname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_apply_line"
+                    android:inputType="textCapWords"
+                    android:maxLength="20"
+                    android:padding="@dimen/lite"
+                    android:singleLine="true"
+                    android:textColor="@color/secondary_txt"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText,LabelFor,MissingPrefix,TextFields" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/large"
+                android:layout_marginStart="@dimen/large"
+                android:layout_marginTop="@dimen/duplex"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:lineSpacingExtra="@dimen/primary"
+                    android:padding="@dimen/mini1"
+                    android:text="Patient ID"
+                    android:textColor="@color/cardviewhintfont"
+                    android:textSize="@dimen/small_txt"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,MissingPrefix" />
+
+
+                <EditText
+                    android:id="@+id/edit_patientage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_apply_line"
+                    android:inputType="textCapWords"
+                    android:maxLength="20"
+                    android:padding="@dimen/lite"
+                    android:singleLine="true"
+                    android:textColor="@color/secondary_txt"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText,LabelFor,MissingPrefix,TextFields" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/large"
+                android:layout_marginStart="@dimen/large"
+                android:layout_marginTop="@dimen/duplex"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:lineSpacingExtra="@dimen/primary"
+                    android:padding="@dimen/mini1"
+                    android:text="Patient Phone:"
+                    android:textColor="@color/cardviewhintfont"
+                    android:textSize="@dimen/small_txt"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,MissingPrefix" />
+
+
+                <EditText
+                    android:id="@+id/edit_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_apply_line"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:padding="@dimen/lite"
+                    android:singleLine="true"
+                    android:textColor="@color/secondary_txt"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText,LabelFor,MissingPrefix,TextFields" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/large"
+                android:layout_marginStart="@dimen/large"
+                android:layout_marginTop="@dimen/duplex"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:lineSpacingExtra="@dimen/primary"
+                    android:padding="@dimen/mini1"
+                    android:text="Date"
+                    android:textColor="@color/cardviewhintfont"
+                    android:textSize="@dimen/small_txt"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,MissingPrefix" />
+
+
+                <EditText
+                    android:id="@+id/edit_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_apply_line"
+                    android:inputType="textCapWords"
+                    android:maxLength="20"
+                    android:focusable="false"
+                    android:padding="@dimen/lite"
+                    android:singleLine="true"
+                    android:textColor="@color/secondary_txt"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText,LabelFor,MissingPrefix,TextFields" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/large"
+                android:layout_marginStart="@dimen/large"
+                android:layout_marginTop="@dimen/duplex"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:lineSpacingExtra="@dimen/primary"
+                    android:padding="@dimen/mini1"
+                    android:text="Patient Disease"
+                    android:textColor="@color/cardviewhintfont"
+                    android:textSize="@dimen/small_txt"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,MissingPrefix" />
+
+
+                <EditText
+                    android:id="@+id/edit_disease"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_apply_line"
+                    android:inputType="textCapWords"
+                    android:maxLength="20"
+                    android:padding="@dimen/lite"
+                    android:singleLine="true"
+                    android:textColor="@color/secondary_txt"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText,LabelFor,MissingPrefix,TextFields" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/large"
+                android:layout_marginStart="@dimen/large"
+                android:layout_marginTop="@dimen/duplex"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:lineSpacingExtra="@dimen/primary"
+                    android:padding="@dimen/mini1"
+                    android:text="Patient Stage"
+                    android:textColor="@color/cardviewhintfont"
+                    android:textSize="@dimen/small_txt"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,MissingPrefix" />
+
+
+                <EditText
+                    android:id="@+id/edit_stage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_apply_line"
+                    android:inputType="textCapWords"
+                    android:maxLength="20"
+                    android:padding="@dimen/lite"
+                    android:singleLine="true"
+                    android:textColor="@color/secondary_txt"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText,LabelFor,MissingPrefix,TextFields" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/large"
+                android:layout_marginStart="@dimen/large"
+                android:layout_marginTop="@dimen/duplex"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:lineSpacingExtra="@dimen/primary"
+                    android:padding="@dimen/mini1"
+                    android:text="Prescription"
+                    android:textColor="@color/cardviewhintfont"
+                    android:textSize="@dimen/small_txt"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,MissingPrefix" />
+
+
+                <EditText
+                    android:id="@+id/edit_Prescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_apply_line"
+                    android:inputType="textCapWords"
+                    android:maxLength="20"
+                    android:padding="@dimen/lite"
+                    android:singleLine="true"
+                    android:textColor="@color/secondary_txt"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText,LabelFor,MissingPrefix,TextFields" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_Submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/secondary"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/normal1"
+                android:text="Submit"
+                android:textColor="@color/White"
+                android:textSize="@dimen/default_txt"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logo3"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.example.surya.fine_fettle.Front">
+
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/medium"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_marginTop="@dimen/primary"
+        android:background="@android:color/holo_blue_light"
+        android:fontFamily="serif"
+        android:padding="@dimen/normal1"
+        android:text="@string/doctor_login"
+        android:textSize="@dimen/secondary_txt" />
+
+
+</LinearLayout>

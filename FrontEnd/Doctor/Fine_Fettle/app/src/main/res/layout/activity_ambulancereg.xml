@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logo3"
+    tools:context="com.example.surya.fine_fettle.Ambulancereg">
+
+    <EditText
+        android:id="@+id/aname"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/aemail"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/aemail"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:hint="Your Name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/anum"
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/aname"
+        android:layout_alignRight="@+id/aname"
+        android:layout_below="@+id/aname"
+        android:ems="10"
+        android:hint="Ambulace Veichle Number"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <EditText
+        android:id="@+id/a1user"
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/a1pass"
+        android:layout_alignStart="@+id/a1pass"
+        android:layout_below="@+id/anum"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Create Username"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="154dp" />
+
+    <EditText
+        android:id="@+id/aemail"
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/a1user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="EMAIL"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <EditText
+        android:id="@+id/amob"
+        android:layout_width="351dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/adate"
+        android:layout_alignStart="@+id/adate"
+        android:layout_below="@+id/aemail"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Mobile no"
+        android:inputType="phone"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="253dp" />
+
+    <EditText
+        android:id="@+id/a1pass"
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/aemail"
+        android:layout_alignRight="@+id/aemail"
+        android:layout_below="@+id/amob"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Type Password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <EditText
+        android:id="@+id/adate"
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/aemail"
+        android:layout_alignRight="@+id/aemail"
+        android:layout_below="@+id/a1pass"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Date Of Birth"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <EditText
+        android:id="@+id/aadd"
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/amob"
+        android:layout_alignRight="@+id/amob"
+        android:layout_below="@+id/adate"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPostalAddress"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="408dp" />
+
+    <Button
+        android:id="@+id/acan"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/asin"
+        android:layout_alignBottom="@+id/asin"
+        android:layout_alignLeft="@+id/ahos"
+        android:layout_alignStart="@+id/ahos"
+        android:background="@android:color/holo_blue_light"
+        android:text="Cancel"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="454dp" />
+
+    <Button
+        android:id="@+id/asin"
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/adate"
+        android:layout_alignRight="@+id/adate"
+        android:layout_below="@+id/ahos"
+        android:layout_marginTop="19dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Sign Up"
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="454dp" />
+
+    <EditText
+        android:id="@+id/ahos"
+        android:layout_width="344dp"
+        android:layout_height="41dp"
+        android:layout_alignEnd="@+id/asin"
+        android:layout_alignRight="@+id/asin"
+        android:layout_below="@+id/aadd"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:hint="Hospital or trust Name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="113dp" />
+
+
+</RelativeLayout>

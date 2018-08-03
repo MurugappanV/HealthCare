@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.surya.fine_fettle.Ambulancehome">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Ambulance Dashboard"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="105dp" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="332dp"
+        android:layout_height="75dp"
+
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="98dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="AMBULANCE INFO"
+        android:textColor="@color/White"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="387dp" />
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="332dp"
+        android:layout_height="75dp"
+
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="188dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Alarm for Emergency"
+        android:textColor="@color/White"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="333dp"
+        android:layout_height="78dp"
+
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="118dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="NORMAL ALERT"
+        android:textColor="@color/White"
+        tools:layout_editor_absoluteX="193dp"
+        tools:layout_editor_absoluteY="386dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="335dp"
+        android:layout_height="77dp"
+
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Patient  History"
+        android:textColor="@color/White"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="533dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="333dp"
+        android:layout_height="77dp"
+
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="211dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Hospital Message Box"
+        android:textColor="@color/White"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="534dp" />
+
+</RelativeLayout>

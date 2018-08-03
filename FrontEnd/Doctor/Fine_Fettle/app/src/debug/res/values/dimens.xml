@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="primary">12dp</dimen>
+    <dimen name="normal">16dp</dimen>
+    <dimen name="normal1">18dp</dimen>
+    <dimen name="normal2">20dp</dimen>
+    <dimen name="normal11">21dp</dimen>
+    <dimen name="secondary">24dp</dimen>
+    <dimen name="medium">36dp</dimen>
+    <dimen name="large">48dp</dimen>
+    <dimen name="extra_large">72dp</dimen>
+    <dimen name="mini">2dp</dimen>
+    <dimen name="mini1">3dp</dimen>
+    <dimen name="lite">4dp</dimen>
+    <dimen name="extra_lite">6dp</dimen>
+    <dimen name="duplex">8dp</dimen>
+    <dimen name="extra_duplex">10dp</dimen>
+    <dimen name="extra_duplex1">12dp</dimen>
+    <dimen name="minus_unit">-1dp</dimen>
+    <dimen name="unit">1dp</dimen>
+    <dimen name="half">0.5dp</dimen>
+    <dimen name="zero">0dp</dimen>
+
+    <dimen name="very_small_txt">10sp</dimen>
+    <dimen name="small_txt11">11sp</dimen>
+    <dimen name="small_txt">12sp</dimen>
+    <dimen name="semismall_txt">13sp</dimen>
+    <dimen name="default_txt">14sp</dimen>
+    <dimen name="default_txt1">15sp</dimen>
+    <dimen name="primary_txt">16sp</dimen>
+    <dimen name="primary_txt2">17sp</dimen>
+    <dimen name="primary_txt1">18sp</dimen>
+    <dimen name="secondary_txt">20sp</dimen>
+    <dimen name="secondary_txt22">22sp</dimen>
+    <dimen name="secondary_txt1">24sp</dimen>
+    <dimen name="medium_txt">30sp</dimen>
+    <dimen name="large_txt">36sp</dimen>
+
+    <dimen name="oops">200dp</dimen>
+    <dimen name="empty">196dp</dimen>
+    <dimen name="placeholder">150dp</dimen>
+    <dimen name="profile">56dp</dimen>
+    <dimen name="cancelled">64dp</dimen>
+    <dimen name="steps">100dp</dimen>
+    <dimen name="radius">100dp</dimen>
+    <dimen name="walkthrough">200dp</dimen>
+    <dimen name="slider">250dp</dimen>
+    <dimen name="input">16dp</dimen>
+    <dimen name="baggage">120dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+
+
+</resources>
