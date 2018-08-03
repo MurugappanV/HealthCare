@@ -54,7 +54,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"WELCOME",Toast.LENGTH_SHORT).show();
-                new mymethod().execute();
+                Intent intent = new Intent(MainActivity.this, Personhome.class);
+                intent.putExtra("id","1003");
+
+                intent.putExtra("user", "Valliyappan");
+                intent.putExtra("pass", "");
+                startActivity(intent);
+                finish();
+                //new mymethod().execute();
             }
         });
 
@@ -69,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 //URL url = new URL("http://192.168.43.194/user_login.php"); // here is your URL path
                 //URL url = new URL("http://192.168.43.59/user_login.php");
-                URL url = new URL("http://35.200.189.226/user_login.php");
+                URL url = new URL("http://10.13.1.17/user_login.php");
                 JSONObject postDataParams = new JSONObject();
                 postDataParams.put("user", user);
                 postDataParams.put("pass",pass);
