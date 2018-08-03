@@ -71,7 +71,7 @@
             android:hint="Email"
             android:fontFamily="@font/roboto_medium"
             android:textColorHint="#73696868"
-            android:inputType="textPersonName"/>
+            android:inputType="textEmailAddress"/>
 
         <EditText
             android:id="@+id/pmobile"
@@ -83,7 +83,7 @@
             android:hint="Mobile Number"
             android:fontFamily="@font/roboto_medium"
             android:textColorHint="#73696868"
-            android:inputType="textPersonName"/>
+            android:inputType="phone"/>
 
         <EditText
             android:id="@+id/pass"
@@ -95,7 +95,7 @@
             android:hint="Password"
             android:fontFamily="@font/roboto_medium"
             android:textColorHint="#73696868"
-            android:inputType="textPersonName"/>
+            android:inputType="textPassword"/>
 
         <EditText
             android:id="@+id/p1pass"
@@ -107,7 +107,7 @@
             android:hint="Retype password"
             android:fontFamily="@font/roboto_medium"
             android:textColorHint="#73696868"
-            android:inputType="textPersonName"/>
+            android:inputType="textPassword"/>
 
     </LinearLayout>
 
