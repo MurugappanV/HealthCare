@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -31,18 +30,16 @@ public class PersonInfo extends AppCompatActivity {
     ProgressDialog progressDialog;
     private Calendar newCalendar;
     private static final String TAG = "PersonInfo";
-    TextView tvView;
+    String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personinfo);
-        tvView =findViewById(R.id.tvView);
         Intent intent = getIntent();
-        final String username = intent.getStringExtra("user");
+        username = intent.getStringExtra("user");
         // Progress dialog
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
-        tvView.setText(username);
         firstname = findViewById(R.id.fname);
         lastname = findViewById(R.id.lname);
         age = findViewById(R.id.age);
@@ -154,7 +151,7 @@ public class PersonInfo extends AppCompatActivity {
 
         //if it passes all the validations
         HashMap<String, String> params = new HashMap<>();
-        params.put("user", tvView.getText().toString());
+        params.put("user", username);
         params.put("firstname", first);
         params.put("lastname", last);
         params.put("age", p_age);
@@ -172,7 +169,7 @@ public class PersonInfo extends AppCompatActivity {
 
     public void employeeList(View view) {
         Intent intent = new Intent(PersonInfo.this, PersonInfoList.class);
-        intent.putExtra("user", tvView.getText().toString());
+        intent.putExtra("user", username);
         startActivity(intent);
     }
 

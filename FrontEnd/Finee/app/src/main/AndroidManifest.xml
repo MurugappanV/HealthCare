@@ -23,14 +23,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity"
+            android:theme="@style/ThemeSplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER"/>
 
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/ThemeSplashScreen">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -92,7 +94,10 @@
         </activity>
         <activity android:name=".Personhome" />
         <activity android:name=".Personreg" />
-        <activity android:name=".PersonInfo" />
+        <activity android:name=".PersonInfo"
+            android:windowSoftInputMode="stateVisible|adjustPan">
+
+        </activity>
         <activity android:name=".Tips">
             <intent-filter>
 

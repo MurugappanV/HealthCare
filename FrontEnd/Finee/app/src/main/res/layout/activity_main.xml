@@ -1,46 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back1"
+    android:background="@drawable/app_bg1"
     tools:context="com.fine_fettle.MainActivity"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20sp">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="40sp"
-            android:fontFamily="cursive"
-            android:text="@string/welcome"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40sp"
+        android:layout_centerInParent="true"
         android:fadingEdgeLength="@dimen/activity_vertical_margin"
         android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo3"/>
 
         <EditText
             android:id="@+id/puser"
             android:layout_width="200dp"
-            android:layout_height="73dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="@string/username"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:hint="Username"
+            android:fontFamily="@font/roboto_medium"
+            android:textColorHint="#73696868"
             android:textAlignment="center"
-            android:inputType="textPersonName"
-            android:textStyle="bold"/>
+            android:inputType="textPersonName"/>
 
         <EditText
             android:id="@+id/ppass"
@@ -48,62 +43,54 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:ems="10"
-            android:hint="@string/password"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="16sp"
+            android:textColorHint="#73696868"
+            android:hint="Password"
             android:textAlignment="center"
-            android:inputType="textPassword"
-            android:textStyle="bold"/>
-        <Button
-            android:id="@+id/pb1"
-            android:layout_width="100sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/button_tranparent"
-            android:fontFamily="Times"
-            android:text="@string/login"
-            android:textSize="20sp" />
+            android:inputType="textPassword"/>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="140sp">
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/pb1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#FF00ADE7"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_tranparent"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="Login"
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/pb2"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FF00ADE7"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textAllCaps="false"
             android:background="@drawable/button_tranparent"
-            android:fontFamily="Times"
-            android:text="@string/sign_up"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="Sign Up"
             android:textSize="15sp" />
-        <TextView
-            android:id="@+id/u_id"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-        <TextView
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:layout_marginBottom="10dp"
-        android:textColor="@color/black"
-        android:textSize="20sp" />
 
 
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
 
 
 
