@@ -2,6 +2,8 @@ package com.fine_fettle;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,9 +26,42 @@ public class BMI extends AppCompatActivity {
         height = (EditText) findViewById(R.id.height);
         weight = (EditText) findViewById(R.id.weight);
         result = (TextView) findViewById(R.id.result);
+        result.setText("Enter your weight(kg) and height(cm) to calculate BMI");
+        height.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                calculateBMI();
+            }
+        });
+        weight.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                calculateBMI();
+            }
+        });
     }
 
-    public void calculateBMI(View v) {
+    public void calculateBMI() {
         String heightStr = height.getText().toString();
         String weightStr = weight.getText().toString();
 
@@ -37,6 +72,8 @@ public class BMI extends AppCompatActivity {
             float bmi = weightValue / (heightValue * heightValue);
 
             displayBMI(bmi);
+        } else {
+            result.setText("Enter your weight(Kg) and height(cm) to calculate BMI");
         }
     }
 
@@ -61,7 +98,7 @@ public class BMI extends AppCompatActivity {
             bmiLabel = getString(R.string.OBESE_CLASS_III);
         }
 
-        bmiLabel = bmi + "\n\n" + bmiLabel;
+        bmiLabel = "BMI : " + bmi + "\n\n" + "Type : " + bmiLabel;
         result.setText(bmiLabel);
     }
 }
