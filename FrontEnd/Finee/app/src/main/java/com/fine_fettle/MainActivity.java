@@ -55,14 +55,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"Authorizing user",Toast.LENGTH_SHORT).show();
-                new mymethod().execute();
-//                Intent intent = new Intent(MainActivity.this, Personhome.class);
-//                intent.putExtra("id","1003");
-//
-//                intent.putExtra("user", "Valliyappan");
-//                intent.putExtra("pass", "");
-//                startActivity(intent);
-//                finish();
+                //new mymethod().execute();
+                Intent intent = new Intent(MainActivity.this, Personhome.class);
+                intent.putExtra("id","1003");
+
+                intent.putExtra("user", "Valliyappan");
+                intent.putExtra("pass", "");
+                startActivity(intent);
+                finish();
             }
         });
 
