@@ -68,6 +68,8 @@ public class DoctorMedicineActivity extends AppCompatActivity {
             }
         });
         newCalendar = Calendar.getInstance();
+        Intent intent = getIntent();
+        final String hosname=intent.getStringExtra("hosname");
         mAppointmentDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,7 +117,7 @@ public class DoctorMedicineActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Prescription(name,Age,date,num,disease,Stage,medicine,doc_id);
+                    Prescription(name,Age,date,num,disease,Stage,medicine,doc_id,hosname);
                 }
             }
         });
@@ -141,7 +143,7 @@ public class DoctorMedicineActivity extends AppCompatActivity {
 
     }
 
-    public void  Prescription(final String name,final String age,final String date,final String num,final String disease,final String stage,final String medicine,final String doc_id)
+    public void  Prescription(final String name,final String age,final String date,final String num,final String disease,final String stage,final String medicine,final String doc_id,final String hosname)
     {
         final ProgressDialog loading = ProgressDialog.show(this, "Loading", "Please wait...", false, false);
 
@@ -183,6 +185,7 @@ public class DoctorMedicineActivity extends AppCompatActivity {
                 params.put("p_condition",stage);
                 params.put("prescription",medicine);
                 params.put("d_id",doc_id);
+                params.put("h_name",hosname);
                 Log.e("Params",""+params);
                 return params;
             }

@@ -119,6 +119,7 @@
         <activity android:name=".PersonInfoList"
             android:theme="@style/ThemeSplashScreen" />
         <activity android:name=".BloodRequest" />
+        <activity android:name=".upload_prescription" />
 
 
         <!--

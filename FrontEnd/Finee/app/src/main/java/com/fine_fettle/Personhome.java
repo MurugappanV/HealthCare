@@ -121,6 +121,8 @@ public class Personhome extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Personhome.this, Health.class);
+                intent.putExtra("user", tvView.getText().toString());
+                intent.putExtra("id", tv.getText().toString());
                 startActivity(intent);
             }
         });
