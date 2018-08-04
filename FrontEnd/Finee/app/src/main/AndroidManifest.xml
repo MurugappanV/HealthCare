@@ -106,7 +106,8 @@
             android:windowSoftInputMode="stateVisible|adjustPan">
 
         </activity>
-        <activity android:name=".Tips">
+        <activity android:name=".Tips"
+            android:theme="@style/ThemeSplashScreen">
             <intent-filter>
 
                 <category android:name="android.intent.category.DEFAULT" />
