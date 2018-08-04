@@ -6,6 +6,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -61,6 +64,7 @@ public class PersonInfoList extends AppCompatActivity {
         protected Void doInBackground(Void... arg0) {
             JsonParser sh = new JsonParser();
             //String url= "http://192.168.43.194/u_profile_select.php?user="+tvView.getText().toString();
+            //String url= "http://192.168.43.59/u_profile_select.php?user="+username;
             String url= "http://10.13.1.17/u_profile_select.php?user="+username;
             //String url= "http://192.168.0.111/u_profile_select.php?user="+tvView.getText().toString();
            String jsonStr = sh.convertJson(url);
@@ -96,7 +100,7 @@ public class PersonInfoList extends AppCompatActivity {
                         HashMap<String, String> employee = new HashMap<>();
 
                         // adding each child node to HashMap key => value
-                        employee.put("u_id", id);
+//                        employee.put("u_id", id);
                         employee.put("u_name", name);
                         employee.put("email", email);
                         employee.put("phone", phone);
@@ -152,12 +156,46 @@ public class PersonInfoList extends AppCompatActivity {
              */
             ListAdapter adapter = new SimpleAdapter(
                     PersonInfoList.this, contactList,
-                    R.layout.activity_personinfoup, new String[]{"u_id", "u_name","first_name",
+                    R.layout.activity_personinfoup, new String[]{ "u_name","first_name",
                     "last_name","email",
                     "phone","age","gender"
-                    ,"dob","bloodgroup","address","city","pincode"}, new int[]{R.id.uid, R.id.uname,
+                    ,"dob","bloodgroup","address","city","pincode"}, new int[]{ R.id.uname,
                     R.id.fname, R.id.lname,R.id.email,R.id.phone,R.id.age,R.id.gender,R.id.dob,R.id.bgroup
-                    ,R.id.address,R.id.city,R.id.pincode});
+                    ,R.id.address,R.id.city,R.id.pincode}) {
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent) {
+                     View view = super.getView(position, convertView, parent);
+                     Button updateBtn = (Button)view.findViewById(R.id.update);
+                     Button backBtn = (Button)view.findViewById(R.id.back);
+                     updateBtn.setOnClickListener(new View.OnClickListener() {
+                         @Override
+                         public void onClick(View v) {
+                             Intent intent = new Intent(PersonInfoList.this, PersonInfo.class);
+                             intent.putExtra("user",username );
+                             intent.putExtra("first_name", contactList.get(0).get("first_name"));
+                             intent.putExtra("last_name", contactList.get(0).get("last_name"));
+                             intent.putExtra("email", contactList.get(0).get("email"));
+                             intent.putExtra("phone", contactList.get(0).get("phone"));
+                             intent.putExtra("age", contactList.get(0).get("age"));
+                             intent.putExtra("gender", contactList.get(0).get("gender"));
+                             intent.putExtra("dob", contactList.get(0).get("dob"));
+                             intent.putExtra("address", contactList.get(0).get("address"));
+                             intent.putExtra("bloodgroup", contactList.get(0).get("bloodgroup"));
+                             intent.putExtra("city", contactList.get(0).get("city"));
+                             intent.putExtra("pincode", contactList.get(0).get("pincode"));
+                             startActivity(intent);
+                             finish();
+                         }
+                     });
+                     backBtn.setOnClickListener(new View.OnClickListener() {
+                         @Override
+                         public void onClick(View v) {
+                             finish();
+                         }
+                     });
+                     return  view;
+                }
+            };
 
             lv.setAdapter(adapter);
 

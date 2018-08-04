@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -30,7 +31,7 @@ public class PersonInfo extends AppCompatActivity {
     ProgressDialog progressDialog;
     private Calendar newCalendar;
     private static final String TAG = "PersonInfo";
-    String username;
+    String username, sfirstname, slastname, sage, sdob, sbgroup, saddress, scity, spincode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,9 @@ public class PersonInfo extends AppCompatActivity {
         // Progress dialog
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
+
         firstname = findViewById(R.id.fname);
+
         lastname = findViewById(R.id.lname);
         age = findViewById(R.id.age);
         genderRadioGroup =findViewById(R.id.gender_radio_group);
@@ -63,6 +66,25 @@ public class PersonInfo extends AppCompatActivity {
                         submitForm(view);
                     }
                 });
+
+        firstname.setText(intent.getStringExtra("first_name"));
+        lastname.setText(intent.getStringExtra("last_name"));
+        age.setText(intent.getStringExtra("age"));
+        String gender = intent.getStringExtra("gender");
+        RadioButton b;
+        if(gender == "Male") {
+            b = (RadioButton) findViewById(R.id.radioButton1);
+        } else if(gender == "Female") {
+            b = (RadioButton) findViewById(R.id.radioButton2);
+        } else {
+            b = (RadioButton) findViewById(R.id.radioButton3);
+        }
+        b.setChecked(true);
+        dob.setText(intent.getStringExtra("dob"));
+        bgroup.setText(intent.getStringExtra("bloodgroup"));
+        address.setText(intent.getStringExtra("address"));
+        city.setText(intent.getStringExtra("city"));
+        pincode.setText(intent.getStringExtra("pincode"));
 
     }
     private void mFromdatePicker() {
@@ -171,6 +193,7 @@ public class PersonInfo extends AppCompatActivity {
         Intent intent = new Intent(PersonInfo.this, PersonInfoList.class);
         intent.putExtra("user", username);
         startActivity(intent);
+        finish();
     }
 
 

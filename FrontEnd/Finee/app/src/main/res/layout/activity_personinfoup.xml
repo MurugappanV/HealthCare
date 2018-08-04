@@ -1,35 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/logo3"
     android:orientation="vertical">
-    <TextView
-        android:id="@+id/tvView"
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:layout_marginBottom="10dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:visibility="invisible"/>
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="PERSONAL INFORMATION"
-        android:gravity="center_horizontal"
-        android:textSize="30sp"
-        android:layout_marginBottom="10dp"
-        android:textColor="@color/black"
-        android:fontFamily="cursive"
-        />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:src="@drawable/sign_up"/>
+
+        <TextView
+            android:id="@+id/cance"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FF00ADE7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="Personal Information"
+            android:textSize="20sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp">-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,51 +58,22 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="70"
-                    android:gravity="left"
-                    android:text="User Id"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:fontFamily="cursive"/>
-
-                <TextView
-                    android:id="@+id/uid"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="#000000"
-                    android:textSize="17sp" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal"
-                android:weightSum="100">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="70"
                     android:gravity="left"
                     android:text="User name"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:fontFamily="cursive"/>
+                    android:fontFamily="@font/roboto_medium"/>
 
                 <TextView
                     android:id="@+id/uname"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="17sp" />
@@ -100,22 +90,22 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="70"
                     android:gravity="left"
                     android:text="@string/first_name"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:fontFamily="cursive"/>
+                    android:fontFamily="@font/roboto_medium"/>
 
                 <TextView
                     android:id="@+id/fname"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="17sp" />
@@ -129,22 +119,22 @@
 
                 <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="70"
             android:gravity="left"
-            android:text="last Name : "
+            android:text="last Name "
             android:textColor="#000000"
             android:textSize="17dp"
             android:textStyle="bold"
-            android:fontFamily="cursive"/>
+            android:fontFamily="@font/roboto_medium"/>
 
             <TextView
                 android:id="@+id/lname"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="30"
-                android:fontFamily="sans-serif-light"
-                android:gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="left"
                 android:text=""
                 android:textColor="#000000"
                 android:textSize="17sp" />
@@ -158,22 +148,22 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="70"
                     android:gravity="left"
                     android:text="Email"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:fontFamily="cursive"/>
+                    android:fontFamily="@font/roboto_medium"/>
 
                 <TextView
                     android:id="@+id/email"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="17sp" />
@@ -187,22 +177,22 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="70"
                     android:gravity="left"
                     android:text="Phone"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:fontFamily="cursive"/>
+                    android:fontFamily="@font/roboto_medium"/>
 
                 <TextView
                     android:id="@+id/phone"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="17sp" />
@@ -217,22 +207,22 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="70"
                     android:gravity="left"
-                    android:text="Age : "
+                    android:text="Age "
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:fontFamily="cursive"/>
+                    android:fontFamily="@font/roboto_medium"/>
 
                 <TextView
                     android:id="@+id/age"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="17dp" />
@@ -248,21 +238,21 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="70"
                     android:gravity="left"
                     android:text="Gender: "
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:fontFamily="cursive"/>
+                    android:fontFamily="@font/roboto_medium"/>
                 <TextView
                     android:id="@+id/gender"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="17dp" />
@@ -280,22 +270,22 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="70"
                     android:gravity="left"
-                    android:text="DOB : "
+                    android:text="DOB "
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:fontFamily="cursive"/>
+                    android:fontFamily="@font/roboto_medium"/>
 
                 <TextView
                     android:id="@+id/dob"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="17dp" />
@@ -310,22 +300,22 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="70"
                     android:gravity="left"
-                    android:text="B Group : "
+                    android:text="B Group "
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:fontFamily="cursive"/>
+                    android:fontFamily="@font/roboto_medium"/>
 
                 <TextView
                     android:id="@+id/bgroup"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="17dp" />
@@ -341,22 +331,22 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="70"
                     android:gravity="left"
                     android:text="Address"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:fontFamily="cursive"/>
+                    android:fontFamily="@font/roboto_medium"/>
 
                 <TextView
                     android:id="@+id/address"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="17dp" />
@@ -370,22 +360,22 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="70"
                     android:gravity="left"
                     android:text="City"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:fontFamily="cursive"/>
+                    android:fontFamily="@font/roboto_medium"/>
 
                 <TextView
                     android:id="@+id/city"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="17dp" />
@@ -400,46 +390,67 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="70"
                     android:gravity="left"
-                    android:text="Pincode : "
+                    android:text="Pincode "
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:fontFamily="cursive"/>
+                    android:fontFamily="@font/roboto_medium"/>
 
                 <TextView
                     android:id="@+id/pincode"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="30"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
                     android:text=""
                     android:textColor="#000000"
                     android:textSize="17dp" />
             </LinearLayout>
 
 
-            <Button
-            android:layout_width="136dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginTop="30dp"
-            android:text="Update"
-            android:background="@drawable/button_tranparent"
-            android:id="@+id/update" />
-
-            <Button
-                android:id="@+id/back"
-                android:layout_width="136dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:background="@drawable/button_tranparent"
-                android:text="Back"
-                android:textStyle="italic" />
         </LinearLayout>
-    </ScrollView>
+    <!--</ScrollView>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textColor="#FF00ADE7"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_tranparent"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="Update"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FF00ADE7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:background="@drawable/button_tranparent"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="Back"
+            android:textSize="15sp" />
+    </LinearLayout>
 
 </LinearLayout>

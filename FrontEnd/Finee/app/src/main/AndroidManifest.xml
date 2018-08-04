@@ -55,7 +55,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".BMI">
+        <activity android:name=".BMI"
+            android:theme="@style/ThemeSplashScreen">
             <intent-filter>
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -92,9 +93,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Personhome" />
-        <activity android:name=".Personreg" />
+        <activity
+            android:name=".Personhome"
+            android:theme="@style/ThemeSplashScreen"
+        />
+        <activity
+            android:name=".Personreg"
+            android:theme="@style/ThemeSplashScreen"
+        />
         <activity android:name=".PersonInfo"
+            android:theme="@style/ThemeSplashScreen"
             android:windowSoftInputMode="stateVisible|adjustPan">
 
         </activity>
@@ -108,7 +116,8 @@
         <activity android:name=".ViewAppointment" />
         <activity android:name=".BloodView" />
         <activity android:name=".MapsActivity" />
-        <activity android:name=".PersonInfoList" />
+        <activity android:name=".PersonInfoList"
+            android:theme="@style/ThemeSplashScreen" />
         <activity android:name=".BloodRequest" />
 
 
