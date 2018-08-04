@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
-    android:paddingTop="30dp"
-    android:background="#a6d9ef"
+    android:paddingTop="35dp"
+    android:background="#d1ecf7"
     android:layout_height="match_parent">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/tips_list"
