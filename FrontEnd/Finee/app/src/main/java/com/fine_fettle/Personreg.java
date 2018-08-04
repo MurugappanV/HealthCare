@@ -51,6 +51,13 @@ public class Personreg extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Hi !", Toast.LENGTH_SHORT).show();
             }
         });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
 
@@ -96,14 +103,16 @@ public class Personreg extends AppCompatActivity {
         params.put("pass", password);
         params.put("email", mail);
         params.put("phone", phone);
-        Toast.makeText(getApplicationContext(), "Hi: " + params.get("name")+"You have successfully registered", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Hi: " + params.get("name")+" You have successfully registered", Toast.LENGTH_LONG).show();
         PostRequestHandler postRequestHandler = new PostRequestHandler(URLs.REGISTER, params);
         postRequestHandler.execute();
-        employeeList(view);
+        finish();
+//        employeeList(view);
     }
 
-    public void employeeList(View view) {
-        Intent intent = new Intent(Personreg.this, MainActivity.class);
-        startActivity(intent);
-    }
+//    public void employeeList(View view) {
+//        Intent intent = new Intent(Personreg.this, MainActivity.class);
+//        startActivity(intent);
+//        finish();
+//    }
 }
