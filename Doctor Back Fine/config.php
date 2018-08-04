@@ -2,7 +2,7 @@
 error_reporting(0);
 
 
-$acn_con = mysqli_connect('localhost','root', '', 'user_details');
+$acn_con = mysqli_connect('localhost','root', 'rhMJ6MSXx9Oc', 'user_details');
 if($acn_con->connect_errno > 0)
 {
     die('Unable to connect to database' . $acn_con->connect_error);

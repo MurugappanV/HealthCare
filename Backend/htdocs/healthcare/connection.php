@@ -1,3 +1,3 @@
 <?php
-$con=new mysqli("localhost",'root','','user_details');
+$con=new mysqli("localhost",'root','rhMJ6MSXx9Oc','user_details');
 ?>
