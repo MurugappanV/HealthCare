@@ -75,10 +75,10 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(String... arg0) {
 
             try {
-                //URL url = new URL("http://192.168.43.194/user_login.php");
+                URL url = new URL("http://192.168.43.194/user_login.php");
                 //URL url = new URL("http://192.168.42.229/user_login.php");// here is your URL path
                 //URL url = new URL("http://192.168.43.59/user_login.php");
-                URL url = new URL("http://10.13.1.17/user_login.php");
+                //URL url = new URL("http://10.13.1.17/user_login.php");
                 JSONObject postDataParams = new JSONObject();
                 postDataParams.put("user", user);
                 postDataParams.put("pass",pass);
@@ -132,8 +132,9 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
 
             try {
-                JSONObject jsonObj = new JSONObject(result);
                 System.out.println(result);
+                JSONObject jsonObj = new JSONObject(result);
+
 
                    id = Integer.parseInt(jsonObj.getString("u_id"));
                    name = jsonObj.getString("uname");

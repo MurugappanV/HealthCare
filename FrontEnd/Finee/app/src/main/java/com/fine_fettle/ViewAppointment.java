@@ -67,7 +67,8 @@ public class ViewAppointment extends AppCompatActivity {
                 JsonParser sh = new JsonParser();
 
                //String url= "http://192.168.42.229/viewallapp.php?ID="+tvView.getText();
-                String url= "http://10.13.1.17/viewallapp.php?ID="+tvView.getText();
+                //String url= "http://10.13.1.17/viewallapp.php?ID="+tvView.getText();
+                String url= "http://192.168.43.194/viewallapp.php?ID="+tvView.getText();
                //String url= "http://192.168.0.111/viewallapp.php?ID="+tvView.getText();
                 String jsonStr = sh.convertJson(url);
                 System.out.println(url);
