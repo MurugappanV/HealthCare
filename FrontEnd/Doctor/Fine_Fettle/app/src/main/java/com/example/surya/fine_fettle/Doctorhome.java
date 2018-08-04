@@ -11,7 +11,7 @@ public class Doctorhome extends AppCompatActivity {
     Button info, alert;
     Button chat, history, appoint;
     TextView mTextviewTitle;
-    String doc_id, Name, Mobilenumber;
+    String doc_id, Name, Mobilenumber,hosname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,8 @@ public class Doctorhome extends AppCompatActivity {
         history = findViewById(R.id.button2);
         appoint = findViewById(R.id.button3);
         mTextviewTitle = findViewById(R.id.textView12);
+        Intent intent = getIntent();
+        final String hosname=intent.getStringExtra("hosname");
 
         mTextviewTitle.setText(String.format("Welcome %s", Name));
         info.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +50,7 @@ public class Doctorhome extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Doctorhome.this, DoctorMedicineActivity.class);
                 i.putExtra("Doc_id", doc_id);
+                i.putExtra("hosname",hosname);
                 startActivity(i);
             }
         });

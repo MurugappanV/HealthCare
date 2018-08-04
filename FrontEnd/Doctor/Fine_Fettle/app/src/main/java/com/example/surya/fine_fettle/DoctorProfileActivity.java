@@ -70,7 +70,10 @@ public class DoctorProfileActivity extends AppCompatActivity {
         mImageBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+
+                Intent intent = new Intent(DoctorProfileActivity.this,Doctorhome.class);
+                intent.putExtra("hosname", mDochospitalName.getText().toString());
+                startActivity(intent);
             }
         });
     }

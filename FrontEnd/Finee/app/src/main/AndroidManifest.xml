@@ -105,6 +105,7 @@
         <activity android:name=".MapsActivity" />
         <activity android:name=".PersonInfoList" />
         <activity android:name=".BloodRequest" />
+        <activity android:name=".upload_prescription" />
 
 
         <!--
