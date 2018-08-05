@@ -59,7 +59,7 @@ public class BloodView extends AppCompatActivity{
         @Override
         protected Void doInBackground(Void... arg0) {
             JsonParser sh = new JsonParser();
-            String url= "http://35.204.108.96/viewallapp.php?ID="+tvView.getText();
+            String url= "http://35.204.108.96/bloodselect.php?u_id="+tvView.getText();
             //String url= "http://192.168.42.229/viewallapp.php?ID="+tvView.getText();
             //String url= "http://10.13.1.17/bloodselect.php?u_id="+tv.getText();
             //String url= "http://192.168.0.111/viewallapp.php?ID="+tvView.getText();

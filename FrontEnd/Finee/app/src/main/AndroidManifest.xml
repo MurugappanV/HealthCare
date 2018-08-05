@@ -50,7 +50,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Blood">
+        <activity android:name=".Blood"
+            android:theme="@style/ThemeSplashScreen">
             <intent-filter>
 
                 <category android:name="android.intent.category.DEFAULT" />

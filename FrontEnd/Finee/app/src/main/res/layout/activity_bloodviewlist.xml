@@ -8,11 +8,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:fontFamily="cursive"
+        android:fontFamily="@font/corpos_dem_regular"
         android:gravity="center_horizontal"
         android:text="REQUEST INFORMATRION"
         android:textColor="@color/black"
-        android:textSize="30sp" />
+        android:textSize="18sp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
