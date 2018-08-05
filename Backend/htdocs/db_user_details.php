@@ -2,7 +2,7 @@
 
 $server="localhost";
 $user="root";
-$pass="rhMJ6MSXx9Oc";
+$pass="JTKhpFB8zdbL";
 $db="user_details";
 $con=mysqli_connect($server, $user, $pass,$db);
 if($con->connect_error)
