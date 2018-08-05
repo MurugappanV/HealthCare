@@ -63,7 +63,7 @@ public class PersonInfoList extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... arg0) {
             JsonParser sh = new JsonParser();
-            String url= "http://35.200.189.226/u_profile_select.php?user="+username;
+            String url= "http://35.204.108.96/u_profile_select.php?user="+username;
             //String url= "http://192.168.43.59/u_profile_select.php?user="+username;
            // String url= "http://10.13.1.17/u_profile_select.php?user="+username;
             //String url= "http://192.168.0.111/u_profile_select.php?user="+tvView.getText().toString();

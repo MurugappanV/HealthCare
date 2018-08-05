@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(String... arg0) {
 
             try {
-                URL url = new URL("http://35.200.189.226/user_login.php");
+                URL url = new URL("http://35.204.108.96/user_login.php");
                 //URL url = new URL("http://192.168.42.229/user_login.php");// here is your URL path
                 //URL url = new URL("http://192.168.43.59/user_login.php");
                 //URL url = new URL("http://10.13.1.17/user_login.php");
