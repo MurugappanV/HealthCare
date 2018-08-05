@@ -241,7 +241,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="70"
                     android:gravity="left"
-                    android:text="Gender: "
+                    android:text="Gender "
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:textStyle="bold"

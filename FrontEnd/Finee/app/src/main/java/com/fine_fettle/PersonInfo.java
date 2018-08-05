@@ -72,14 +72,16 @@ public class PersonInfo extends AppCompatActivity {
         age.setText(intent.getStringExtra("age"));
         String gender = intent.getStringExtra("gender");
         RadioButton b;
-        if(gender == "Male") {
+        if(gender.equals("Male")) {
             b = (RadioButton) findViewById(R.id.radioButton1);
-        } else if(gender == "Female") {
+            b.setChecked(true);
+        } else if(gender.equals("Female")) {
             b = (RadioButton) findViewById(R.id.radioButton2);
-        } else {
+            b.setChecked(true);
+        } else if(gender.equals("others")) {
             b = (RadioButton) findViewById(R.id.radioButton3);
+            b.setChecked(true);
         }
-        b.setChecked(true);
         dob.setText(intent.getStringExtra("dob"));
         bgroup.setText(intent.getStringExtra("bloodgroup"));
         address.setText(intent.getStringExtra("address"));

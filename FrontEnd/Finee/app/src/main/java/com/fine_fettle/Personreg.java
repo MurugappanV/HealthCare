@@ -48,7 +48,7 @@ public class Personreg extends AppCompatActivity {
                 //if user pressed on button register
                 //here we will register the user to server
                 onRegister(view);
-                Toast.makeText(getApplicationContext(), "Hi !", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Registering...", Toast.LENGTH_SHORT).show();
             }
         });
 

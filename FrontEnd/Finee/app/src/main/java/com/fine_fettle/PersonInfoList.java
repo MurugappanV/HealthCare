@@ -101,18 +101,18 @@ public class PersonInfoList extends AppCompatActivity {
 
                         // adding each child node to HashMap key => value
 //                        employee.put("u_id", id);
-                        employee.put("u_name", name);
-                        employee.put("email", email);
-                        employee.put("phone", phone);
-                        employee.put("first_name", fname);
-                        employee.put("last_name", lname);
-                        employee.put("age", age);
-                        employee.put("gender",gender);
-                        employee.put("dob", dob);
-                        employee.put("address", address);
-                        employee.put("bloodgroup", blood);
-                        employee.put("city", city);
-                        employee.put("pincode", pincode);
+                        employee.put("u_name", !name.equals("null") ? name : "");
+                        employee.put("email", !email.equals("null") ? email : "");
+                        employee.put("phone", !phone.equals("null") ? phone : "");
+                        employee.put("first_name", !fname.equals("null") ? fname : "");
+                        employee.put("last_name", !lname.equals("null") ? lname : "");
+                        employee.put("age", !age.equals("null") ? age : "");
+                        employee.put("gender",!gender.equals("null") ? gender : "");
+                        employee.put("dob", !dob.equals("null") ? dob : "");
+                        employee.put("address", !address.equals("null") ? address : "");
+                        employee.put("bloodgroup", !blood.equals("null") ? blood : "");
+                        employee.put("city", !city.equals("null") ? city : "");
+                        employee.put("pincode", !pincode.equals("null") ? pincode : "");
                         // adding contact to contact list
                         contactList.add(employee);
                     }
