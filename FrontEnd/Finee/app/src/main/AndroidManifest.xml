@@ -76,7 +76,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Laboratory">
+        <activity android:name=".Laboratory"
+            android:theme="@style/ThemeSplashScreen">
             <intent-filter>
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -119,7 +120,8 @@
             android:theme="@style/ThemeTips"/>
 
 
-        <activity android:name=".MakeAppointment" />
+        <activity android:name=".MakeAppointment"
+            android:theme="@style/ThemeSplashScreen"/>
         <activity android:name=".ViewAppointment" />
         <activity android:name=".BloodView" />
         <activity android:name=".MapsActivity" />

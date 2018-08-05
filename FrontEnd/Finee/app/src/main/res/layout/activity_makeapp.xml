@@ -1,144 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="16dp"
-    android:orientation="vertical"
-    android:background="@drawable/logo3">
-    <TextView
-        android:id="@+id/tvView1"
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:layout_marginBottom="10dp"
-        android:textColor="@color/black"
-        android:textSize="20sp" />
-    <ScrollView
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="35dp"
+    android:background="#d1ecf7"
+    android:layout_height="match_parent">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center">
 
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="0dp"/>
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/hospital_list"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/cance"
+            android:layout_marginStart="30dp"
+            android:textColor="#FF00ADE7"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <EditText
-                android:id="@+id/p_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:ems="10"
-                android:hint="Patient Name"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="108dp" />
-            <EditText
-                android:id="@+id/p_age"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:ems="10"
-                android:hint="patient age"
-                android:inputType="number"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="108dp" />
+            android:layout_gravity="center_vertical"
+            android:textAllCaps="false"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="Select a hospital"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="0dp"/>
 
-            <EditText
-                android:id="@+id/p_addr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:ems="10"
-                android:hint="patient address"
-                android:inputType="textMultiLine"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="108dp" />
+    </LinearLayout>
 
-            <EditText
-                android:id="@+id/h_issue"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:ems="10"
-                android:hint="health issue"
-                android:inputType="text"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="108dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/hospital_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="60dp"></android.support.v7.widget.RecyclerView>
 
-            <EditText
-                android:id="@+id/doc_specializtion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:ems="10"
-                android:hint="doctor specialization"
-                android:inputType="text"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="108dp" />
-
-            <EditText
-                android:id="@+id/doc_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:ems="10"
-                android:hint="doctor name"
-                android:inputType="text"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="161dp" />
-
-            <EditText
-                android:id="@+id/hos_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:ems="10"
-                android:hint="hospital name"
-                android:inputType="text"
-                tools:layout_editor_absoluteX="19dp"
-                tools:layout_editor_absoluteY="307dp" />
-
-
-            <EditText
-                android:id="@+id/date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:ems="10"
-                android:hint="yyyy-mm-dd"
-                android:inputType="date"
-                tools:layout_editor_absoluteX="19dp"
-                tools:layout_editor_absoluteY="307dp" />
-
-
-            <EditText
-                android:id="@+id/slot"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:ems="10"
-                android:hint="1:00pm"
-                android:inputType="time"
-                tools:layout_editor_absoluteX="20dp"
-                tools:layout_editor_absoluteY="353dp" />
-
-            <Button
-                android:id="@+id/book"
-                android:layout_width="136dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/button_tranparent"
-                android:text="freeze appointment" />
-
-            <ProgressBar
-                android:visibility="gone"
-                android:id="@+id/progressBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-    </ScrollView>
-
-
-
-</LinearLayout>
+</RelativeLayout>

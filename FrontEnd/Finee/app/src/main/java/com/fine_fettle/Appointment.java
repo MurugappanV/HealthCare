@@ -50,7 +50,7 @@ public class Appointment extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Appointment.this, MakeAppointment.class);
                 intent.putExtra("id", id);
-                Toast.makeText(getApplicationContext(), "Id" + id,Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), "Id" + id,Toast.LENGTH_LONG).show();
                 startActivity(intent);
             }
         });
