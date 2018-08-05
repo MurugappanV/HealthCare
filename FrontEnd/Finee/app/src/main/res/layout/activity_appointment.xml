@@ -3,114 +3,125 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/logo3"
+    android:background="@drawable/app_bg1"
+    android:padding="10dp"
+    android:orientation="vertical"
     tools:context="com.fine_fettle.Appointment">
-    <TextView
-        android:id="@+id/tvView"
-        android:layout_width="wrap_content"
-        android:layout_height="32dp"
-        android:textColor="@color/black"
-        android:textSize="20sp"/>
+    <!--<TextView-->
+        <!--android:id="@+id/tvView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="32dp"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="20sp"/>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tips_list"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="60dp">
+
+    </android.support.v7.widget.RecyclerView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:layout_centerInParent="true">
-
-        <LinearLayout
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="100">
-
-            <Button
-                android:id="@+id/make"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50px"
-                android:text="Make Appointment"
-                android:background="@drawable/button_tranparent"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="100">
-
-            <Button
-                android:id="@+id/view"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50px"
-                android:text="View Appointment"
-                android:background="@drawable/button_tranparent"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="100"
-            android:layout_marginTop="15dp">
-
-            <Button
-                android:id="@+id/reschedule"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Reschedule Appointment"
-                android:background="@drawable/button_tranparent"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="100"
-            android:layout_marginTop="15dp">
-
-            <Button
-                android:id="@+id/cancel"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Cancel"
-                android:background="@drawable/button_tranparent"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="100"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp">
-
-            <Button
-                android:id="@+id/remainder"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/set_reminder"
-                android:background="@drawable/button_tranparent"
-                android:textSize="17dp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
-        </LinearLayout>
-
-
+            android:layout_gravity="center"
+            android:text="Make Appointment"
+            android:textAllCaps="false"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:textSize="17sp"
+            android:textColor="#FF00ADE7"
+            android:background="@drawable/button_tranparent"
+            android:id="@+id/make" />
     </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:layout_centerInParent="true">-->
+
+       <!---->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="100">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/view"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="50px"-->
+                <!--android:text="View Appointment"-->
+                <!--android:background="@drawable/button_tranparent"-->
+                <!--android:textSize="17dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="#000000"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="100"-->
+            <!--android:layout_marginTop="15dp">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/reschedule"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Reschedule Appointment"-->
+                <!--android:background="@drawable/button_tranparent"-->
+                <!--android:textSize="17dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="#000000"/>-->
+
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="100"-->
+            <!--android:layout_marginTop="15dp">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/cancel"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Cancel"-->
+                <!--android:background="@drawable/button_tranparent"-->
+                <!--android:textSize="17dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="#000000"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="100"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:layout_marginBottom="15dp">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/remainder"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/set_reminder"-->
+                <!--android:background="@drawable/button_tranparent"-->
+                <!--android:textSize="17dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textColor="#000000"/>-->
+        <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
 
 
 </RelativeLayout>

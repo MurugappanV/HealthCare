@@ -17,20 +17,20 @@ import java.text.BreakIterator;
 public class Appointment extends AppCompatActivity {
     Button makeapp, viewapp, rescheduleapp, cancelapp, remainderapp;
     TextView tv;
-
+    String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointment);
         Intent intent = getIntent();
-        final String id=intent.getStringExtra("id");
-        tv=findViewById(R.id.tvView);
-        tv.setText(id);
+        id=intent.getStringExtra("id");
+//        tv=findViewById(R.id.tvView);
+//        tv.setText(id);
         makeapp = findViewById(R.id.make);
-        viewapp = findViewById(R.id.view);
-        rescheduleapp = findViewById(R.id.reschedule);
-        cancelapp = findViewById(R.id.cancel);
-        remainderapp = findViewById(R.id.remainder);
+//        viewapp = findViewById(R.id.view);
+//        rescheduleapp = findViewById(R.id.reschedule);
+//        cancelapp = findViewById(R.id.cancel);
+//        remainderapp = findViewById(R.id.remainder);
 
 
         makeapp.setOnClickListener(new View.OnClickListener() {
@@ -38,31 +38,31 @@ public class Appointment extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Appointment.this, MakeAppointment.class);
-                intent.putExtra("id", tv.getText().toString());
+                intent.putExtra("id", id);
                 Toast.makeText(getApplicationContext(), "Id" + id,Toast.LENGTH_LONG).show();
                 startActivity(intent);
 
             }
         });
-        viewapp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Appointment.this, ViewAppointment.class);
-                intent.putExtra("id", tv.getText().toString());
-               Toast.makeText(getApplicationContext(), "Id" + id,
-                        Toast.LENGTH_LONG).show();
-                startActivity(intent);
-            }
-        });
-        rescheduleapp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Appointment.this, RescheduleAppointment.class);
-                startActivity(intent);
-            }
-        });
+//        viewapp.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent intent = new Intent(Appointment.this, ViewAppointment.class);
+//                intent.putExtra("id", tv.getText().toString());
+//               Toast.makeText(getApplicationContext(), "Id" + id,
+//                        Toast.LENGTH_LONG).show();
+//                startActivity(intent);
+//            }
+//        });
+//        rescheduleapp.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent intent = new Intent(Appointment.this, RescheduleAppointment.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 }
