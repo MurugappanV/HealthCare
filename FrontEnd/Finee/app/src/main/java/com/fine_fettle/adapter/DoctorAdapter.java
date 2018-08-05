@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.fine_fettle.CreateUpdateAppointment;
 import com.fine_fettle.Laboratory;
 import com.fine_fettle.MakeAppointment;
 import com.fine_fettle.R;
@@ -59,10 +60,12 @@ public class DoctorAdapter  extends RecyclerView.Adapter<DoctorAdapter.DoctorVie
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(mContext,Laboratory.class);
-//                intent.putExtra("id",  ((MakeAppointment)mContext).id);
-//                intent.putExtra("hospital_name", tip.getHospital_name() );
-//                mContext.startActivity(intent);
+                Intent intent = new Intent(mContext,CreateUpdateAppointment.class);
+                intent.putExtra("id",  ((Laboratory)mContext).id);
+                intent.putExtra("hospital_name", tip.getHospital_name() );
+                intent.putExtra("doctor_name", tip.getName() );
+                intent.putExtra("doctor_spec", tip.getSpecialization() );
+                mContext.startActivity(intent);
             }
         });
 

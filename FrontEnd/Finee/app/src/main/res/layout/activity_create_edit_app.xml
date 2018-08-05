@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg1"
+    android:paddingTop="30dp"
+    tools:context="com.fine_fettle.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:src="@drawable/sign_up"/>
+
+        <TextView
+            android:id="@+id/cance"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FF00ADE7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="Appointment Information"
+            android:textSize="20sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="Patient name"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="Patient age"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="Address"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="textPostalAddress"/>
+
+            <EditText
+                android:id="@+id/issue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="Health issue"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="Date"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="date"/>
+
+            <EditText
+                android:id="@+id/slot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:hint="Slot"
+                android:fontFamily="@font/roboto_medium"
+                android:textColorHint="#73696868"
+                android:inputType="textPersonName"/>
+
+            <!--<EditText-->
+                <!---->
+                <!--android:id="@+id/doctorname"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:hint="Doctor name"-->
+                <!--android:fontFamily="@font/roboto_medium"-->
+                <!--android:textColorHint="#73696868"-->
+                <!--android:inputType="textPostalAddress"/>-->
+
+
+            <!--<EditText-->
+                <!--android:id="@+id/hospitalname"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:textSize="16sp"-->
+                <!--android:hint="Hospital name"-->
+                <!--android:fontFamily="@font/roboto_medium"-->
+                <!--android:textColorHint="#73696868"-->
+                <!--android:inputType="number"/>-->
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"
+        android:text="Book Appointment"
+        android:textAllCaps="false"
+        android:fontFamily="@font/corpos_dem_regular"
+        android:textSize="15sp"
+        android:textColor="#FF00ADE7"
+        android:background="@drawable/button_tranparent"
+        android:id="@+id/book" />
+</LinearLayout>
+
+
+    <!--// name , age , addr , issue , date , slot , book-->
