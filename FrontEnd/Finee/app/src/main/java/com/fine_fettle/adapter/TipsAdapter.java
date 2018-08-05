@@ -1,6 +1,7 @@
 package com.fine_fettle.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
@@ -13,8 +14,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.fine_fettle.R;
+import com.fine_fettle.TipsDetailActivity;
 import com.fine_fettle.models.TipsModel;
+import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -46,11 +50,24 @@ public class TipsAdapter  extends RecyclerView.Adapter<TipsAdapter.TipsViewHolde
 
     @Override
     public void onBindViewHolder(@NonNull TipsViewHolder holder, int position) {
-        TipsModel tip = mTipsList.get(position);
+        final TipsModel tip = mTipsList.get(position);
 
-        holder.mIcon.setImageDrawable(mContext.getResources().getDrawable(tip.getmImageUrl()));
+        Picasso.get()
+                .load(tip.getmImageUrl())
+                .placeholder(R.drawable.tips_icon)
+                .error(R.drawable.tips_icon)
+                .into(holder.mIcon);
+
         holder.mTitle.setText(tip.getmTitle());
         holder.mDescription.setText(tip.getmDescription());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext,TipsDetailActivity.class);
+                intent.putExtra("tip_model",  tip);
+                mContext.startActivity(intent);
+            }
+        });
 
     }
 

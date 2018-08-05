@@ -115,6 +115,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".TipsDetailActivity"
+            android:theme="@style/ThemeTips"/>
+
 
         <activity android:name=".MakeAppointment" />
         <activity android:name=".ViewAppointment" />
