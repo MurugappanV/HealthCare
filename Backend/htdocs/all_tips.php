@@ -10,11 +10,11 @@ if(mysqli_num_rows($result1)>0)
 	{	
 	
 	    array_push($response,array(
-			"title"=>$row1['fld_title'],
-			"description"=>$row1['fld_description'],
-			"content"=>$row1['fld_content'],
+			"mTitle"=>$row1['fld_title'],
+			"mDescription"=>$row1['fld_description'],
+			"mContent"=>$row1['fld_content'],
             "link"=>$row1['fld_link'],
-            "img"=>$row1['fld_img_url']
+            "mImageUrl"=>$row1['fld_img_url']
         ));
 	}
 }	
