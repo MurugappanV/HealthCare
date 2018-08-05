@@ -7,9 +7,42 @@
     android:paddingTop="35dp"
     android:background="#d1ecf7"
     android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:src="@drawable/tip_list"/>
+
+        <TextView
+            android:id="@+id/cance"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textColor="#FF00ADE7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="Tips of the day"
+            android:textSize="20sp"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/tips_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent"
+        android:paddingTop="60dp"></android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>
