@@ -15,6 +15,5 @@ class URLs {
     static final String PROFILE=ROOT_URL+"userpro.php";
     static final String BLOODREQ=ROOT_URL+"bloodinsert.php";
     static final String POST_METHOD = "POST";
-
-
+    public static final String URL = "http://9dotsmobility.com/demo/yeshaul/Geo/";
 }
