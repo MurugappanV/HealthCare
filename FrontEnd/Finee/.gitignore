@@ -49,6 +49,7 @@ gradle.properties
 /.idea/workspace.xml
 /.idea/libraries
 .idea
+.idea/
 .idea/*
 /build
 /captures
