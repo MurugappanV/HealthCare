@@ -2,10 +2,10 @@
 -- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 03, 2018 at 05:24 PM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.2.7
+-- Host: localhost:3306
+-- Generation Time: Aug 05, 2018 at 08:41 PM
+-- Server version: 5.7.23
+-- PHP Version: 7.1.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -105,7 +105,7 @@ CREATE TABLE `doc_login` (
 --
 
 INSERT INTO `doc_login` (`h_id`, `d_id`, `d_name`, `d_specialization`, `d_experience`, `password`, `d_email`, `d_mobile`, `d_hospital`, `username`, `age`, `gender`, `dob`, `bloodgroup`, `address`, `city`, `pincode`, `confirmation`, `req_type`, `date`) VALUES
-(1, 1, 'sivaram', 'cardio', '10yrs', 'hello', 'sivaram@gmail.com', 9876543210, 'KG', '', 0, '', '0000-00-00', '', '', '', 0, 0, 0, '0000-00-00'),
+(1, 1, 'sivaram', 'cardio', '10yrs', 'hello', 'sivaram@gmail.com', 9876543210, 'KG', '', 0, 'male', '0000-00-00', '', '', '', 0, 0, 0, '0000-00-00'),
 (2, 2, 'ramya', 'brain', '5', 'hello', 'ramya@gmail.com', 890768541, 'KGH', 'ramya', 30, 'female', '1988-07-09', 'A+ve', '100/9', 'karur', 639114, 1, 0, '0000-00-00'),
 (2, 3, 'sruthi', 'cardio', '5', 'hello', 'sruthi@gmail.com', 8976876567, 'KGH', 'sruthi', 30, 'female', '1988-07-09', 'A+ve', '\r\n324/23', 'karur', 639114, 0, 0, '0000-00-00'),
 (2, 4, 'sruthi', 'cardio', '5years', 'hello', 'sruthi@gmail.com', 9876543210, 'kg', 'sruthi', 30, 'female', '2018-08-02', 'A+ve', 'gandhipuram', 'karur', 639114, 0, 0, '0000-00-00'),
@@ -173,7 +173,7 @@ CREATE TABLE `hos_login` (
 
 INSERT INTO `hos_login` (`hos_name`, `h_id`, `pass`, `address`, `city`, `pincode`, `confirmation`) VALUES
 ('KG', 1, 'hello', '100/9', 'karur', 639114, 1),
-('KGH', 2, 'hello', '324/90', 'karur', 639114, 0),
+('KRISHNA', 2, 'hello', '324/90', 'karur', 639114, 0),
 ('KGH', 9, 'hello', '324/34', 'karur', 639114, 0),
 ('SDF', 10, 'hello', '54/43', 'karur', 639114, 0);
 
@@ -199,6 +199,31 @@ CREATE TABLE `pharmacy_req` (
 
 INSERT INTO `pharmacy_req` (`u_id`, `p_id`, `p_name`, `prescription`, `status`, `d_id`) VALUES
 (1, 1, 'ramya', 'amoxilin, dollo', 2, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbltips`
+--
+
+DROP TABLE IF EXISTS `tbltips`;
+CREATE TABLE `tbltips` (
+  `find_id` int(11) NOT NULL,
+  `fld_title` varchar(255) NOT NULL,
+  `fld_description` varchar(255) NOT NULL,
+  `fld_content` text NOT NULL,
+  `fld_link` varchar(255) NOT NULL,
+  `fld_img_url` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbltips`
+--
+
+INSERT INTO `tbltips` (`find_id`, `fld_title`, `fld_description`, `fld_content`, `fld_link`, `fld_img_url`) VALUES
+(1, 'Meditation', 'Be calm...', 'Meditation is an approach to training the mind, similar to the way that fitness is an approach to training the body. But many meditation techniques exist — so how do you learn how to meditate?\r\n\r\n“In Buddhist tradition, the word ‘meditation’ is equivalent to a word like ‘sports’ in the U.S. It’s a family of activities, not a single thing,” University of Wisconsin neuroscience lab director Richard J. Davidson, Ph.D., told The New York Times. And different meditation practices require different mental skills.\r\n\r\nIt’s extremely difficult for a beginner to sit for hours and think of nothing or have an “empty mind.” We have some tools such as a beginner mediation DVD or a brain sensing headband to help you through this process when you are starting out. In general, the easiest way to begin meditating is by focusing on the breath — an example of one of the most common approaches to meditation: concentration.', 'https://en.wikipedia.org/wiki/Meditation', 'https://blog.bulletproof.com/wp-content/uploads/2015/03/meditation_sun.jpg'),
+(2, 'Yoga', 'Be fit...', 'Yoga is an ancient physical and spiritual discipline and branch of philosophy that originated in India reportedly more than 5,000 years ago. The word yoga comes from the Sanskrit word yuj, which means to yoke, join, or unite. The Iyengar school of yoga defines yuj as the \"joining or integrating of all aspects of the individual - body with mind and mind with soul - to achieve a happy, balanced and useful life.\" The ultimate aim of yoga, they claim, is to reach kaivalya (emancipation or ultimate freedom).\r\nThere is no written record of who invented yoga because it was practiced by yogis (yoga practitioners) long before any written account of it could have come into existence. Yogis over the millennia passed down the discipline to their students, and many different schools of yoga developed as it spread. The earliest written record of yoga, and one of the oldest texts in existence, is generally believed to have been written by Patanjali, an Indian yogic sage who lived somewhere between 2,000 and 2,500 years ago. Patanjali is credited with writing the Yoga Sutras (sutra means \"thread\" in Sanskrit), which are the principles, philosophy, and practices of yoga that are still followed today. Although many schools of yoga have evolved over the centuries, they all follow these same fundamental principles. Buddhism and other Eastern spiritual traditions use many of the yoga techniques or derivations of those techniques', 'https://en.wikipedia.org/wiki/Yoga', 'https://images.pexels.com/photos/588561/pexels-photo-588561.jpeg?auto=compress&cs=tinysrgb&h=350'),
+(3, 'Sleep', 'Key to get good sleep', 'Do you ever struggle to sleep? The key to a good night’s sleep, according to David, is to know that what God thinks about your right standing before him is way more important than what you or others believe about it. In verse 1 of the Psalm, David uses a name for God that isn’t used anywhere else in Scripture. He calls him “God of my righteousness.”\r\nAs David was being pursued by forces led by his son Absalom, he was having a lot of accusations thrown at him. They must have kept him up at night. “You are a sham, David. You were a lousy king. Remember what you did with Bathsheba? Even your own son hates you.”\r\nI reckon that a lot of us have voices of accusation that keep us up at night. I don’t know what they sound like to you, but I certainly experience them at times in my life.\r\n“How can you lead these people when you are such a wreck yourself? You barely prayed today; what if everyone in your church prayed like you? If people knew the real you, they would reject you.” Recognize any of these?\r\nNow that’s reason to sleep easy.', 'https://en.wikipedia.org/wiki/Sleep', 'https://images.agoramedia.com/everydayhealth/gcms/SG-Why-Sleep-Matters-722x406.jpg');
 
 -- --------------------------------------------------------
 
@@ -248,16 +273,16 @@ CREATE TABLE `user_reg` (
   `u_name` varchar(50) NOT NULL,
   `pass` varchar(50) NOT NULL,
   `email` varchar(70) NOT NULL,
-  `phone` bigint(10) NOT NULL,
-  `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL,
-  `age` int(11) NOT NULL,
-  `gender` varchar(12) NOT NULL,
-  `dob` date NOT NULL,
-  `bloodgroup` varchar(7) NOT NULL,
-  `address` varchar(100) NOT NULL,
-  `city` varchar(25) NOT NULL,
-  `pincode` int(6) NOT NULL
+  `phone` bigint(10) DEFAULT NULL,
+  `first_name` varchar(50) DEFAULT NULL,
+  `last_name` varchar(50) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `gender` varchar(12) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `bloodgroup` varchar(7) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `city` varchar(25) DEFAULT NULL,
+  `pincode` int(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -265,7 +290,7 @@ CREATE TABLE `user_reg` (
 --
 
 INSERT INTO `user_reg` (`u_id`, `u_name`, `pass`, `email`, `phone`, `first_name`, `last_name`, `age`, `gender`, `dob`, `bloodgroup`, `address`, `city`, `pincode`) VALUES
-(1, 'Ramya', 'hello', 'ramya@gmail.com', 9876543210, 'Ramya', 'vijay', 20, 'female', '2018-05-07', 'B+ve', '6, pattinathar street', 'karur', 639114),
+(1, 'Ramya', 'hello', 'ramya@gmail.com', 9876543210, 'Ramya', 'vijay', 20, 'Female', '2018-05-07', 'B+ve', '6, pattinathar street', 'karur', 639114),
 (7, 'sethu', 'hello', 'ramya@gmail.com', 9876543210, '', '', 0, '', '0000-00-00', '', '', '', 0),
 (8, 'priya25', 'priya', 'pr@gmail.com', 124567890, '', '', 0, '', '0000-00-00', '', '', '', 0);
 
@@ -350,6 +375,12 @@ ALTER TABLE `pharmacy_req`
   ADD KEY `prescription` (`prescription`);
 
 --
+-- Indexes for table `tbltips`
+--
+ALTER TABLE `tbltips`
+  ADD PRIMARY KEY (`find_id`);
+
+--
 -- Indexes for table `user_med_history`
 --
 ALTER TABLE `user_med_history`
@@ -390,6 +421,12 @@ ALTER TABLE `doc_login`
 --
 ALTER TABLE `hos_login`
   MODIFY `h_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `tbltips`
+--
+ALTER TABLE `tbltips`
+  MODIFY `find_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_reg`
