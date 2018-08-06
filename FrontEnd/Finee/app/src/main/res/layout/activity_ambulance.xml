@@ -30,4 +30,4 @@
         android:textStyle="bold"
         android:textSize="15sp" />
 
-</>
+</LinearLayout>

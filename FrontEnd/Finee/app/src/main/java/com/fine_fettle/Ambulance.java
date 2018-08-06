@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.DocumentsContract;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
@@ -45,7 +47,7 @@ import java.util.Map;
  * Created by Priyadharshini on 05-Jul-18.
  */
 
-public class Ambulance extends AppCompatActivity {
+public class Ambulance extends AppCompatActivity implements LocationListener {
     private GoogleMap googleMap;
     String radius;
     String deviceId = "EADEH000001455"; // show hospital drop down , and driver can pick up a hospital
@@ -185,4 +187,4 @@ public class Ambulance extends AppCompatActivity {
             }
         }
     }
-}
+
