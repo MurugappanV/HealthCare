@@ -51,11 +51,9 @@ android:orientation="vertical">
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="170dp"
+        android:layout_marginBottom="120dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_gravity="center"
-        android:gravity="center">
+        android:paddingRight="10dp">
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"
@@ -74,15 +72,17 @@ android:orientation="vertical">
         android:layout_alignParentBottom="true"
         android:gravity="center">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="vertical"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
             android:weightSum="100"
+            android:paddingLeft="10dp"
             android:layout_gravity="center"
             android:gravity="center">
 
             <Spinner
+                android:layout_alignParentLeft="true"
                 android:id="@+id/blood"
                 android:layout_width="wrap_content"
                 android:layout_height="40sp"
@@ -92,10 +92,13 @@ android:orientation="vertical">
                 android:textColor="#000000"
                 android:textSize="20sp" />
             <RatingBar
+                android:layout_alignParentRight="true"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
+                android:scaleX="0.4"
+                android:scaleY="0.4"
                 android:id="@+id/rating"/>
-        </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 

@@ -47,25 +47,25 @@ public class Blood extends AppCompatActivity {
         id=intent.getStringExtra("id");
 
 
-        breq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Blood.this, BloodRequest.class);
-                intent.putExtra("user", name);
-                intent.putExtra("id", id);
-                startActivity(intent);
-            }
-        });
+//        breq.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Blood.this, BloodRequest.class);
+//                intent.putExtra("user", name);
+//                intent.putExtra("id", id);
+//                startActivity(intent);
+//            }
+//        });
 
-        bview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Blood.this, BloodView.class);
-                intent.putExtra("user", name);
-                intent.putExtra("id", id);
-                startActivity(intent);
-            }
-        });
+//        bview.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Blood.this, BloodView.class);
+//                intent.putExtra("user", name);
+//                intent.putExtra("id", id);
+//                startActivity(intent);
+//            }
+//        });
         addListenerOnSpinnerItemSelection();
         ratingBar = findViewById(R.id.rating);
 //        breq = findViewById(R.id.request);
