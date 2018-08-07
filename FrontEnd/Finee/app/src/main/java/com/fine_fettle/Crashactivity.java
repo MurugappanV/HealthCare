@@ -11,16 +11,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import com.squareup.picasso.Picasso;
+
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 public class Crashactivity extends AppCompatActivity {
     public static String firstN,secondN;
     public int flag;
+    public int setText = 0;
     public EditText edT1;
     public EditText edT2;
     @Override
@@ -31,34 +38,65 @@ public class Crashactivity extends AppCompatActivity {
 //        setSupportActionBar(toolbar);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //hjh
-                Intent i = new Intent();
-                i.setComponent(new ComponentName("com.android.contacts", "com.android.contacts.DialtactsContactsEntryActivity"));
-                i.setAction("android.intent.action.MAIN");
-                i.addCategory("android.intent.category.LAUNCHER");
-                i.addCategory("android.intent.category.DEFAULT");
-                Toast.makeText(getApplicationContext(),"Copy the particular contact's number",Toast.LENGTH_LONG).show();
-                startActivity(i);
-            }
-        });
-        final Button serviceB=(Button)findViewById(R.id.serviceB);
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //hjh
+//                Intent i = new Intent();
+//                i.setComponent(new ComponentName("com.android.contacts", "com.android.contacts.DialtactsContactsEntryActivity"));
+//                i.setAction("android.intent.action.MAIN");
+//                i.addCategory("android.intent.category.LAUNCHER");
+//                i.addCategory("android.intent.category.DEFAULT");
+//                Toast.makeText(getApplicationContext(),"Copy the particular contact's number",Toast.LENGTH_LONG).show();
+//                startActivity(i);
+//            }
+//        });
+        edT1 = (EditText) findViewById(R.id.firstNumber);
+        edT2 = (EditText) findViewById(R.id.secondNumber);
+        try {
+            File myFile = new File("/sdcard/.emergencyNumbers.txt");
+            FileInputStream fIn = new FileInputStream(myFile);
+            BufferedReader myReader = new BufferedReader(
+                    new InputStreamReader(fIn));
+            edT1.setText(myReader.readLine());
+            edT2.setText(myReader.readLine());
+            setText = 1;
+            myReader.close();
+        } catch (Exception e) {
+            Toast.makeText(Crashactivity.this, "Please update your emergency contact numbers",
+                    Toast.LENGTH_SHORT).show();
+        }
+        final ImageButton serviceB=(ImageButton)findViewById(R.id.serviceB);
         flag=1;
         serviceB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (flag == 1) {
-                    Toast.makeText(Crashactivity.this, "ACTIVATED!", Toast.LENGTH_LONG).show();
+            if (flag == 1) {
+//                    Toast.makeText(Crashactivity.this, "ACTIVATED!", Toast.LENGTH_LONG).show();
+                if(setText == 1) {
                     startService(new Intent(getApplicationContext(), ShakeService.class));
+                    Picasso.get()
+                            .load(R.drawable.on)
+                            .placeholder(R.drawable.on)
+                            .error(R.drawable.on)
+                            .into(serviceB);
                     flag = 0;
+
                 } else {
-                    Toast.makeText(Crashactivity.this, "DEACTIVATED!", Toast.LENGTH_LONG).show();
-                    stopService(new Intent(getApplicationContext(), ShakeService.class));
-                    flag = 1;
+                    Toast.makeText(Crashactivity.this, "Please update your emergency contact numbers",
+                            Toast.LENGTH_SHORT).show();
                 }
+            } else {
+//                    Toast.makeText(Crashactivity.this, "DEACTIVATED!", Toast.LENGTH_LONG).show();
+                stopService(new Intent(getApplicationContext(), ShakeService.class));
+                Picasso.get()
+                        .load(R.drawable.off)
+                        .placeholder(R.drawable.off)
+                        .error(R.drawable.off)
+                        .into(serviceB);
+                flag = 1;
+            }
 
             }
         });
@@ -67,8 +105,7 @@ public class Crashactivity extends AppCompatActivity {
             doneB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    edT1 = (EditText) findViewById(R.id.firstNumber);
-                    edT2 = (EditText) findViewById(R.id.secondNumber);
+
                     if(edT1.getText()!=null)
                         firstN=edT1.getText().toString();
                     if(edT2.getText()!=null)
@@ -87,6 +124,7 @@ public class Crashactivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),
                                 "The emergency contact numbers have been saved.",
                                 Toast.LENGTH_SHORT).show();
+                        setText = 1;
                     } catch (Exception e) {
                         Toast.makeText(getApplicationContext(), e.getMessage(),
                                 Toast.LENGTH_SHORT).show();
@@ -102,28 +140,28 @@ public class Crashactivity extends AppCompatActivity {
     private void setSupportActionBar(Toolbar toolbar) {
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.aboutM) {
-            startActivity(new Intent(Crashactivity.this,About.class));
-        }
-        else if(id == R.id.close){
-            System.exit(1);
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.aboutM) {
+//            startActivity(new Intent(Crashactivity.this,About.class));
+//        }
+//        else if(id == R.id.close){
+//            System.exit(1);
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 }

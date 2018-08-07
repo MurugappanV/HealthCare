@@ -142,8 +142,10 @@
             android:theme="@style/ThemeSplashScreen" />
         <activity android:name=".BloodRequest" />
         <activity android:name=".upload_prescription" />
-        <activity android:name=".Crashactivity" />
-        <activity android:name=".CheckCertainty" />
+        <activity android:name=".Crashactivity"
+            android:theme="@style/ThemeSplashScreen" />
+        <activity android:name=".CheckCertainty"
+            android:theme="@style/ThemeSplashScreen" />
         <activity android:name=".About" />
 
 

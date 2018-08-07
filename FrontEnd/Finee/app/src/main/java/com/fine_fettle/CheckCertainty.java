@@ -78,7 +78,8 @@ public class CheckCertainty extends Activity implements LocationListener {
                 sms.sendTextMessage(No1, null, "Nearby Hospitals http://maps.google.com/maps?q=hospital&mrt=yp&sll="+String.valueOf(latitude)+","+String.valueOf(longitude)+"&output=kml", null, null);
                 sms.sendTextMessage(No2, null, "Help! I've met with an accident at http://maps.google.com/?q="+String.valueOf(latitude)+","+String.valueOf(longitude), null, null);
                 sms.sendTextMessage(No2, null, "Nearby Hospitals http://maps.google.com/maps?q=hospital&mrt=yp&sll="+String.valueOf(latitude)+","+String.valueOf(longitude)+"&output=kml", null, null);
-                System.exit(1);
+                finish();
+//                System.exit(1);
             }
         }, 15000);
 
@@ -86,7 +87,8 @@ public class CheckCertainty extends Activity implements LocationListener {
         dismiss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.exit(1);
+                finish();
+//                System.exit(1);
             }
         });
 
