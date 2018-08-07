@@ -29,7 +29,7 @@ public class Personhome extends AppCompatActivity{
         b2 =findViewById(R.id.b_p_hospital);
         b3 =  findViewById(R.id.b_p_lab);
         b4 = findViewById(R.id.b_p_appointment);
-        b5 =  findViewById(R.id.b_p_chat);
+//        b5 =  findViewById(R.id.b_p_chat);
         b6 = findViewById(R.id.b_p_order);
         b7 = findViewById(R.id.b_p_ambulance);
         b8 = findViewById(R.id.b_p_bloodbank);
@@ -70,13 +70,13 @@ public class Personhome extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-        b5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Personhome.this, DoctorChat.class);
-                startActivity(intent);
-            }
-        });
+//        b5.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Personhome.this, DoctorChat.class);
+//                startActivity(intent);
+//            }
+//        });
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
