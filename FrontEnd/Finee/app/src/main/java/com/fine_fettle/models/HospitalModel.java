@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by murugappanviswanathan on 05/08/18.
  */
 
-public class HospitalModel  implements Serializable {
+public class HospitalModel  implements Serializable{
     public String hospital_name;
     public String hospital_address;
     public String hospital_city;
@@ -53,4 +53,5 @@ public class HospitalModel  implements Serializable {
     public void setHospital_pincode(String hospital_pincode) {
         this.hospital_pincode = hospital_pincode;
     }
+
 }

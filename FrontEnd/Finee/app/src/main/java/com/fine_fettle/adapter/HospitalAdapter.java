@@ -13,9 +13,7 @@ import android.widget.TextView;
 import com.fine_fettle.Laboratory;
 import com.fine_fettle.MakeAppointment;
 import com.fine_fettle.R;
-import com.fine_fettle.TipsDetailActivity;
 import com.fine_fettle.models.HospitalModel;
-import com.fine_fettle.models.TipsModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -36,6 +34,11 @@ public class HospitalAdapter  extends RecyclerView.Adapter<HospitalAdapter.Hospi
         if (mContext != null) {
             inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
+    }
+
+    public void updateList(ArrayList<HospitalModel> tipsList){
+        mTipsList = tipsList;
+        notifyDataSetChanged();
     }
 
     @NonNull
