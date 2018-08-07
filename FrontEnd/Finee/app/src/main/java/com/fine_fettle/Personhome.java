@@ -13,7 +13,7 @@ import android.widget.Button;
  */
 
 public class Personhome extends AppCompatActivity{
-    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13;
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14;
     String username, id;
 
 
@@ -145,6 +145,13 @@ public class Personhome extends AppCompatActivity{
                 Intent intent = new Intent(Personhome.this, MainActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+        b14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Personhome.this, Crashactivity.class);
+                startActivity(intent);
             }
         });
 

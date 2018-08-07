@@ -9,5 +9,5 @@ public interface Root {
     //public static final String URL = "https://www.9dotsmobility.com/demo/yeshaul/Geo/track/";
 
            // String URL = "http://10.13.1.17/FineFettleWebservice/web-services/";
-           String URL = "http://192.168.43.194/FineFettleWebservice/web-services/";
+           String URL = "http://35.204.108.96/FineFettleWebservice/web-services/";
 }

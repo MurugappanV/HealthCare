@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#008ccb</color>
+    <color name="colorPrimaryDark">#008ccb</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="White">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="primary_txt">#000000</color>
+    <color name="secondary_txt">#4c4c4d</color>
+    <color name="text_color">#838383</color>
+    <color name="app_background_color">#2A2E43</color>
+    <color name="edittext_background">#454F63</color>
+    <color name="submit_background">#665EFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="nav_backcground">#868B9F</color>
+    <color name="nav_footercolor">#AAAEBC</color>
+    <color name="support_textcolor">#78849E</color>
+    <color name="border">#959DAD</color>
+
+
+    <color name="green">#339e57</color>
+    <color name="red">#e41a13</color>
+
+    <color name="mainTextColor">#343d43</color>
+    <color name="btnRequest">#ffbf12</color>
+    <color name="black30">#60000000</color>
+    <color name="cardviewfont">#454F63</color>
+    <color name="cardviewhintfont">#959DAD</color>
+    <color name="cardviewBg">#F3F3F5</color>
+    <color name="closebutton">#C840E9</color>
+    <color name="tickbutton">#3ACCE1</color>
+    <color name="progressbaremi">#665EFF</color>
+    <color name="progressbarsecondary">#78849E</color>
+    <color name="dialog_button">#673AB7</color>
+    <color name="aboutus">#414141</color>
+    <color name="walletbac">#757991</color>
 </resources>
