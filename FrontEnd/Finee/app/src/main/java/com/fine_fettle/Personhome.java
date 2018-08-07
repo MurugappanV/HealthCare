@@ -1,6 +1,5 @@
 package com.fine_fettle;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -39,6 +38,7 @@ public class Personhome extends AppCompatActivity{
         b11 = findViewById(R.id.b_p_health);
         b12 = findViewById(R.id.b_p_tips);
         b13 = findViewById(R.id.b_p_logout);
+        b14 = findViewById(R.id.b_p_crash);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
