@@ -71,11 +71,35 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
             if (location != null) {
                 onLocationChanged(location);
             }
-    //    locationManager.requestLocationUpdates(provider, 2000,0,this);
+        locationManager.requestLocationUpdates(provider, 2000, 0, new android.location.LocationListener() {
+            @Override
+            public void onLocationChanged(Location location) {
+                onLC(location);
+            }
+
+            @Override
+            public void onStatusChanged(String s, int i, Bundle bundle) {
+
+            }
+
+            @Override
+            public void onProviderEnabled(String s) {
+
+            }
+
+            @Override
+            public void onProviderDisabled(String s) {
+
+            }
+        });
         }
 
     @Override
     public void onLocationChanged(Location location) {
+        onLC(location);
+    }
+
+    public void onLC(Location location) {
         TextView locationTv = (TextView) findViewById(R.id.latlongLocation);
 
         lat =location.getLatitude();
@@ -98,6 +122,7 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
         Log.e("Destination_longitude", "" + Destination_longitude);
         getlogin(latitude,longitude,deviceId,Destination_latitude,Destination_longitude,radius);
     }
+
 
 
     private boolean isGooglePlayServicesAvailable() {
