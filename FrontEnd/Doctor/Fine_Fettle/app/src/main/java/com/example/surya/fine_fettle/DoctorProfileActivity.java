@@ -37,7 +37,7 @@ public class DoctorProfileActivity extends AppCompatActivity {
 
 
     String doc_id;
-    private TextView mName, mMobile, mDocId, mDochospitalName, mgender, mdob, mEmail,dspl;
+    private TextView mName, mMobile, mDocId, mDochospitalName, mgender, mdob, mEmail,dspl,ddesig;
     private Context mContext;
     private ImageView mImageBack;
 
@@ -65,6 +65,7 @@ public class DoctorProfileActivity extends AppCompatActivity {
         mEmail = findViewById(R.id.usr_email);
         mdob = findViewById(R.id.usr_doc_dob);
         dspl = findViewById(R.id.usr_special);
+        ddesig=findViewById(R.id.user_deisig);
         getProfile(doc_id);
 
         mImageBack.setOnClickListener(new View.OnClickListener() {
@@ -137,6 +138,7 @@ public class DoctorProfileActivity extends AppCompatActivity {
                 String dob = jsonObject.getString("dob");
                 String clinic_name = jsonObject.getString("h_name");
                 String d_special = jsonObject.getString("d_specialization");
+                String d_desig=jsonObject.getString("d_desig");
                 mName.setText(name);
                 mMobile.setText(mobilenumber);
                 mDocId.setText(doc_id);
@@ -145,6 +147,7 @@ public class DoctorProfileActivity extends AppCompatActivity {
                 mdob.setText(dob);
                 mEmail.setText(email);
                 dspl.setText(d_special);
+                ddesig.setText(d_desig);
 
             } else if (success == 201) {
                 Toast.makeText(getApplicationContext(), "Please Try Again", Toast.LENGTH_SHORT).show();

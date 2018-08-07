@@ -41,45 +41,19 @@ public class Blood extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blood);
         breq=findViewById(R.id.bloodreq);
-//        bview=findViewById(R.id.bloodview);
         Intent intent = getIntent();
         name = intent.getStringExtra("user");
         id=intent.getStringExtra("id");
 
-
-//        breq.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Blood.this, BloodRequest.class);
-//                intent.putExtra("user", name);
-//                intent.putExtra("id", id);
-//                startActivity(intent);
-//            }
-//        });
-
-//        bview.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Blood.this, BloodView.class);
-//                intent.putExtra("user", name);
-//                intent.putExtra("id", id);
-//                startActivity(intent);
-//            }
-//        });
         addListenerOnSpinnerItemSelection();
         ratingBar = findViewById(R.id.rating);
-//        breq = findViewById(R.id.request);
 
         breq.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(BloodRequest.this, BloodView.class);
                 rate = String.valueOf(ratingBar.getRating());
-//                intent.putExtra("user", name);
-//                intent.putExtra("id", id);
                 submitReq(view);
-//                startActivity(intent);
             }
         });
 
@@ -129,11 +103,6 @@ public class Blood extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            // Showing progress dialog
-//            pDialog = new ProgressDialog(Blood.this);
-//            pDialog.setMessage("Please wait...");
-//            pDialog.setCancelable(false);
-//            pDialog.show();
 
         }
 
@@ -141,13 +110,8 @@ public class Blood extends AppCompatActivity {
         protected Void doInBackground(Void... arg0) {
             JsonParser sh = new JsonParser();
             String url= "http://35.204.108.96/bloodselect.php?u_id="+id;
-            //String url= "http://192.168.42.229/viewallapp.php?ID="+tvView.getText();
-            //String url= "http://10.13.1.17/bloodselect.php?u_id="+tv.getText();
-            //String url= "http://192.168.0.111/viewallapp.php?ID="+tvView.getText();
             String jsonStr = sh.convertJson(url);
             System.out.println(url);
-
-//            Log.e(TAG, "Response from url: " + jsonStr);
 
             if (jsonStr != null) {
                 try {
@@ -173,7 +137,6 @@ public class Blood extends AppCompatActivity {
                         contactList.add(employee);
                     }
                 } catch (final JSONException e) {
-//                    Log.e(TAG, "Json parsing error: " + e.getMessage());
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -186,7 +149,6 @@ public class Blood extends AppCompatActivity {
 
                 }
             } else {
-//                Log.e(TAG, "Couldn't get json from server.");
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -205,9 +167,6 @@ public class Blood extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            // Dismiss the progress dialog
-//            if (pDialog.isShowing())
-//                pDialog.dismiss();
             /**
              * Updating parsed JSON data into ListView
              * */

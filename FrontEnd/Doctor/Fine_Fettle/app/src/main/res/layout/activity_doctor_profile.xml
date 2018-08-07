@@ -120,6 +120,19 @@
                                 tools:ignore="HardcodedText" />
 
                             <TextView
+
+                                android:id="@+id/user_deisig"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:drawablePadding="10dp"
+                                android:drawableStart="@drawable/ic_user"
+                                android:text="MBBS"
+                                android:textColor="@color/secondary_txt"
+                                android:textSize="15sp"
+                                tools:ignore="HardcodedText" />
+
+                            <TextView
                                 android:id="@+id/usr_id"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

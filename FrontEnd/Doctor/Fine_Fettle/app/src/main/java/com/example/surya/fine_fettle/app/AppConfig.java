@@ -12,6 +12,8 @@ public class AppConfig {
     public static String Patient_Prescription="Patient_prescription.php";
     public static String Patient_List="Patient_list.php";
     public static String Accept="Doc_Accept_booking.php";
+    public static  String UPLOAD_URL = "AndroidImageUpload/upload.php";
+    public static  String IMAGES_URL = "AndroidImageUpload/getImages.php";
 
 
 }

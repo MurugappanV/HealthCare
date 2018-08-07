@@ -41,6 +41,16 @@
             android:hint="Your Name"
             android:inputType="textCapWords"
             tools:ignore="HardcodedText" />
+        <EditText
+            android:id="@+id/ddesign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/secondary"
+            android:layout_marginStart="@dimen/secondary"
+            android:layout_marginTop="@dimen/secondary"
+            android:hint="Designation"
+            android:inputType="textCapWords"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/dhos"
@@ -241,6 +251,32 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="2">
+            <Button
+                android:id="@+id/buttonChoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:text="Select" />
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:hint="Name For Image"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/buttonUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:text="Upload" />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
         <Button
             android:id="@+id/dsin"

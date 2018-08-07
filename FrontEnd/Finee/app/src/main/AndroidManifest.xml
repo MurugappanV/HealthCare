@@ -142,6 +142,8 @@
         <activity android:name=".upload_prescription" />
         <activity android:name=".Crashactivity" />
         <activity android:name=".About" />
+        <activity android:name=".ViewPrescription" />
+        <activity android:name=".adapter.PrescriptionAdapter" />
 
 
         <!--
