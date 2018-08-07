@@ -34,7 +34,7 @@ public class ShakeService extends Service implements ShakeListener.OnShakeListen
     @Override
     public void onShake() {
         if(check==1) {
-            Toast.makeText(ShakeService.this, "SHAKEN!", Toast.LENGTH_LONG).show();
+            Toast.makeText(ShakeService.this, "Oooh! is it a accident ?", Toast.LENGTH_LONG).show();
             final Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             vib.vibrate(500);
             Intent i = new Intent();
