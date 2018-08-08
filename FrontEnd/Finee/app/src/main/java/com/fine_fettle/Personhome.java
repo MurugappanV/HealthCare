@@ -51,7 +51,7 @@ public class Personhome extends AppCompatActivity{
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Personhome.this,MapsActivity.class );
+                Intent intent = new Intent(Personhome.this,MakeAppointment.class );
                 startActivity(intent);
             }
         });

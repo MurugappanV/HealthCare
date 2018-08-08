@@ -34,7 +34,6 @@
             android:src="@drawable/safety_list"/>
 
         <TextView
-            android:layout_marginStart="30dp"
             android:textColor="#FF00ADE7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,7 +64,7 @@
 
         <TextView
             android:layout_marginStart="10dp"
-            android:textColor="#0055e7"
+            android:textColor="#007ba4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -91,7 +90,7 @@
 
         <TextView
             android:layout_marginStart="10dp"
-            android:textColor="#0055e7"
+            android:textColor="#007ba4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
