@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -41,16 +43,39 @@ import javax.net.ssl.HttpsURLConnection;
 public class Tips extends AppCompatActivity{
     private ArrayList<TipsModel> mTipsList = new ArrayList<>();
     private RecyclerView mListView;
+    private SearchView mSearchView;
+    private TipsAdapter adapter;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tips_lyt);
         mListView = findViewById(R.id.tips_list);
+        mSearchView = findViewById(R.id.search);
         new mymethod().execute();
+        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if(adapter != null) {
+                     ArrayList<TipsModel> tipsList = new ArrayList<>();
+                    for (TipsModel moel: mTipsList) {
+                        if(moel.getmTitle().toUpperCase().contains(newText.toUpperCase())) {
+                            tipsList.add(moel);
+                        }
+                    }
+                    adapter.updateList(tipsList);
+                }
+                return false;
+            }
+        });
     }
 
     private void setAdapter(){
-        TipsAdapter adapter = new TipsAdapter(this,R.layout.tips_item_lyt,mTipsList);
+        adapter = new TipsAdapter(this,R.layout.tips_item_lyt,mTipsList);
         LinearLayoutManager horizontalLinearLytmanager = new LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL, false);
         mListView.setLayoutManager(horizontalLinearLytmanager);

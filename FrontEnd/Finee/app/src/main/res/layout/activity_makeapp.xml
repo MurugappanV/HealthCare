@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:paddingTop="35dp"
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="10dp"
+        android:paddingBottom="5dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:layout_gravity="center">
@@ -52,14 +52,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/filters"
-        android:paddingTop="60dp">
+        android:paddingTop="10dp">
 
     </android.support.v7.widget.RecyclerView>
     <android.support.v7.widget.SearchView
         android:id="@+id/search"
         android:layout_below="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:queryHint="Search hospitals..."
+        android:iconifiedByDefault="false" >
 
     </android.support.v7.widget.SearchView>
     <LinearLayout

@@ -48,6 +48,11 @@ public class TipsAdapter  extends RecyclerView.Adapter<TipsAdapter.TipsViewHolde
         return holder;
     }
 
+    public void updateList(ArrayList<TipsModel> tipsList){
+        mTipsList = tipsList;
+        notifyDataSetChanged();
+    }
+
     @Override
     public void onBindViewHolder(@NonNull TipsViewHolder holder, int position) {
         final TipsModel tip = mTipsList.get(position);

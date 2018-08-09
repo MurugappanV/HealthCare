@@ -9,6 +9,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -39,10 +40,25 @@
             android:textAlignment="center"/>
     </LinearLayout>
 
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search hospitals..."
+        android:iconifiedByDefault="false" >
+
+    </android.support.v7.widget.SearchView>
+
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/tips_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="60dp"></android.support.v7.widget.RecyclerView>
+        android:paddingTop="10dp"
+        android:layout_below="@+id/search"
+        >
+
+    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>
