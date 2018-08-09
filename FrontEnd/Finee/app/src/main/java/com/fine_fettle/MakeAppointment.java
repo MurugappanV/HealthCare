@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.AsyncTask;
@@ -12,12 +13,14 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.fine_fettle.adapter.HospitalAdapter;
 import com.fine_fettle.models.HospitalModel;
+import com.fine_fettle.models.TipsModel;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -59,12 +62,15 @@ public class MakeAppointment extends AppCompatActivity implements View.OnClickLi
     private final int DESCENDING = 1;
     private final String NAME = "name";
     private final String DISTANCE = "distance";
+    private final String RATING = "rating";
     private RecyclerView mListView;
     private double lat, longg;
-    Button mSortButton;
+    Button mSortButton, mDist, mRat;
     HospitalAdapter mHospitalAdapter;
     public String id;
     private FusedLocationProviderClient mFusedLocationClient;
+    private SearchView mSearchView;
+    private String sortBy = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,9 +78,13 @@ public class MakeAppointment extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_makeapp);
         Intent intent = getIntent();
         id = intent.getStringExtra("id");
-        mSortButton = findViewById(R.id.sort_button);
         mListView = findViewById(R.id.hospital_list);
+        mSortButton = findViewById(R.id.sort_button);
         mSortButton.setOnClickListener(this);
+        mDist = findViewById(R.id.distance);
+        mDist.setOnClickListener(this);
+        mRat = findViewById(R.id.rating);
+        mRat.setOnClickListener(this);
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -112,18 +122,51 @@ public class MakeAppointment extends AppCompatActivity implements View.OnClickLi
             }
         }
         new mymethod().execute();
+        mSearchView = findViewById(R.id.search);
+        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if(mHospitalAdapter != null) {
+                    ArrayList<HospitalModel> tipsList = new ArrayList<>();
+                    for (HospitalModel moel: mTipsList) {
+                        if(moel.getHospital_name().toUpperCase().contains(newText.toUpperCase())) {
+                            tipsList.add(moel);
+                        }
+                    }
+                    mHospitalAdapter.updateList(tipsList);
+                }
+                return false;
+            }
+        });
     }
 
     @Override
     public void onClick(View v) {
+        mSortButton.setTextColor(Color.parseColor("#55000000"));
+        mDist.setTextColor(Color.parseColor("#55000000"));
+        mRat.setTextColor(Color.parseColor("#55000000"));
         if(v.getId()==R.id.sort_button){
-            sortList();
+            sortList(NAME,ASCENDING);
+            mSortButton.setTextColor(Color.parseColor("#FF00ADE7"));
+        }
+        if(v.getId()==R.id.distance){
+            sortList(DISTANCE,ASCENDING);
+            mDist.setTextColor(Color.parseColor("#FF00ADE7"));
+        }
+        if(v.getId()==R.id.rating){
+            sortList(RATING,ASCENDING);
+            mRat.setTextColor(Color.parseColor("#FF00ADE7"));
         }
     }
 
-    private void sortList() {
+    private void sortList(String name, int type) {
         if(mHospitalAdapter!=null){
-            Collections.sort(mTipsList, new HospitalItemComparator(NAME,ASCENDING));
+            Collections.sort(mTipsList, new HospitalItemComparator(name, type));
             mHospitalAdapter.updateList(mTipsList);
         }
     }
@@ -255,7 +298,45 @@ public class MakeAppointment extends AppCompatActivity implements View.OnClickLi
                             }
                         }
                     } else if (sortBy.equalsIgnoreCase(DISTANCE)) {
-
+                        if ((result1.getDist() != null) && (result2.getDist() != null)) {
+                            if(orderBy==ASCENDING){
+                                if( Double.parseDouble(result1.getDist()) > (Double.parseDouble(result2.getDist())) ) {
+                                    return 1;
+                                } else if( Double.parseDouble(result1.getDist()) < (Double.parseDouble(result2.getDist())) ) {
+                                    return -1;
+                                } else {
+                                    return 0;
+                                }
+                            }else{
+                                if( Double.parseDouble(result1.getDist()) > (Double.parseDouble(result2.getDist())) ) {
+                                    return -1;
+                                } else if( Double.parseDouble(result1.getDist()) < (Double.parseDouble(result2.getDist())) ) {
+                                    return 1;
+                                } else {
+                                    return 0;
+                                }
+                            }
+                        }
+                    } else if (sortBy.equalsIgnoreCase(RATING)) {
+                        if ((result1.getRating() != null) && (result2.getRating() != null)) {
+                            if(orderBy==ASCENDING){
+                                if( Double.parseDouble(result1.getRating()) > (Double.parseDouble(result2.getRating())) ) {
+                                    return -1;
+                                } else if( Double.parseDouble(result1.getRating()) < (Double.parseDouble(result2.getRating())) ) {
+                                    return 1;
+                                } else {
+                                    return 0;
+                                }
+                            }else{
+                                if( Double.parseDouble(result1.getRating()) > (Double.parseDouble(result2.getRating())) ) {
+                                    return 1;
+                                } else if( Double.parseDouble(result1.getRating()) < (Double.parseDouble(result2.getRating())) ) {
+                                    return -1;
+                                } else {
+                                    return 0;
+                                }
+                            }
+                        }
                     }
 
                 } catch (NumberFormatException e) {

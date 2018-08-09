@@ -82,7 +82,7 @@
             android:textAllCaps="false"
             android:fontFamily="@font/corpos_dem_regular"
             android:textSize="15sp"
-            android:textColor="#FF00ADE7"
+            android:textColor="#55000000"
             android:background="@drawable/button_tranparent"
             >
         </Button>
@@ -97,7 +97,21 @@
             android:textAllCaps="false"
             android:fontFamily="@font/corpos_dem_regular"
             android:textSize="15sp"
-            android:textColor="#FF00ADE7"
+            android:textColor="#55000000"
+            android:background="@drawable/button_tranparent"
+            />
+
+        <Button
+            android:text="Sort by Rating"
+            android:id="@+id/rating"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textAllCaps="false"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:textSize="15sp"
+            android:textColor="#55000000"
             android:background="@drawable/button_tranparent"
             />
 
