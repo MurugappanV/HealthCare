@@ -37,6 +37,11 @@ public class DoctorAdapter  extends RecyclerView.Adapter<DoctorAdapter.DoctorVie
         }
     }
 
+    public void updateList(ArrayList<DoctorModal> tipsList){
+        mTipsList = tipsList;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public DoctorAdapter.DoctorViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -50,9 +55,9 @@ public class DoctorAdapter  extends RecyclerView.Adapter<DoctorAdapter.DoctorVie
         final DoctorModal tip = mTipsList.get(position);
 
         Picasso.get()
-                .load(tip.getGender().equals("male") ? R.drawable.male_doctor : R.drawable.female_doctor)
-                .placeholder(R.drawable.male_doctor)
-                .error(R.drawable.male_doctor)
+                .load(tip.getImg())
+                .placeholder(tip.getGender().equals("male") ? R.drawable.male_doctor : R.drawable.female_doctor)
+                .error(tip.getGender().equals("male") ? R.drawable.male_doctor : R.drawable.female_doctor)
                 .into(holder.mIcon);
 
         holder.mTitle.setText(tip.getName() + ", " + tip.getHospital_name());
@@ -68,6 +73,9 @@ public class DoctorAdapter  extends RecyclerView.Adapter<DoctorAdapter.DoctorVie
                 mContext.startActivity(intent);
             }
         });
+        holder.degree.setText("Degree : " + tip.getDegree());
+        holder.exp.setText("Experience : " + tip.getExp() + "yrs");
+        holder.rating.setText("Rating : " + tip.getRating());
 
     }
 
@@ -85,6 +93,9 @@ public class DoctorAdapter  extends RecyclerView.Adapter<DoctorAdapter.DoctorVie
         private TextView mTitle;
         private TextView mDescription;
         private ImageView mIcon;
+        private TextView degree;
+        private TextView exp;
+        private TextView rating;
 
 
         public DoctorViewHolder(View itemView) {
@@ -92,6 +103,9 @@ public class DoctorAdapter  extends RecyclerView.Adapter<DoctorAdapter.DoctorVie
             mTitle = (TextView) itemView.findViewById(R.id.name);
             mDescription = (TextView) itemView.findViewById(R.id.specialisation);
             mIcon = (ImageView) itemView.findViewById(R.id.doc_icon);
+            degree = (TextView) itemView.findViewById(R.id.degree);
+            rating = (TextView) itemView.findViewById(R.id.rating);
+            exp = (TextView) itemView.findViewById(R.id.exp);
 
         }
 

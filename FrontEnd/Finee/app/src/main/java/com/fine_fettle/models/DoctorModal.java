@@ -10,6 +10,10 @@ public class DoctorModal {
     public String hospital_name;
     public String specialization;
     public String mobile_number;
+    public String rating;
+    public String degree;
+    public String exp;
+    public String img;
 
     public DoctorModal() {
     }
@@ -60,5 +64,37 @@ public class DoctorModal {
 
     public void setMobile_number(String mobile_number) {
         this.mobile_number = mobile_number;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    public String getDegree() {
+        return degree;
+    }
+
+    public void setDegree(String degree) {
+        this.degree = degree;
+    }
+
+    public String getExp() {
+        return exp;
+    }
+
+    public void setExp(String exp) {
+        this.exp = exp;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }
