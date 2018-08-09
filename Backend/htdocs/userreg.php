@@ -8,7 +8,10 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 	$pass=$_POST['pass'];
 	$email=$_POST['email'];
 	$phone=$_POST['phone'];
-	
+/*$u_name="priya25";
+$pass="priya";
+$email="pr@gmail.com";
+$phone=	124567890;*/
 		
 	$sql="INSERT INTO user_reg (u_name,pass,email,phone) VALUES ('$u_name','$pass','$email',$phone)";
 	

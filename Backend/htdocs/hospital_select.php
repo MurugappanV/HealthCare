@@ -13,7 +13,11 @@ if(mysqli_num_rows($result1)>0)
 			"hospital_name"=>$row1['hos_name'],
 			"hospital_address"=>$row1['address'],
 			"hospital_city"=>$row1['city'],
-			"hospital_pincode"=>$row1['pincode']
+            "hospital_pincode"=>$row1['pincode'],
+            "rating"=>$row1['ratings'],
+            "longg"=>$row1['longitude'],
+            "lat"=>$row1['latitude'],
+            "img"=>$row1['img_url']
         ));
 	}
 }	

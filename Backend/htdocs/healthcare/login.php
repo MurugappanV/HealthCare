@@ -16,7 +16,7 @@ if($con)
         {
             session_start();
             $_SESSION['hos_mail']=$email;
-            header("Location:http://localhost/healthcare/hospital.php");
+            header("Location:http://finefettle.ooo/healthcare/hospital.php");
         }
         else
         {

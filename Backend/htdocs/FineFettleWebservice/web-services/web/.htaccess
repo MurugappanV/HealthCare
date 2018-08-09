@@ -1,0 +1,23 @@
+RewriteEngine on
+# general
+RewriteRule  ^login?$  Acn-Login-Process.php
+RewriteRule  ^register?$ Acn-registration.php
+RewriteRule  ^verifyotp?$ Acn-Verify-Otp.php
+RewriteRule  ^resendotp?$ Acn-Resend-Otp.php
+RewriteRule  ^productlist?$ Acn-Product-List.php
+RewriteRule  ^customerreference?$ Acn-Customer-Reference.php
+RewriteRule  ^newrequest?$ Acn-new-request.php
+RewriteRule  ^profileview?$ Acn-Profile-View.php
+RewriteRule  ^requestview?$ Acn-Request-View.php
+RewriteRule  ^vendornewticket?$ Acn-Vendor-New_Ticket.php
+RewriteRule  ^customercomments?$ Acn-Comments-View.php
+RewriteRule  ^requestupdate?$ Acn-Request-Completed.php
+RewriteRule  ^forwardvendorlist?$ Acn-Forward-Vendor-List.php
+RewriteRule  ^completedrequest?$ Acn-Vendor-Completed-Request.php
+RewriteRule  ^forwardticket?$ Acn-Vendor-Forward-Ticket.php
+RewriteRule  ^acceptticket?$ Acn-Accept-Ticket.php
+RewriteRule  ^rejectticket?$ Acn-Reject-Ticket.php
+RewriteRule  ^forwardticketview?$ Acn-Forward-Ticket-View.php
+RewriteRule  ^reassignedticket?$ Acn-Reassigned-View.php
+RewriteRule  ^requestcount?$ Acn-Vendor-Request-Count.php
+RewriteRule  ^customerview?$ Acn-Customer-Request-view.php

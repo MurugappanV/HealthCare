@@ -2,7 +2,7 @@
 @session_start();
 if(@$_SESSION['hos_mail']!='')
 {
-    header("Location:http://localhost/healthcare/hospital.php");
+    header("Location:http://finefettle.ooo/healthcare/hospital.php");
 }
 ?>
 <html>

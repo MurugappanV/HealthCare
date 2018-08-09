@@ -115,13 +115,13 @@ if(isset($_POST['special']) ) {
                 {
                     $special=$_SESSION['special'];
                 }
-                @$sql = "select d_id,d_name from doc_login where confirmation=1 and d_specialization='$special'";
+                 @$sql = "select d_id,d_name from doc_login where confirmation=1 and d_specialization='$special'";
                 @$exe_sql = $con->query($sql);
                 while (@$row = mysqli_fetch_array($exe_sql)) {
-                    $id = $row['d_id'];
-                    $name=$row['d_name'];
+                     $id = $row['d_id'];
+                     $name=$row['d_name'];
 
-                    echo '<form action="View_Doctor.php" method="post"><input type="hidden" value="'.$special.'" name="special"><button id="button" name="id" value=' . $id . '>' . $name . '</button></form>';
+                    echo '<form action="View_Doctor.php" method="post"><input type="hidden" value="'.$special.'" name="special"><button id="button" name="id" value='. $id .'>'. $name .'</button></form>';
                 }
 
             ?>

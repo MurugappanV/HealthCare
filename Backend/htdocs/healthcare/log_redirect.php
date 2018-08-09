@@ -3,6 +3,6 @@
 @$email=$_SESSION['hos_mail'];
 if($email=='')
 {
-    header("Location:http://localhost/healthcare/index.php");
+    header("Location:http://finefettle.ooo/healthcare/index.php");
 }
 ?>

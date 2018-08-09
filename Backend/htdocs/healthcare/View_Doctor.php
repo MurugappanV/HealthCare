@@ -1,7 +1,6 @@
 
 <?php
 include 'log_redirect.php';
-
 include 'connection.php';
 
 ?>
@@ -100,9 +99,16 @@ include 'connection.php';
             border-radius: 3px;
             padding-left: 20px;
         }
+        img
+        {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: 10px;
+        }
     </style>
 </head>
-<body style="background: url(images/investigacion-farmaceutica.jpg) no-repeat;overflow: hidden;">
+<body style="background: url(images/investigacion-farmaceutica.jpg) no-repeat;">
 <center>
     <div >
         <h1>Doctors</h1>
@@ -114,7 +120,9 @@ include 'connection.php';
             $det_select="select * from doc_login where d_id=$id ";
             $exe_det_select=$con->query($det_select);
             $det_fetch=mysqli_fetch_array($exe_det_select);
-            $name=$det_fetch['d_name'];
+            $username=$det_fetch['username'];
+            $doc_name=$det_fetch['d_name'];
+            $hospital=$det_fetch['d_hospital'];
             $mobile=$det_fetch['d_mobile'];
             $age=$det_fetch['age'];
             $experience=$det_fetch['d_experience'];
@@ -122,15 +130,36 @@ include 'connection.php';
             $gender=$det_fetch['gender'];
             $blood=$det_fetch['bloodgroup'];
             $address=$det_fetch['address'];
+            $profile=$det_fetch['profile_pic'];
+            $d_degree=$det_fetch['d_degree'];
+
             echo '<div>
+<img src="images/'.$profile.'">
+
 <table>
 <tr>
 <td>ID</td>
 <td>'.$id.'</td>                        
 </tr>
 <tr>
-<td>Name</td>
-<td>'.$name.'</td>                        
+<td>Doctor Name</td>
+<td>'.$doc_name.'</td>                        
+</tr>
+<tr>
+<td>
+Doctor Qualification
+</td>
+<td>
+'.$d_degree.'
+</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>'.$username.'</td>                        
+</tr>
+<tr>
+<td>Hospital</td>
+<td>'.$hospital.'</td>                        
 </tr>
 <tr>
 <td>Specialization</td>

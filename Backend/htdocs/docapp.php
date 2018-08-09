@@ -11,7 +11,8 @@ include 'db_user_details.php';
 
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
-	$u_id=$_POST['u_id'];
+    $u_id=$_POST['u_id'];
+    $d_id=$_POST['d_id'];
 	$p_age=$_POST['age'];
 	$p_name=$_POST['name'];
 	$doc_name=$_POST['d_name'];
@@ -40,7 +41,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 	$date="2018-07-05";
 	$slot="7-9am";*/
 	
-	$sql="INSERT INTO user_req (u_id,p_name,p_age,p_addr,h_issue,doc_specialization,doc_name,hos_name,date,slot) VALUES ($u_id,'$p_name',$p_age,'$p_addr','$h_issue','$doc_specialization','$doc_name','$hos_name','$date','$slot')";
+	$sql="INSERT INTO user_req (u_id,d_id,p_name,p_age,p_addr,h_issue,doc_specialization,doc_name,hos_name,date,slot, appointment_status) VALUES ($u_id,$d_id,'$p_name',$p_age,'$p_addr','$h_issue','$doc_specialization','$doc_name','$hos_name','$date','$slot', 'PENDING')";
 	
 	$res=mysqli_query($con,$sql);
 	if($res)
@@ -56,7 +57,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 	else
 	{
 		$response["Failure"] = 0;
-        $response["message"] = "Data does not inserted into database.";
+        $response["message"] = "INSERT INTO user_req (u_id,p_name,p_age,p_addr,h_issue,doc_specialization,doc_name,hos_name,date,slot) VALUES ($u_id,'$p_name',$p_age,'$p_addr','$h_issue','$doc_specialization','$doc_name','$hos_name','$date','$slot')";
 
         // echoing JSON response
         echo json_encode($response);// Here you are echoing
@@ -66,3 +67,5 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 }
 mysqli_close($con);
 ?>
+
+{"Failure":0,"message":"INSERT INTO user_req (u_id,p_name,p_age,p_addr,h_issue,doc_specialization,doc_name,hos_name,date,slot) VALUES (1,'Murugappan',52,'34,678','fff','lungs','Dr. Naresh Trehan','State Hospital','2018-08-10','1pm')"}

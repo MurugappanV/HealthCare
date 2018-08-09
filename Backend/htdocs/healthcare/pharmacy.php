@@ -6,6 +6,33 @@ $count=mysqli_fetch_array($exe_count);
 <html>
 <head>
     <style>
+        #form
+        {
+            margin-top:4%;
+            height: 350px;
+            width: 400px;
+            background: rgba(0,0,0,0.8);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        #input
+        {
+            height:30px;
+            width:250px;
+            border-radius: 3px;
+            -webkit-box-shadow: 0 0 20px #fff;
+            -moz-box-shadow: 0 0 20px #fff;
+            box-shadow: 0 0 20px #fff;
+            margin: 15px;
+        }
+        #input:hover, #input:focus
+        {
+            -webkit-box-shadow: none;
+            -moz-box-shadow:none;
+            box-shadow: none;
+        }
         h1
         {
             color: #fff;
@@ -101,6 +128,12 @@ $count=mysqli_fetch_array($exe_count);
             border-radius: 3px;
             padding-left: 20px;
         }
+        textarea
+        {
+            height: 150px;
+            width: 250px;
+            border-radius: 3px;
+        }
         a{
             color: #fff;
         }
@@ -131,7 +164,31 @@ $count=mysqli_fetch_array($exe_count);
                 echo '<script>window.alert("Updated Successfully.");window.location("pharmacy.php");</script>';
             }
         }
-        if(isset($_POST['pharmacy']))
+        else if(isset($_POST['Available']))
+        {
+            $avilable=$_POST['Available'];
+            $id=$_POST['u_id'];
+            echo '<form method="post" id="form"><br>
+    <input type="number" name="number" placeholder="Phone Number" id="input" required><br>
+    <textarea rows="10" cols="20" name="announce" placeholder="Announcement"></textarea><br><br>
+    <input type="hidden" name="id" value="'.$id.'">
+    <input type="submit" id="submit" name="phone" value="Submit">
+</form>';
+
+        }
+        else if(isset($_POST['phone']))
+        {
+            $id=$_POST['id'];
+            $phone=$_POST['number'];
+            $announce=$_POST['announce'];
+            $set_available=$con->query("update pharmacy_req set status='1',pharmacy_msg='$phone.$announce' WHERE u_id=$id");
+
+            if($set_available)
+            {
+                echo '<script>window.alert("Updated Successfully.");window.location("Blood_Bank.php");</script>';
+            }
+        }
+        else if(isset($_POST['pharmacy']))
         {
             $id=$_POST['pharmacy'];
             $sel_det=$con->query("select * from pharmacy_req where u_id=$id");
@@ -159,8 +216,8 @@ $count=mysqli_fetch_array($exe_count);
 <td>'.$prescription.'</td>
 </tr>
 <tr>
-<td><button id="submit" name="pharmacy_req" value="1">Available</button></td>
 <td><button id="submit" name="pharmacy_req" value="2">Not Available</button></td>
+<td><button id="submit" name="Available" value="1">Available</button></td>
 </tr>
 </table>
 </form>';

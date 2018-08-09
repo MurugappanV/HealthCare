@@ -13,11 +13,16 @@ include "db_user_details.php";
         {	
         
             array_push($response,array(
+                "id"=>$row1['d_id'],
                 "name"=>$row1['d_name'],
                 "gender"=>$row1['gender'],
                 "hospital_name"=>$row1['d_hospital'],
                 "specialization"=>$row1['d_specialization'],
-                "mobile_number"=>$row1['d_mobile']
+                "mobile_number"=>$row1['d_mobile'],
+                "rating"=>$row1['rating'],
+                "degree"=>$row1['d_degree'],
+                "exp"=>$row1['d_experience'],
+                "img"=>$row1['profile_pic']
             ));
         }
     }	
