@@ -67,6 +67,7 @@ public class DoctorAdapter  extends RecyclerView.Adapter<DoctorAdapter.DoctorVie
             public void onClick(View view) {
                 Intent intent = new Intent(mContext,CreateUpdateAppointment.class);
                 intent.putExtra("id",  ((Laboratory)mContext).id);
+                intent.putExtra("d_id",  tip.getId());
                 intent.putExtra("hospital_name", tip.getHospital_name() );
                 intent.putExtra("doctor_name", tip.getName() );
                 intent.putExtra("doctor_spec", tip.getSpecialization() );

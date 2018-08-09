@@ -28,7 +28,7 @@ public class CreateUpdateAppointment extends AppCompatActivity {
     Button book;
     private ProgressBar progressBar;
     private Calendar newCalendar;
-     String id,hospital_name, doctor_name, doctor_spec;
+     String id,d_id,hospital_name, doctor_name, doctor_spec;
 //    TextView tv;
 
     @Override
@@ -38,6 +38,7 @@ public class CreateUpdateAppointment extends AppCompatActivity {
 //        tv=findViewById(R.id.tvView1);
         Intent intent = getIntent();
         id=intent.getStringExtra("id");
+        d_id=intent.getStringExtra("d_id");
         hospital_name=intent.getStringExtra("hospital_name");
         doctor_name=intent.getStringExtra("doctor_name");
         doctor_spec=intent.getStringExtra("doctor_spec");
@@ -148,6 +149,7 @@ public class CreateUpdateAppointment extends AppCompatActivity {
         //if it passes all the validations
         HashMap<String, String> params = new HashMap<>();
         params.put("u_id", id);
+        params.put("d_id", d_id);
         params.put("age", p_age);
         params.put("addr", p_addr);
         params.put("h_issue", h_issue);

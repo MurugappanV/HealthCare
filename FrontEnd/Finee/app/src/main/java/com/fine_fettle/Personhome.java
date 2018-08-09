@@ -52,6 +52,8 @@ public class Personhome extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Personhome.this,MakeAppointment.class );
+                intent.putExtra("user", username);
+                intent.putExtra("id", id);
                 startActivity(intent);
             }
         });
@@ -59,6 +61,8 @@ public class Personhome extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Personhome.this, Laboratory.class);
+                intent.putExtra("user", username);
+                intent.putExtra("id", id);
                 startActivity(intent);
             }
         });
@@ -81,6 +85,8 @@ public class Personhome extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Personhome.this, MedicineOreder.class);
+                intent.putExtra("user", username);
+                intent.putExtra("id", id);
                 startActivity(intent);
             }
         });
@@ -88,6 +94,8 @@ public class Personhome extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Personhome.this, Ambulance.class);
+                intent.putExtra("user", username);
+                intent.putExtra("id", id);
                 startActivity(intent);
             }
         });
@@ -105,6 +113,8 @@ public class Personhome extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Personhome.this, Need.class);
+                intent.putExtra("user", username);
+                intent.putExtra("id", id);
                 startActivity(intent);
             }
         });

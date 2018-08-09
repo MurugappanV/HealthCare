@@ -5,6 +5,8 @@ package com.fine_fettle.models;
  */
 
 public class DoctorModal {
+
+    public String id;
     public String name;
     public String gender;
     public String hospital_name;
@@ -96,5 +98,13 @@ public class DoctorModal {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
