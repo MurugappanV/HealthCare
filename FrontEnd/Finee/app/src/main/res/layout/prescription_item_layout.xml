@@ -1,0 +1,222 @@
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/duplex">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/lite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/duplex"
+                    android:layout_marginStart="@dimen/duplex"
+                    android:layout_marginTop="@dimen/lite"
+                    android:text="Patient Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/duplex"
+                    android:layout_marginStart="@dimen/duplex"
+                    android:layout_marginTop="@dimen/lite"
+                    android:text="Suriya"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/duplex"
+                    android:layout_marginStart="@dimen/duplex"
+                    android:layout_marginTop="@dimen/lite"
+                    android:text="Date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/duplex"
+                    android:layout_marginStart="@dimen/duplex"
+                    android:layout_marginTop="@dimen/lite"
+                    android:text="21-07-2018"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/duplex"
+                    android:layout_marginStart="@dimen/duplex"
+                    android:layout_marginTop="@dimen/lite"
+                    android:text="Issue"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txt_issue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/duplex"
+                    android:layout_marginStart="@dimen/duplex"
+                    android:layout_marginTop="@dimen/lite"
+                    android:text="Headache"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/duplex"
+                    android:layout_marginStart="@dimen/duplex"
+                    android:layout_marginTop="@dimen/lite"
+                    android:text="Hospital Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txt_hosname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/duplex"
+                    android:layout_marginStart="@dimen/duplex"
+                    android:layout_marginTop="@dimen/lite"
+                    android:text="KG"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/primary_txt"
+                    tools:ignore="HardcodedText" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/duplex"
+            android:layout_marginStart="@dimen/duplex"
+            android:layout_marginTop="@dimen/lite"
+            android:text="Doctor Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/primary_txt"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/txt_docname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/duplex"
+            android:layout_marginStart="@dimen/duplex"
+            android:layout_marginTop="@dimen/lite"
+            android:singleLine="true"
+            android:text="Gheetha"
+            android:textColor="@color/black"
+            android:textSize="@dimen/primary_txt"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/duplex"
+                android:layout_marginStart="@dimen/duplex"
+                android:layout_marginTop="@dimen/lite"
+                android:text="Medicine:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/primary_txt"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/txt_medi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/duplex"
+                android:layout_marginStart="@dimen/duplex"
+                android:layout_marginTop="@dimen/lite"
+                android:singleLine="true"
+                android:text="Dolo 650"
+                android:textColor="@color/black"
+                android:textSize="@dimen/primary_txt"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

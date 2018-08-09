@@ -17,7 +17,8 @@
     <string name="OBESE_CLASS_III">OBESE CLASS III</string>
     <string name="title_activity_maps">FINE-FETTLE</string>
     <string name="sign_up">SIGN UP</string>
-
+    <color name="cardviewhintfont">#959DAD</color>
+    <color name="cardviewBg">#F3F3F5</color>
 
 
     <string-array name="dropdown">

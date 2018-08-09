@@ -5,4 +5,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/cance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/corpos_dem_regular"
+        android:text="View Prescription"
+        android:textAllCaps="false"
+        android:textColor="#FF00ADE7"
+        android:textSize="20sp" />
+
+
+
+
 </LinearLayout>
