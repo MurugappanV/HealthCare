@@ -1,9 +1,11 @@
 package com.fine_fettle;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -33,6 +35,7 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -57,6 +60,7 @@ public class MakeAppointment extends AppCompatActivity implements View.OnClickLi
     private final String NAME = "name";
     private final String DISTANCE = "distance";
     private RecyclerView mListView;
+    private double lat, longg;
     Button mSortButton;
     HospitalAdapter mHospitalAdapter;
     public String id;
@@ -70,7 +74,6 @@ public class MakeAppointment extends AppCompatActivity implements View.OnClickLi
         id = intent.getStringExtra("id");
         mSortButton = findViewById(R.id.sort_button);
         mListView = findViewById(R.id.hospital_list);
-        new mymethod().execute();
         mSortButton.setOnClickListener(this);
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -89,11 +92,26 @@ public class MakeAppointment extends AppCompatActivity implements View.OnClickLi
             public void onSuccess(Location location) {
                 // Got last known location. In some rare situations this can be null.
                 if (location != null) {
-                    Log.d("__________________LOCATION_______________", String.valueOf(location.getLatitude())+"////"+String.valueOf(location.getLongitude()));
+                    lat = location.getLatitude();
+                    longg = location.getLongitude();
+                    Log.d("_____LOCATION____", String.valueOf(location.getLatitude())+"////"+String.valueOf(location.getLongitude()));
                     // Logic to handle location object
                 }
             }
         });
+        LocationManager manager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+        Location utilLocation = null;
+        List<String> providers = manager.getProviders(false);
+        for(String provider : providers){
+
+            utilLocation = manager.getLastKnownLocation(provider);
+            if(utilLocation != null) {
+                lat = utilLocation.getLatitude();
+                longg = utilLocation.getLongitude();
+                Log.d("_____LOCATION_2___", String.valueOf(utilLocation.getLatitude())+"////"+String.valueOf(utilLocation.getLongitude()));
+            }
+        }
+        new mymethod().execute();
     }
 
     @Override
@@ -167,6 +185,11 @@ public class MakeAppointment extends AppCompatActivity implements View.OnClickLi
                 if(tipsList!=null){
                     mTipsList = tipsList;
                     mTipsList.addAll(tipsList);
+                    DecimalFormat df2 = new DecimalFormat(".##");
+                    for (HospitalModel tips:mTipsList) {
+
+                        tips.setDist(df2.format(distance(lat, longg, Double.parseDouble(tips.getLat()), Double.parseDouble(tips.getLongg()), 'K')));
+                    }
                     setAdapter();
                 }
             } catch (JSONException e) {
@@ -185,6 +208,29 @@ public class MakeAppointment extends AppCompatActivity implements View.OnClickLi
                 LinearLayoutManager.VERTICAL, false);
         mListView.setLayoutManager(horizontalLinearLytmanager);
         mListView.setAdapter(mHospitalAdapter);
+    }
+
+
+    private double distance(double lat1, double lon1, double lat2, double lon2, char unit) {
+        double theta = lon1 - lon2;
+        double dist = Math.sin(deg2rad(lat1)) * Math.sin(deg2rad(lat2)) + Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.cos(deg2rad(theta));
+        dist = Math.acos(dist);
+        dist = rad2deg(dist);
+        dist = dist * 60 * 1.1515;
+        if (unit == 'K') {
+            dist = dist * 1.609344;
+        } else if (unit == 'N') {
+            dist = dist * 0.8684;
+        }
+        return (dist);
+    }
+
+    private double deg2rad(double deg) {
+        return (deg * Math.PI / 180.0);
+    }
+
+    private double rad2deg(double rad) {
+        return (rad * 180.0 / Math.PI);
     }
 
     private class HospitalItemComparator implements Comparator< HospitalModel> {

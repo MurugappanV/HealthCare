@@ -11,6 +11,12 @@ public class HospitalModel  implements Serializable{
     public String hospital_address;
     public String hospital_city;
     public String hospital_pincode;
+    public String rating;
+    public String longg;
+    public String lat;
+    public String img;
+    public String dist;
+
 
     public HospitalModel() {
     }
@@ -54,4 +60,43 @@ public class HospitalModel  implements Serializable{
         this.hospital_pincode = hospital_pincode;
     }
 
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    public String getLongg() {
+        return longg;
+    }
+
+    public void setLongg(String longg) {
+        this.longg = longg;
+    }
+
+    public String getLat() {
+        return lat;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public String getDist() {
+        return dist;
+    }
+
+    public void setDist(String dist) {
+        this.dist = dist;
+    }
 }

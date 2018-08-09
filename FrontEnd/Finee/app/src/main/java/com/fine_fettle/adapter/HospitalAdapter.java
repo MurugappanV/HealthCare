@@ -54,12 +54,12 @@ public class HospitalAdapter  extends RecyclerView.Adapter<HospitalAdapter.Hospi
         final HospitalModel tip = mTipsList.get(position);
 
         Picasso.get()
-                .load(R.drawable.hospital_icon)
+                .load(tip.getImg())
                 .placeholder(R.drawable.hospital_icon)
                 .error(R.drawable.hospital_icon)
                 .into(holder.mIcon);
 
-        holder.mTitle.setText(tip.getHospital_name() + ", " + tip.getHospital_city());
+        holder.mTitle.setText(tip.getHospital_name());
         holder.mDescription.setText(tip.getHospital_address() + ", " + tip.getHospital_pincode());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +70,8 @@ public class HospitalAdapter  extends RecyclerView.Adapter<HospitalAdapter.Hospi
                 mContext.startActivity(intent);
             }
         });
+        holder.distance.setText("Distance : " + tip.getDist() + " Km");
+        holder.rating.setText("Rating : " + tip.getRating());
 
     }
 
@@ -87,6 +89,8 @@ public class HospitalAdapter  extends RecyclerView.Adapter<HospitalAdapter.Hospi
         private TextView mTitle;
         private TextView mDescription;
         private ImageView mIcon;
+        private TextView distance;
+        private TextView rating;
 
 
         public HospitalViewHolder(View itemView) {
@@ -94,6 +98,8 @@ public class HospitalAdapter  extends RecyclerView.Adapter<HospitalAdapter.Hospi
             mTitle = (TextView) itemView.findViewById(R.id.name);
             mDescription = (TextView) itemView.findViewById(R.id.address);
             mIcon = (ImageView) itemView.findViewById(R.id.hosp_icon);
+            distance = (TextView) itemView.findViewById(R.id.distance);
+            rating = (TextView) itemView.findViewById(R.id.rating);
 
         }
 
