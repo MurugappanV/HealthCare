@@ -356,7 +356,7 @@ public class Ambulance extends AppCompatActivity implements
         String title = latLng.latitude + ", " + latLng.longitude;
         BitmapDrawable bitmapdraw=(BitmapDrawable)getResources().getDrawable(R.drawable.ambulance_loc2);
         Bitmap b=bitmapdraw.getBitmap();
-        Bitmap smallMarker = Bitmap.createScaledBitmap(b, 200, 200, false);
+        Bitmap smallMarker = Bitmap.createScaledBitmap(b, 120, 120, false);
         MarkerOptions markerOptions = new MarkerOptions()
                 .position(latLng)
                 .icon(BitmapDescriptorFactory.fromBitmap(smallMarker))
