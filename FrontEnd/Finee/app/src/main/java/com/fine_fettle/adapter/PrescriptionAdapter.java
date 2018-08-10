@@ -43,17 +43,17 @@ public class PrescriptionAdapter extends RecyclerView.Adapter<PrescriptionAdapte
     public void onBindViewHolder(@NonNull PrescriptionAdapter.PrescriptionViewHolder  holder, int position) {
         final PrescriptionModel tip = mTipsList.get(position);
 
-        holder.mTitle.setText(tip.getHospital_name() + ", " + tip.getHospital_city());
-        holder.mDescription.setText(tip.getHospital_address() + ", " + tip.getHospital_pincode());
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mContext,Laboratory.class);
-                intent.putExtra("id",  ((MakeAppointment)mContext).id);
-                intent.putExtra("hospital_name", tip.getHospital_name() );
-                mContext.startActivity(intent);
-            }
-        });
+//        holder.mTitle.setText(tip.getHospital_name() + ", " + tip.getHospital_city());
+//        holder.mDescription.setText(tip.getHospital_address() + ", " + tip.getHospital_pincode());
+//        holder.itemView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(mContext,Laboratory.class);
+//                intent.putExtra("id",  ((MakeAppointment)mContext).id);
+//                intent.putExtra("hospital_name", tip.getHospital_name() );
+//                mContext.startActivity(intent);
+//            }
+//        });
 
     }
 

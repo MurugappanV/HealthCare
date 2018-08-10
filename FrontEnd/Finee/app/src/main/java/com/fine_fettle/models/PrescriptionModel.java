@@ -69,31 +69,31 @@ public class PrescriptionModel implements Serializable {
 
 
 
-    public void setHospital_name(String hospital_name) {
-        this.hospital_name = hospital_name;
-    }
-
-    public String getHospital_address() {
-        return hospital_address;
-    }
-
-    public void setHospital_address(String hospital_address) {
-        this.hospital_address = hospital_address;
-    }
-
-    public String getHospital_city() {
-        return hospital_city;
-    }
-
-    public void setHospital_city(String hospital_city) {
-        this.hospital_city = hospital_city;
-    }
-
-    public String getHospital_pincode() {
-        return hospital_pincode;
-    }
-
-    public void setHospital_pincode(String hospital_pincode) {
-        this.hospital_pincode = hospital_pincode;
-    }
+//    public void setHospital_name(String hospital_name) {
+////        this.hospital_name = hospital_name;
+//    }
+//
+//    public String getHospital_address() {
+//        return hospital_address;
+//    }
+//
+//    public void setHospital_address(String hospital_address) {
+//        this.hospital_address = hospital_address;
+//    }
+//
+//    public String getHospital_city() {
+//        return hospital_city;
+//    }
+//
+//    public void setHospital_city(String hospital_city) {
+//        this.hospital_city = hospital_city;
+//    }
+//
+//    public String getHospital_pincode() {
+//        return hospital_pincode;
+//    }
+//
+//    public void setHospital_pincode(String hospital_pincode) {
+//        this.hospital_pincode = hospital_pincode;
+//    }
 }
