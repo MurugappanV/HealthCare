@@ -63,14 +63,18 @@ public class Appointment extends AppCompatActivity {
     }
 
     private void setAdapter(){
-        ViewAppoinmentAdapter adapter = new ViewAppoinmentAdapter(this,R.layout.appointment_item_layout,contactList);
+        ViewAppoinmentAdapter adapter = new ViewAppoinmentAdapter(this,R.layout.appointment_item_layout,contactList, mListView);
         LinearLayoutManager horizontalLinearLytmanager = new LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL, false);
         mListView.setLayoutManager(horizontalLinearLytmanager);
         mListView.setAdapter(adapter);
     }
 
-    private class AppointmentGetter extends AsyncTask<Void, Void, Void> {
+    public void exe() {
+        new AppointmentGetter().execute();
+    }
+
+    public class AppointmentGetter extends AsyncTask<Void, Void, Void> {
 
         private ListAdapter adapter;
 

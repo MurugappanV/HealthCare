@@ -11,6 +11,7 @@ class URLs {
     //private static final String ROOT_URL = "http://10.13.1.17/";
     private static final String ROOT_URL = "http://35.204.108.96/";
     static final String URL_REGISTER = ROOT_URL+"docapp.php";
+    static final String HELP_REGISTER = ROOT_URL+"needy_insert.php";
     static final String REGISTER=ROOT_URL+"userreg.php";
     static final String PROFILE=ROOT_URL+"userpro.php";
     static final String BLOODREQ=ROOT_URL+"bloodinsert.php";

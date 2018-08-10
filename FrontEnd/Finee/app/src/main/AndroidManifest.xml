@@ -122,6 +122,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".NeedList"
+            android:theme="@style/ThemeSplashScreen">
+            <intent-filter>
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Personhome"
             android:theme="@style/ThemeSplashScreen"

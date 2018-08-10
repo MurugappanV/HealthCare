@@ -15,7 +15,7 @@ public class PostRequestHandler extends AsyncTask<Void, Void, String> {
     // Key, Value pair
     private HashMap<String, String> params;
 
-    PostRequestHandler(String url, HashMap<String, String> params){
+    public PostRequestHandler(String url, HashMap<String, String> params){
         this.url = url;
         this.params = params;
         // Log.d("Input Box", designation);

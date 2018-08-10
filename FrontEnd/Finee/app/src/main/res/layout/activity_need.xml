@@ -61,6 +61,18 @@
         android:inputType="textPersonName"/>
 
     <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:hint="Phone number"
+        android:fontFamily="@font/roboto_medium"
+        android:textColorHint="#73696868"
+        android:inputType="number"/>
+
+    <EditText
         android:id="@+id/phospital"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -104,7 +116,31 @@
         android:hint="Operation fees"
         android:fontFamily="@font/roboto_medium"
         android:textColorHint="#73696868"
-        android:inputType="textPersonName"/>
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:hint="Message"
+        android:fontFamily="@font/roboto_medium"
+        android:textColorHint="#73696868"
+        android:inputType="text"/>
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:hint="Operation date"
+        android:editable="false"
+        android:fontFamily="@font/roboto_medium"
+        android:textColorHint="#73696868"
+        android:inputType="date"/>
+
     <!--<LinearLayout-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="wrap_content"-->
@@ -214,21 +250,21 @@
             <!--android:textSize="17dp" />-->
     <!--</LinearLayout>-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal"
-        android:weightSum="100">
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="100">-->
 
-        <Button
-            android:id="@+id/picDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Pic Date for operation"
-            android:onClick="datePicker"
-            android:background="@drawable/button_tranparent"/>
-    </LinearLayout>
+        <!--<Button-->
+            <!--android:id="@+id/picDate"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Pic Date for operation"-->
+            <!--android:onClick="datePicker"-->
+            <!--android:background="@drawable/button_tranparent"/>-->
+    <!--</LinearLayout>-->
 
     <TextView
         android:layout_weight="1"
