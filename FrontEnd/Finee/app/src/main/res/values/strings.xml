@@ -22,7 +22,6 @@
 
 
     <string-array name="dropdown">
-        <item>BLOOD GROUP</item>
         <item>O+</item>
         <item>O-</item>
         <item>A+</item>

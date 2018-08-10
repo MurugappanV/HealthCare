@@ -115,16 +115,17 @@ public class Blood extends AppCompatActivity {
 
             if (jsonStr != null) {
                 try {
-                    JSONObject jsonObj = new JSONObject(jsonStr);
+//                    JSONObject jsonObj = new JSONObject(jsonStr);
 
                     // Getting JSON Array node
-                    JSONArray employeeArray = jsonObj.getJSONArray("result");
+                    JSONArray employeeArray = new JSONArray(jsonStr);
 
                     // looping through All Contacts
                     for (int i = 0; i < employeeArray.length(); i++) {
-                        JSONObject c = employeeArray.getJSONObject(i);
-
-                        String text = c.getString("text");
+                        String text = employeeArray.getString(i);
+//                        JSONObject c = employeeArray.getJSONObject(i);
+//
+//                        String text = c.getString("text");
 
 
                         // tmp hash map for single contact

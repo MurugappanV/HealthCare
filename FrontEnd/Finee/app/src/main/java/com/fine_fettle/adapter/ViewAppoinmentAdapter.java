@@ -53,7 +53,11 @@ public class ViewAppoinmentAdapter  extends RecyclerView.Adapter<ViewAppoinmentA
         holder.mHos.setText(tip.get("hos_name"));
         holder.mDate.setText(tip.get("date").substring(8,10) + "-" +tip.get("date").substring(5,7) + "-" + tip.get("date").substring(0,4) );
         holder.mSlot.setText(tip.get("slot"));
-        holder.mStatus.setText(Integer.parseInt(tip.get("status")) == 0 ? "PENDING" : Integer.parseInt(tip.get("status")) == 1 ? "ACCEPTED" : "REJECTED");
+        String status = "PENDING";
+        if(!tip.get("status").equals("null")) {
+            status =Integer.parseInt(tip.get("status")) == 0 ? "PENDING" : Integer.parseInt(tip.get("status")) == 1 ? "ACCEPTED" : "REJECTED";
+        }
+        holder.mStatus.setText("Status  : " + status);
 //        holder.itemView.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
