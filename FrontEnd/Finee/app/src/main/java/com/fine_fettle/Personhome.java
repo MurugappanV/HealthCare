@@ -93,7 +93,7 @@ public class Personhome extends AppCompatActivity{
         b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Personhome.this, Ambulance.class);
+                Intent intent = new Intent(Personhome.this, AmbulanceRequest.class);
                 intent.putExtra("user", username);
                 intent.putExtra("id", id);
                 startActivity(intent);

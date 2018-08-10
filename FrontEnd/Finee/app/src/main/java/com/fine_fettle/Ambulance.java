@@ -115,7 +115,7 @@ public class Ambulance extends AppCompatActivity implements
     String lan;
     // Create a Intent send by the notification
     public static Intent makeNotificationIntent(Context context, String msg) {
-        Intent intent = new Intent( context, MainActivity.class );
+        Intent intent = new Intent( context, Ambulance.class );
         intent.putExtra( NOTIFICATION_MSG, msg );
         return intent;
     }
