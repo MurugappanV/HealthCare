@@ -169,5 +169,6 @@ public class CreateUpdateAppointment extends AppCompatActivity {
         Intent intent = new Intent(CreateUpdateAppointment.this,Appointment.class);
         intent.putExtra("id", id);
         startActivity(intent);
+        finish();
     }
 }

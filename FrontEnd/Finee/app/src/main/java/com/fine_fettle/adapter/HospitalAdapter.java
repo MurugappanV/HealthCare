@@ -68,6 +68,7 @@ public class HospitalAdapter  extends RecyclerView.Adapter<HospitalAdapter.Hospi
                 intent.putExtra("id",  ((MakeAppointment)mContext).id);
                 intent.putExtra("hospital_name", tip.getHospital_name() );
                 mContext.startActivity(intent);
+                ((MakeAppointment) mContext).finish();
             }
         });
         holder.distance.setText("Distance : " + tip.getDist() + " Km");

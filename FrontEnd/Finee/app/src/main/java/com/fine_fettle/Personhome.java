@@ -12,7 +12,7 @@ import android.widget.Button;
  */
 
 public class Personhome extends AppCompatActivity{
-    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14;
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14, b15;
     String username, id;
 
 
@@ -39,6 +39,7 @@ public class Personhome extends AppCompatActivity{
         b12 = findViewById(R.id.b_p_tips);
         b13 = findViewById(R.id.b_p_logout);
         b14 = findViewById(R.id.b_p_crash);
+        b15 = findViewById(R.id.b_p_need_list);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -161,6 +162,13 @@ public class Personhome extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Personhome.this, Crashactivity.class);
+                startActivity(intent);
+            }
+        });
+        b15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Personhome.this, NeedList.class);
                 startActivity(intent);
             }
         });

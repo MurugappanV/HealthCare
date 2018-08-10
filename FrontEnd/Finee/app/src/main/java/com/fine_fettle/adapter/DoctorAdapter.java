@@ -72,6 +72,7 @@ public class DoctorAdapter  extends RecyclerView.Adapter<DoctorAdapter.DoctorVie
                 intent.putExtra("doctor_name", tip.getName() );
                 intent.putExtra("doctor_spec", tip.getSpecialization() );
                 mContext.startActivity(intent);
+                ((Laboratory) mContext).finish();
             }
         });
         holder.degree.setText("Degree : " + tip.getDegree());

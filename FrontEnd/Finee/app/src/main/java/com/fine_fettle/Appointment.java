@@ -56,6 +56,12 @@ public class Appointment extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        new AppointmentGetter().execute();
+    }
+
     private void setAdapter(){
         ViewAppoinmentAdapter adapter = new ViewAppoinmentAdapter(this,R.layout.appointment_item_layout,contactList);
         LinearLayoutManager horizontalLinearLytmanager = new LinearLayoutManager(this,

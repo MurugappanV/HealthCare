@@ -67,7 +67,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="16sp"
-        android:hint="Hospital Name"
+        android:hint="Hospital"
         android:fontFamily="@font/roboto_medium"
         android:textColorHint="#73696868"
         android:inputType="textPersonName"/>
@@ -79,7 +79,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="16sp"
-        android:hint="Hospital Name"
+        android:hint="Doctor"
         android:fontFamily="@font/roboto_medium"
         android:textColorHint="#73696868"
         android:inputType="textPersonName"/>
@@ -90,7 +90,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="16sp"
-        android:hint="Hospital Name"
+        android:hint="Operation"
         android:fontFamily="@font/roboto_medium"
         android:textColorHint="#73696868"
         android:inputType="textPersonName"/>
@@ -101,7 +101,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="16sp"
-        android:hint="Hospital Name"
+        android:hint="Operation fees"
         android:fontFamily="@font/roboto_medium"
         android:textColorHint="#73696868"
         android:inputType="textPersonName"/>
@@ -254,16 +254,16 @@
         android:id="@+id/send" />
 
 
-        <Button
-            android:layout_weight="1"
-            android:id="@+id/dcan"
-            android:layout_marginLeft="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:background="@drawable/button_tranparent"
-            android:text="Cancel"
-            android:textStyle="italic" />
+        <!--<Button-->
+            <!--android:layout_weight="1"-->
+            <!--android:id="@+id/dcan"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:background="@drawable/button_tranparent"-->
+            <!--android:text="Cancel"-->
+            <!--android:textStyle="italic" />-->
     </LinearLayout>
 
 </LinearLayout>

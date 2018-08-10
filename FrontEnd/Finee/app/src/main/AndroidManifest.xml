@@ -93,6 +93,7 @@
         </activity>
 
         <activity android:name=".Laboratory"
+            android:launchMode="singleTask"
             android:theme="@style/ThemeSplashScreen">
             <intent-filter>
 
@@ -100,7 +101,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreateUpdateAppointment"
-            android:theme="@style/ThemeSplashScreen">
+            android:theme="@style/ThemeSplashScreen"
+            android:windowSoftInputMode="stateVisible|adjustPan">
             <intent-filter>
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -146,6 +148,7 @@
 
 
         <activity android:name=".MakeAppointment"
+            android:launchMode="singleTask"
             android:theme="@style/ThemeSplashScreen"/>
         <activity android:name=".ViewAppointment" />
         <activity android:name=".BloodView" />

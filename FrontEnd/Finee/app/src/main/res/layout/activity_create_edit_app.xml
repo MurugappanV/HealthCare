@@ -122,7 +122,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:textSize="16sp"
-                android:hint="Slot"
+                android:hint="Slot (eg: 1pm)"
                 android:fontFamily="@font/roboto_medium"
                 android:textColorHint="#73696868"
                 android:inputType="textPersonName"/>
