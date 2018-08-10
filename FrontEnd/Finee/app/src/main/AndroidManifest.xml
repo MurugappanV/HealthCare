@@ -41,7 +41,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Ambulance">
+        <activity android:name=".Ambulance"
+            android:theme="@style/ThemeSplashScreen">
             <intent-filter>
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -153,6 +154,14 @@
         <activity android:name=".About" />
         <activity android:name=".ViewPrescription" />
 
+        <service android:name=".GeofenceTrasitionService" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDjRZD3kXgpCSHxTKg0ehjWC17U_xDfozM"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -162,9 +171,9 @@
              sign the APK for publishing.
              You can define the keys for the debug and release targets in src/debug/ and src/release/. 
         -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+        <!--<meta-data-->
+            <!--android:name="com.google.android.geo.API_KEY"-->
+            <!--android:value="@string/google_maps_key" />-->
 
         <service android:name=".ShakeService" />
     </application>
