@@ -49,10 +49,11 @@ public class ViewAppoinmentAdapter  extends RecyclerView.Adapter<ViewAppoinmentA
         holder.mPatient.setText("Patient : " + tip.get("p_name"));
         holder.mAppNo.setText("App.no : FFA0000" + tip.get("id"));
         holder.mIssue.setText("Issue    : " + tip.get("h_issue"));
-        holder.mDocHos.setText(tip.get("doc_name") +", "+ tip.get("hos_name").toUpperCase());
+        holder.mDocHos.setText(tip.get("doc_name"));
+        holder.mHos.setText(tip.get("hos_name"));
         holder.mDate.setText(tip.get("date").substring(8,10) + "-" +tip.get("date").substring(5,7) + "-" + tip.get("date").substring(0,4) );
         holder.mSlot.setText(tip.get("slot"));
-
+        holder.mStatus.setText(Integer.parseInt(tip.get("status")) == 0 ? "PENDING" : Integer.parseInt(tip.get("status")) == 1 ? "ACCEPTED" : "REJECTED");
 //        holder.itemView.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -81,6 +82,8 @@ public class ViewAppoinmentAdapter  extends RecyclerView.Adapter<ViewAppoinmentA
         private TextView mDate;
         private TextView mDocHos;
         private TextView mSlot;
+        private TextView mStatus;
+        private TextView mHos;
 
 
         public AppointmentViewHolder(View itemView) {
@@ -91,6 +94,8 @@ public class ViewAppoinmentAdapter  extends RecyclerView.Adapter<ViewAppoinmentA
             mDate = (TextView) itemView.findViewById(R.id.date);
             mDocHos = (TextView) itemView.findViewById(R.id.docHos);
             mSlot = (TextView) itemView.findViewById(R.id.time);
+            mStatus = (TextView) itemView.findViewById(R.id.status);
+            mHos = (TextView) itemView.findViewById(R.id.hos);
 
 
         }

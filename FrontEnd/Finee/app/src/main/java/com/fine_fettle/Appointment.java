@@ -107,6 +107,7 @@ public class Appointment extends AppCompatActivity {
                         String hosname = c.getString("hos_name");
                         String dates = c.getString("date");
                         String slots = c.getString("slot");
+                        String status = c.getString("status");
 
                         // tmp hash map for single contact
                         HashMap<String, String> employee = new HashMap<>();
@@ -122,6 +123,7 @@ public class Appointment extends AppCompatActivity {
                         employee.put("hos_name", hosname);
                         employee.put("date", dates);
                         employee.put("slot", slots);
+                        employee.put("status", status);
                         // adding contact to contact list
                         contactList.add(employee);
                     }

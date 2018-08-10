@@ -44,6 +44,14 @@
             android:layout_marginTop="3dp"
             android:textSize="14sp"
             android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            tools:text="Health issue"
+            android:layout_marginTop="3dp"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout
@@ -80,7 +88,18 @@
 
             android:textAlignment="viewEnd"
             android:textColor="@color/common_google_signin_btn_text_light_default"
-            tools:text="Doctor, Hospital"
+            tools:text="Doctor"
+            android:layout_marginTop="3dp"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/hos"
+            android:layout_width="match_parent"
+
+            android:textAlignment="viewEnd"
+            android:textColor="@color/common_google_signin_btn_text_light_default"
+            tools:text="Hospital"
             android:layout_marginTop="3dp"
             android:textSize="14sp"
             android:layout_height="wrap_content" />
