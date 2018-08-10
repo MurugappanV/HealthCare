@@ -3,118 +3,217 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/logo3"
+    android:paddingTop="35dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="#b6deef"
     android:orientation="vertical">
 
-
     <LinearLayout
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:orientation="horizontal"
-        android:weightSum="100">
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center">
 
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="0dp"/>
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/donation"/>
 
-        <EditText
-            android:id="@+id/pid"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="30"
-            android:fontFamily="sans-serif-light"
-            android:hint="Patient ID"
-            android:textColor="#000000"
-            android:textSize="17dp" />
+        <TextView
+            android:id="@+id/cance"
+            android:textColor="#FF00ADE7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textAllCaps="false"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:text="Ask help"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_width="0dp"/>
+
     </LinearLayout>
-    <LinearLayout
+
+    <EditText
+        android:id="@+id/pname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:weightSum="100">
+        android:textSize="16sp"
+        android:hint="Patient Name"
+        android:fontFamily="@font/roboto_medium"
+        android:textColorHint="#73696868"
+        android:inputType="textPersonName"/>
 
-
-        <EditText
-            android:id="@+id/pname"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="30"
-            android:fontFamily="sans-serif-light"
-            android:hint="Patient Name"
-            android:textColor="#000000"
-            android:textSize="17dp" />
-    </LinearLayout>
-    <LinearLayout
+    <EditText
+        android:id="@+id/phospital"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:weightSum="100">
+        android:textSize="16sp"
+        android:hint="Hospital Name"
+        android:fontFamily="@font/roboto_medium"
+        android:textColorHint="#73696868"
+        android:inputType="textPersonName"/>
 
-
-        <EditText
-            android:id="@+id/phospital"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="30"
-            android:fontFamily="sans-serif-light"
-            android:hint="Hospital Name"
-            android:textColor="#000000"
-            android:textSize="17dp" />
-    </LinearLayout>
-    <LinearLayout
+    <EditText
+        android:id="@+id/pdoctor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
-
-        <EditText
-            android:id="@+id/pdoctor"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="30"
-            android:fontFamily="sans-serif-light"
-            android:hint="Doctor Name"
-            android:textColor="#000000"
-            android:textSize="17dp" />
-    </LinearLayout>
-    <LinearLayout
+        android:textSize="16sp"
+        android:hint="Hospital Name"
+        android:fontFamily="@font/roboto_medium"
+        android:textColorHint="#73696868"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:id="@+id/poperation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
-
-        <EditText
-            android:id="@+id/poperation"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="30"
-            android:fontFamily="sans-serif-light"
-            android:hint="Operation Name"
-            android:textColor="#000000"
-            android:textSize="17dp" />
-    </LinearLayout>
-    <LinearLayout
+        android:textSize="16sp"
+        android:hint="Hospital Name"
+        android:fontFamily="@font/roboto_medium"
+        android:textColorHint="#73696868"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:id="@+id/opamount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:weightSum="100">
+        android:textSize="16sp"
+        android:hint="Hospital Name"
+        android:fontFamily="@font/roboto_medium"
+        android:textColorHint="#73696868"
+        android:inputType="textPersonName"/>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="100">-->
 
 
-        <EditText
-            android:id="@+id/opamount"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="30"
-            android:fontFamily="sans-serif-light"
-            android:hint="Operation Fees"
-            android:textColor="#000000"
-            android:textSize="17dp" />
-    </LinearLayout>
+        <!--<EditText-->
+            <!--android:id="@+id/pid"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="30"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--android:hint="Patient ID"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="17dp" />-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="100">-->
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/pname"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="30"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--android:hint="Patient Name"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="17dp" />-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="100">-->
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/phospital"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="30"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--android:hint="Hospital Name"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="17dp" />-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="100">-->
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/pdoctor"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="30"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--android:hint="Doctor Name"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="17dp" />-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="100">-->
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/poperation"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="30"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--android:hint="Operation Name"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="17dp" />-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="100">-->
+
+
+        <!--<EditText-->
+            <!--android:id="@+id/opamount"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="30"-->
+            <!--android:fontFamily="sans-serif-light"-->
+            <!--android:hint="Operation Fees"-->
+            <!--android:textColor="#000000"-->
+            <!--android:textSize="17dp" />-->
+    <!--</LinearLayout>-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -131,28 +230,35 @@
             android:background="@drawable/button_tranparent"/>
     </LinearLayout>
 
+    <TextView
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_width="0dp"/>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:weightSum="100">
+        android:orientation="horizontal">
 
     <Button
-        android:layout_width="136dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
         android:text="SEND"
         android:background="@drawable/button_tranparent"
         android:id="@+id/send" />
 
 
         <Button
+            android:layout_weight="1"
             android:id="@+id/dcan"
-            android:layout_width="136dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="@drawable/button_tranparent"

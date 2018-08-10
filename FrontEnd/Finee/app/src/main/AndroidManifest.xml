@@ -76,7 +76,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Health">
+        <activity android:name=".Health"
+            android:theme="@style/ThemeSplashScreen">
             <intent-filter>
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -97,13 +98,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".MedicineOreder">
+        <activity android:name=".MedicineOreder"
+            android:theme="@style/ThemeSplashScreen">
             <intent-filter>
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Need">
+        <activity android:name=".Need"
+            android:theme="@style/ThemeSplashScreen">
             <intent-filter>
 
                 <category android:name="android.intent.category.DEFAULT" />
