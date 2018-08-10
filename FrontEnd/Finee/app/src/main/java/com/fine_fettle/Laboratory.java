@@ -80,7 +80,7 @@ public class Laboratory extends AppCompatActivity implements View.OnClickListene
                 if(adapter != null) {
                     ArrayList<DoctorModal> tipsList = new ArrayList<>();
                     for (DoctorModal moel: mTipsList) {
-                        if(moel.getName().toUpperCase().contains(newText.toUpperCase())) {
+                        if(moel.getName().toUpperCase().contains(newText.toUpperCase()) || moel.getSpecialization().toUpperCase().contains(newText.toUpperCase())) {
                             tipsList.add(moel);
                         }
                     }
