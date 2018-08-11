@@ -41,7 +41,7 @@
             android:layout_gravity="center_vertical"
             android:textAllCaps="false"
             android:fontFamily="@font/corpos_dem_regular"
-            android:text="Tips of the day"
+            android:text="Appointments"
             android:textSize="20sp"/>
         <TextView
             android:layout_weight="1"

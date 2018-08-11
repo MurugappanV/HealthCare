@@ -13,7 +13,7 @@
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center_horizontal"
-        android:text="REQUEST INFORMATRION"
+        android:text="REQUEST INFORMATION"
         android:textColor="@color/black"
         android:textSize="16sp" />
     <LinearLayout
