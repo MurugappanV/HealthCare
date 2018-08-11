@@ -7,41 +7,56 @@
     tools:context="com.fine_fettle.Ambulance">
 
     <!-- Line with Latitude and Longitude -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/colorPrimaryDark"
-        android:paddingTop="5dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="5dp">
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:background="@color/colorPrimaryDark"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:paddingRight="15dp"-->
+        <!--android:paddingBottom="5dp">-->
 
-        <!--Latitude-->
-        <TextView
-            android:id="@+id/lat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:layout_weight="0.5"
-            android:text="Lat: " />
+        <!--&lt;!&ndash;Latitude&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:id="@+id/lat"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:layout_weight="0.5"-->
+            <!--android:text="Lat: " />-->
 
-        <!--Longitude-->
-        <TextView
-            android:id="@+id/lon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:layout_weight="0.5"
-            android:text="Long: " />
-    </LinearLayout>
+        <!--&lt;!&ndash;Longitude&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:id="@+id/lon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:layout_weight="0.5"-->
+            <!--android:text="Long: " />-->
+    <!--</LinearLayout>-->
 
     <!--GoogleMap fragment-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingTop="40dp"
+        android:paddingBottom="20dp"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="18sp"
+        android:textColor="#FF00ADE7"
+        android:background="#b6deef"
+        android:id="@+id/cancel" />
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         android:name="com.google.android.gms.maps.MapFragment"
         android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
+
 
 </LinearLayout>
 

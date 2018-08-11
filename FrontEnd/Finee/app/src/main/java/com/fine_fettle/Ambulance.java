@@ -13,6 +13,7 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -23,6 +24,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -101,17 +105,17 @@ public class Ambulance extends AppCompatActivity implements
     private GoogleApiClient googleApiClient;
     private Location lastLocation;
 
-    private TextView textLat, textLong;
+//    private TextView textLat, textLong;
 
     private MapFragment mapFragment;
-
+    Button b;
 
 
     private static final String NOTIFICATION_MSG = "NOTIFICATION MSG";
     String device = "EADEH000001455"; // this value should be also from hospital if hospital accepts
     int count=0;
     int status1=0;
-    String lat;
+    String lat, id;
     String lan;
     // Create a Intent send by the notification
     public static Intent makeNotificationIntent(Context context, String msg) {
@@ -124,8 +128,8 @@ public class Ambulance extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ambulance);
-        textLat = (TextView)findViewById(R.id.lat);
-        textLong = (TextView) findViewById(R.id.lon);
+//        textLat = (TextView)findViewById(R.id.lat);
+//        textLong = (TextView) findViewById(R.id.lon);
         new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
@@ -145,10 +149,62 @@ public class Ambulance extends AppCompatActivity implements
 //        SupportMapFragment supportMapFragment =
 //                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.googleMap);
 //        supportMapFragment.getMapAsync(this);
-
-
+        Intent intent = getIntent();
+        id =intent.getStringExtra("id");
+        b = findViewById(R.id.cancel);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                try {
+//                    JsonParser sh = new JsonParser();
+//                    String url = "http://35.204.108.96/amb_can.php?u_id=" + id;
+//                    sh.convertJson(url);
+//                } catch (Exception e) {
+//
+//                }
+//                finish();
+                new AmHandler().execute();
+            }
+        });
 
         //    locationManager.requestLocationUpdates(provider, 2000,0,this);
+    }
+
+    private class AmHandler extends AsyncTask<Void, Void, Void> {
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected Void doInBackground(Void... arg0) {
+            JsonParser sh = new JsonParser();
+            String url= "http://35.204.108.96/amb_can.php?u_id="+id;
+            String jsonStr = sh.convertJson(url);
+            System.out.println(url);
+
+            if (jsonStr != null) {
+            } else {
+
+
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            /**
+             * Updating parsed JSON data into ListView
+             * */
+            finish();
+
+
+        }
+
     }
 
     private void createGoogleApi() {
@@ -341,8 +397,8 @@ public class Ambulance extends AppCompatActivity implements
     private void writeActualLocation() {
         Double latitude=Double.valueOf(lat).doubleValue();
         Double langitude=Double.valueOf(lan).doubleValue();
-        textLat.setText( "Lat: " +latitude );
-        textLong.setText( "Long: " +langitude );
+//        textLat.setText( "Lat: " +latitude );
+//        textLong.setText( "Long: " +langitude );
         markerLocation(new LatLng(latitude,langitude));
     }
 

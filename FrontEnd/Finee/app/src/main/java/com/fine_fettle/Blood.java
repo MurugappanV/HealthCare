@@ -1,11 +1,10 @@
 package com.fine_fettle;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -14,12 +13,10 @@ import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -59,7 +56,7 @@ public class Blood extends AppCompatActivity {
 
         lv = findViewById(R.id.list);
         contactList = new ArrayList<>();
-        new Handler().execute();
+        new BloodHandler().execute();
     }
 
     private void submitReq(View view) {
@@ -69,10 +66,18 @@ public class Blood extends AppCompatActivity {
         params.put("req_blood_grp", spin);
         params.put("rate", rate);
         System.out.println("NAME:" + name + "ID:" + id + "BLOOD:" + spin + "RATE:" + rate);
-        Toast.makeText(getApplicationContext(), "Hi: " + params.get("u_name") + "Your Blood Request is sent", Toast.LENGTH_LONG).show();
+//        Toast.makeText(getApplicationContext(), "Hi: " + params.get("u_name") + "Your Blood Request is sent", Toast.LENGTH_LONG).show();
         PostRequestHandler postRequestHandler = new PostRequestHandler(URLs.BLOODREQ, params);
         postRequestHandler.execute();
-
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Do something after 5s = 5000ms
+                new BloodHandler().execute();
+//                buttons[inew][jnew].setBackgroundColor(Color.BLACK);
+            }
+        }, 5000);
+//        new BloodHandler().execute();
     }
 
 
@@ -96,7 +101,7 @@ public class Blood extends AppCompatActivity {
         }
     }
 
-    private class Handler extends AsyncTask<Void, Void, Void> {
+    private class BloodHandler extends AsyncTask<Void, Void, Void> {
 
         private ListAdapter adapter;
 
@@ -129,24 +134,26 @@ public class Blood extends AppCompatActivity {
 
 
                         // tmp hash map for single contact
-                        HashMap<String, String> employee = new HashMap<>();
+                        if(!text.contains("The request for  blood")) {
+                            HashMap<String, String> employee = new HashMap<>();
 
-                        // adding each child node to HashMap key => value
-                        employee.put("text", text);
+                            // adding each child node to HashMap key => value
+                            employee.put("text", text);
 
-                        // adding contact to contact list
-                        contactList.add(employee);
+                            // adding contact to contact list
+                            contactList.add(employee);
+                        }
                     }
                 } catch (final JSONException e) {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(getApplicationContext(),
-                                    "Json parsing error: " + e.getMessage(),
-                                    Toast.LENGTH_LONG)
-                                    .show();
-                        }
-                    });
+//                    runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            Toast.makeText(getApplicationContext(),
+//                                    "Json parsing error: " + e.getMessage(),
+//                                    Toast.LENGTH_LONG)
+//                                    .show();
+//                        }
+//                    });
 
                 }
             } else {
