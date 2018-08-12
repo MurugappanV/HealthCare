@@ -12,6 +12,7 @@
     tools:context="com.fine_fettle.Appointment">
 
     <LinearLayout
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -49,12 +50,53 @@
             android:layout_width="0dp"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/filters"
+        android:layout_below="@+id/title"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:text="Upcoming"
+            android:id="@+id/upcoming"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textAllCaps="false"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:textSize="15sp"
+            android:textColor="#55000000"
+            android:background="@drawable/button_tranparent"
+            >
+        </Button>
+
+        <Button
+            android:text="Previous"
+            android:id="@+id/previous"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textAllCaps="false"
+            android:fontFamily="@font/corpos_dem_regular"
+            android:textSize="15sp"
+            android:textColor="#55000000"
+            android:background="@drawable/button_tranparent"
+            />
+
+
+    </LinearLayout>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/tips_list"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
+        android:layout_below="@+id/filters"
         android:paddingBottom="60dp"
-        android:paddingTop="60dp">
+        android:paddingTop="10dp">
 
     </android.support.v7.widget.RecyclerView>
 

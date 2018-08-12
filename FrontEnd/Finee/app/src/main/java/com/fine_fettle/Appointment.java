@@ -2,6 +2,7 @@ package com.fine_fettle;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,24 +18,29 @@ import android.widget.Toast;
 
 import com.fine_fettle.adapter.TipsAdapter;
 import com.fine_fettle.adapter.ViewAppoinmentAdapter;
+import com.fine_fettle.models.HospitalModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.BreakIterator;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 /**
  * Created by Priyadharshini on 05-Jun-18.
  */
 
-public class Appointment extends AppCompatActivity {
+public class Appointment extends AppCompatActivity implements View.OnClickListener {
     Button makeapp;
+    Button upcoming, previous;
     private ProgressDialog pDialog;
     ArrayList<HashMap<String, String>> contactList;
     private RecyclerView mListView;
+    ViewAppoinmentAdapter adapter;
     String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +60,58 @@ public class Appointment extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        upcoming = findViewById(R.id.upcoming);
+        upcoming.setOnClickListener(this);
+        previous = findViewById(R.id.previous);
+        previous.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        upcoming.setTextColor(Color.parseColor("#55000000"));
+        previous.setTextColor(Color.parseColor("#55000000"));
+        if(v.getId()==R.id.upcoming){
+            if(adapter != null) {
+                ArrayList<HashMap<String, String>> tipsList = new ArrayList<>();
+                for (HashMap<String, String> moel: contactList) {
+                    Date date = new Date();
+                    Date currDate = new Date();
+                    try {
+                        date=new SimpleDateFormat("yyyy-MM-dd").parse(moel.get("date"));
+                    } catch(Exception e) {
+
+                    }
+                    if(currDate.compareTo(date) <= 0) {
+                        tipsList.add(moel);
+                    } else {
+
+                    }
+                }
+                adapter.updateList(tipsList);
+            }
+            upcoming.setTextColor(Color.parseColor("#FF00ADE7"));
+        }
+        if(v.getId()==R.id.previous){
+            if(adapter != null) {
+                ArrayList<HashMap<String, String>> tipsList = new ArrayList<>();
+                for (HashMap<String, String> moel: contactList) {
+                    Date date = new Date();
+                    Date currDate = new Date();
+                    try {
+                        date=new SimpleDateFormat("yyyy-MM-dd").parse(moel.get("date"));
+                    } catch(Exception e) {
+
+                    }
+                    if(!(currDate.compareTo(date) <= 0)) {
+                        tipsList.add(moel);
+                    } else {
+
+                    }
+                }
+                adapter.updateList(tipsList);
+            }
+            previous.setTextColor(Color.parseColor("#FF00ADE7"));
+        }
     }
 
     @Override
@@ -63,7 +121,7 @@ public class Appointment extends AppCompatActivity {
     }
 
     private void setAdapter(){
-        ViewAppoinmentAdapter adapter = new ViewAppoinmentAdapter(this,R.layout.appointment_item_layout,contactList, mListView);
+         adapter = new ViewAppoinmentAdapter(this,R.layout.appointment_item_layout,contactList, mListView);
         LinearLayoutManager horizontalLinearLytmanager = new LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL, false);
         mListView.setLayoutManager(horizontalLinearLytmanager);

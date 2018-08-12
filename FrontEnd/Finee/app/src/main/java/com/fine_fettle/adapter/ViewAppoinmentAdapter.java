@@ -20,6 +20,7 @@ import com.fine_fettle.Appointment;
 import com.fine_fettle.CreateUpdateAppointment;
 import com.fine_fettle.PostRequestHandler;
 import com.fine_fettle.R;
+import com.fine_fettle.models.HospitalModel;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -48,6 +49,11 @@ public class ViewAppoinmentAdapter  extends RecyclerView.Adapter<ViewAppoinmentA
         if (mContext != null) {
             inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
+    }
+
+    public void updateList(ArrayList<HashMap<String, String>> tipsList){
+        mAppointmnetList = tipsList;
+        notifyDataSetChanged();
     }
 
     @NonNull

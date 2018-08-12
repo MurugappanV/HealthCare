@@ -138,8 +138,8 @@ public class Tips extends AppCompatActivity{
                 ArrayList<TipsModel> tipsList = gson.fromJson(jsonObj.getString("result"), type);
                 if(tipsList!=null){
                     mTipsList = tipsList;
-                    mTipsList.addAll(tipsList);
-                    mTipsList.addAll(tipsList);
+//                    mTipsList.addAll(tipsList);
+//                    mTipsList.addAll(tipsList);
                     setAdapter();
                 }
             } catch (JSONException e) {

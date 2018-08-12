@@ -73,6 +73,7 @@ public class Blood extends AppCompatActivity {
             @Override
             public void run() {
                 // Do something after 5s = 5000ms
+                contactList = new ArrayList<>();
                 new BloodHandler().execute();
 //                buttons[inew][jnew].setBackgroundColor(Color.BLACK);
             }

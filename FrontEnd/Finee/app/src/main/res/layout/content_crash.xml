@@ -55,7 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
-        android:gravity="">
+        android:gravity="center">
         <ImageView
             android:layout_width="25dp"
             android:layout_height="25dp"
@@ -73,19 +73,11 @@
             android:text="Wear your helmet"
             android:textSize="14sp"/>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ins2"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ins1"
-        android:gravity="">
         <ImageView
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
             android:src="@drawable/car"/>
 
         <TextView
@@ -99,8 +91,34 @@
             android:text="Wear your seat belt"
             android:textSize="14sp"/>
 
-
     </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ins2"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/ins1"-->
+        <!--android:gravity="">-->
+        <!--<ImageView-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:src="@drawable/car"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:textColor="#007ba4"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:fontFamily="@font/corpos_dem_regular"-->
+            <!--android:text="Wear your seat belt"-->
+            <!--android:textSize="14sp"/>-->
+
+
+    <!--</LinearLayout>-->
 
     <LinearLayout
         android:layout_weight="1"

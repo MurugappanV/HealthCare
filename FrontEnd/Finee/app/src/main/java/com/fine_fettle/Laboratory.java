@@ -186,7 +186,7 @@ public class Laboratory extends AppCompatActivity implements View.OnClickListene
                 ArrayList<DoctorModal> tipsList = gson.fromJson(jsonObj.getString("result"), type);
                 if(tipsList!=null){
                     mTipsList = tipsList;
-                    mTipsList.addAll(tipsList);
+//                    mTipsList.addAll(tipsList);
                     setAdapter();
                 }
             } catch (JSONException e) {

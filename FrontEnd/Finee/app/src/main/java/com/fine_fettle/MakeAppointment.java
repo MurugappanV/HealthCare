@@ -227,7 +227,7 @@ public class MakeAppointment extends AppCompatActivity implements View.OnClickLi
                 ArrayList<HospitalModel> tipsList = gson.fromJson(jsonObj.getString("result"), type);
                 if(tipsList!=null){
                     mTipsList = tipsList;
-                    mTipsList.addAll(tipsList);
+//                    mTipsList.addAll(tipsList);
                     DecimalFormat df2 = new DecimalFormat(".##");
                     for (HospitalModel tips:mTipsList) {
 
