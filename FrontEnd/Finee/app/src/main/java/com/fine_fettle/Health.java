@@ -68,7 +68,7 @@ public class Health extends AppCompatActivity{
         @Override
         protected Void doInBackground(Void... arg0) {
             JsonParser sh = new JsonParser();
-            String url= "http://35.204.108.96/user_pres.php?p_id="+id;
+            String url= "http://35.204.111.241/view_prescription.php?p_id="+id;
             String jsonStr = sh.convertJson(url);
             System.out.println(url);
             if (jsonStr != null) {
